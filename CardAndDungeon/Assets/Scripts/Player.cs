@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
     public VariableJoystick joy;
     public float speed;
 
+    public GameObject attackMotion;
     Rigidbody2D rigid;
     Animator anim;
     Vector2 moveVec;
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
         rigid = GetComponent<Rigidbody2D>();
         //anim = GetComponent<Animator>();
         anim = GetComponentInChildren<Animator>();
+        attackMotion.SetActive(false);
+
     }
 
     private void FixedUpdate()
@@ -48,6 +51,36 @@ public class Player : MonoBehaviour
 
         if (moveVec.sqrMagnitude == 0)
             return;
+    }
+
+    private float curTime;
+    public float coolTime = 0.5f;
+    public Transform pos;
+    public Vector2 boxSize;
+    
+    public void Attack()
+    {
+
+        Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+        foreach (Collider2D collider in collider2Ds)
+        {
+            Debug.Log(collider.tag);
+        }
+        anim.SetTrigger("Attk");
+        StartCoroutine(CountAttack());
+
+    }
+    IEnumerator CountAttack()
+    {
+        attackMotion.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        attackMotion.SetActive(false);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(pos.position, boxSize);
     }
     void Start()
     {
