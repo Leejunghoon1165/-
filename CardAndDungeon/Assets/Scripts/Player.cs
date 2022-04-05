@@ -1,21 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     public VariableJoystick joy;
     public float speed;
 
+    public GameObject attackMotion;
     Rigidbody2D rigid;
     Animator anim;
     Vector2 moveVec;
 
+    [SerializeField]
+    private Slider hpBar;
+    private float maxHp = 100;
+    private float curHp = 100;
+
+    static float damage = 10;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
         anim = GetComponentInChildren<Animator>();
+        attackMotion.SetActive(false);
+        hpBar.value = (float)curHp / (float)maxHp;
+
     }
 
     private void FixedUpdate()
@@ -49,14 +60,41 @@ public class Player : MonoBehaviour
         if (moveVec.sqrMagnitude == 0)
             return;
     }
-    void Start()
+
+    private float curTime;
+    public float coolTime = 0.5f;
+    public Transform pos;
+    public Vector2 boxSize;
+    
+    //공격 기능
+    public void Attack()
     {
+
+        Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+        foreach (Collider2D collider in collider2Ds)
+        {
+            //collider.GetComponent<Enemy>().TakeDamage(damage);
+        }
+        anim.SetTrigger("Attk");
+        StartCoroutine(CountAttack());
 
     }
-
-    void Update()
+    IEnumerator CountAttack()
     {
+        attackMotion.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        attackMotion.SetActive(false);
+    }
+    //플레이어 공격 영역 보여주기
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireCube(pos.position, boxSize);
+    }
 
+    private void HandleHp()
+    {
+        hpBar.value = Mathf.Lerp(hpBar.value, (float)curHp / (float)maxHp, Time.deltaTime * 10);
     }
 
 }
