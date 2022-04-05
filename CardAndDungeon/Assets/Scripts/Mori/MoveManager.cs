@@ -222,7 +222,7 @@ public class MoveManager : MonoBehaviour
     IEnumerator HitedColor()
     {
         sprite.color = Color.red;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.33f);
         sprite.color = Color.white;
     }
     
