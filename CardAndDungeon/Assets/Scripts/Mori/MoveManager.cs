@@ -20,7 +20,7 @@ public class Node
 public class MoveManager : MonoBehaviour
 {
     public Animator anim;
-    Rigidbody2D rigid;
+    public Rigidbody2D rigid;
 
     //타겟
     public GameObject Player;
@@ -40,10 +40,11 @@ public class MoveManager : MonoBehaviour
     //플레이어와의 거리 변수
     public float dist;
 
-    //닿일때 멈추게 하기 위한 변수
-    public bool touch;
+    //공격변수
+    public bool touch;      //근접
+    public bool longRange;  //원거리
 
-    //맞을때 색깔 변경하기 위한 함수
+    //맞을때 색깔 변경하기 위한 변수
     SpriteRenderer sprite;
     float startY, targetY;
 
@@ -57,11 +58,15 @@ public class MoveManager : MonoBehaviour
     List<Node> OpenList, ClosedList;
 
     void Awake() {
-        IdleMove = true;
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
+        //공격변수 초기화
         touch = false;
+        longRange = false;
+
+        //Idle 무빙 초기화
+        IdleMove = true;
     }
 
     void FixedUpdate() {
@@ -83,6 +88,16 @@ public class MoveManager : MonoBehaviour
             anim.SetTrigger("Die");
             Destroy(gameObject, 1f);
         }
+    }
+
+    void Update()   {
+        //플레이어 위치에 따라 좌우 반전해서 바라보기
+        float x = this.transform.position.x - Player.transform.position.x;
+        float y = this.transform.position.x * x;
+        if(y < 0)
+            transform.eulerAngles = new Vector2(0, 180);
+        else
+            transform.eulerAngles = new Vector2(0, 0);
     }
 
     public void PathFinding()
@@ -184,6 +199,8 @@ public class MoveManager : MonoBehaviour
     {   
         if(touch == true)
             Attack();
+        else if(longRange == true)
+            LongRangeAttack();
         else if(FindRange >= dist)
             Chase();
         else
@@ -226,10 +243,8 @@ public class MoveManager : MonoBehaviour
     }
 
     //공격 모션 실행
-    void Attack()
-    {
-        anim.SetTrigger("Attack");
-    }
+    void Attack() { }
+    void LongRangeAttack() { }
 
     //피격시 스프라이트를 일시적으로 빨갛게 표시하는 코루틴함수
     IEnumerator HitedColor()

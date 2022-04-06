@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Worm_Attack : MoveManager
+public class EpicWorm_Attack : MoveManager
 {
     bool attack;
     bool damage;
