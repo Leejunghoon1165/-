@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerMove();
+        HandleHp();
     }
 
     //플레이어 이동 
@@ -40,25 +41,33 @@ public class Player : MonoBehaviour
         float x = joy.Horizontal;
         float y = joy.Vertical;
 
-        moveVec = new Vector2(x, y) * speed * Time.deltaTime;
-        rigid.MovePosition(rigid.position + moveVec);
-
-        //이동 애니메이션  및 플레이어 좌우 반전 
-        if (joy.Horizontal < 0)
+        //플레이어의 체력이 0보다 클때만 움직임 가능
+        if (curHp > 0)
         {
-            transform.eulerAngles = new Vector2(0, 0);
-            anim.SetBool("Run", true);
-        }
-        if (joy.Horizontal > 0)
-        {
-            transform.eulerAngles = new Vector2(0, 180);
-            anim.SetBool("Run", true);
-        }
-        else if (joy.Horizontal == 0)
-            anim.SetBool("Run", false);
+            moveVec = new Vector2(x, y) * speed * Time.deltaTime;
+            rigid.MovePosition(rigid.position + moveVec);
 
-        if (moveVec.sqrMagnitude == 0)
-            return;
+            //이동 애니메이션  및 플레이어 좌우 반전 
+            if (joy.Horizontal < 0)
+            {
+                transform.eulerAngles = new Vector2(0, 0);
+                anim.SetBool("Run", true);
+            }
+            if (joy.Horizontal > 0)
+            {
+                transform.eulerAngles = new Vector2(0, 180);
+                anim.SetBool("Run", true);
+            }
+            else if (joy.Horizontal == 0)
+                anim.SetBool("Run", false);
+
+            if (moveVec.sqrMagnitude == 0)
+                return;
+        }
+        else
+            Die();
+
+       
     }
 
     private float curTime;
@@ -73,11 +82,15 @@ public class Player : MonoBehaviour
         Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
         foreach (Collider2D collider in collider2Ds)
         {
-            //collider.GetComponent<Enemy>().TakeDamage(damage);
+            collider.GetComponent<MoveManager>().TakeDamage(damage);
         }
         anim.SetTrigger("Attk");
         StartCoroutine(CountAttack());
-
+    }
+    void Die()
+    {
+        anim.SetTrigger("Die");
+       
     }
     IEnumerator CountAttack()
     {
@@ -96,5 +109,21 @@ public class Player : MonoBehaviour
     {
         hpBar.value = Mathf.Lerp(hpBar.value, (float)curHp / (float)maxHp, Time.deltaTime * 10);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            if(curHp > 0)
+            {
+                curHp = curHp - collision.gameObject.GetComponent<MoveManager>().Strengh;
+            }
+            if (curHp <= 0)
+                Die();
+           
+        }
+    }
+
+   
 
 }
