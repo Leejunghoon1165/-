@@ -31,17 +31,21 @@ public class MoveManager : MonoBehaviour
     public bool IdleMove;
 
     //스탯
-    public int MovementSpeed;
+    public float MovementSpeed;
     public float HP;
-    public int AttackRange;
+    public float AttackRange;
     public int FindRange;
     public int Strengh;
 
     //플레이어와의 거리 변수
     public float dist;
 
+    //닿일때 멈추게 하기 위한 변수
+    public bool touch;
+
     //맞을때 색깔 변경하기 위한 함수
     SpriteRenderer sprite;
+    float startY, targetY;
 
     //Astar에 쓰이는 변수
     public Vector2Int bottomLeft, topRight, startPos, targetPos;
@@ -52,24 +56,33 @@ public class MoveManager : MonoBehaviour
     Node StartNode, TargetNode, CurNode;
     List<Node> OpenList, ClosedList;
 
-
     void Awake() {
         IdleMove = true;
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
+        touch = false;
     }
 
-    
     void FixedUpdate() {
         targetPos = Vector2Int.RoundToInt(Player.transform.position);
         startPos = Vector2Int.RoundToInt(this.transform.position);
-        dist = Vector2.Distance(startPos, targetPos);
+
+        startY = this.transform.position.y - 0.33f;
+        targetY = Player.transform.position.y + 0.4f;
+
+        Vector2 Start = new Vector2(this.transform.position.x, startY);
+        Vector2 Target = new Vector2(Player.transform.position.x, targetY);
+
+        dist = Vector2.Distance(Start, Target);
 
         PathFinding();
         Movement();
 
-        Debug.Log(dist);
+        if(HP <= 0 ){
+            anim.SetTrigger("Die");
+            Destroy(gameObject, 1f);
+        }
     }
 
     public void PathFinding()
@@ -167,6 +180,16 @@ public class MoveManager : MonoBehaviour
         }
     }
 
+    void Movement()
+    {   
+        if(touch == true)
+            Attack();
+        else if(FindRange >= dist)
+            Chase();
+        else
+            Idle();
+    }
+
     void Chase()
     {
         if(FinalNodeList.Count != 0) {
@@ -178,23 +201,13 @@ public class MoveManager : MonoBehaviour
         }
         anim.SetTrigger("Walk");
     }
-
-    void Movement()
-    {   
-        if(AttackRange > dist)
-            Attack();
-        else if(FindRange > dist)
-            Chase();
-        else
-            Idle();
-    }
-
     void Idle()
     {
         if(IdleMove == true)
+        {
             StartCoroutine(IdleMoving());
-
         rigid.velocity = new Vector2(widthMove, highMove);
+        }
         if(widthMove != 0 || highMove != 0)
          anim.SetTrigger("Walk");
         else
@@ -225,12 +238,23 @@ public class MoveManager : MonoBehaviour
         yield return new WaitForSeconds(.33f);
         sprite.color = Color.white;
     }
-    
-
 
     public void TakeDamage(float damage)
     {
         HP = HP - damage;
         StartCoroutine(HitedColor());
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            rigid.constraints = RigidbodyConstraints2D.FreezePosition;
+            touch = true;
+        } 
+    }
+    void OnCollisionExit2D(Collision2D collision)
+    {   
+        touch = false;
     }
 }
