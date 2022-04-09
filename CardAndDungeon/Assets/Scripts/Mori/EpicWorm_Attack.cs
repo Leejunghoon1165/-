@@ -2,33 +2,48 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EpicWorm_Attack : MoveManager
+public class EpicWorm_Attack : MonoBehaviour
 {
-    bool attack;
-    bool damage;
+    public Animator anim;
+    public GameObject bullet;
+    public Transform bulletPos;
+    Vector2 BulletPos;
+    Vector2 TargetPos;
+
+    float count;
     void Awake()
-    {
-        attack = false;
-        damage = false;
+    {   
+        anim = GetComponent<Animator>();
     }
 
     void FixedUpdate()
     {
-        if(dist < AttackRange)
-        {
-            attack = true;
-            if(damage == false)
-                StartCoroutine(Attack());
-        }
 
+        float dist = GameObject.Find("EpicWorm").GetComponent<MoveManager>().dist;
+        float AttackRange = GameObject.Find("EpicWorm").GetComponent<MoveManager>().AttackRange;
+
+        if(dist <= AttackRange)
+        {
+            if(GameObject.Find("EpicWorm").GetComponent<MoveManager>().longRange == false)  {
+                StartCoroutine(Attack());
+            }
+        }
+        else
+            count = 0;
     }
 
     IEnumerator Attack()
     {
-        damage = true;
-        yield return new WaitForSeconds(.33f);
-        if(attack == true)
-            //데이지함수 호출
-        damage = false;
+
+        
+        GameObject.Find("EpicWorm").GetComponent<MoveManager>().longRange = true;
+        if(count != 0) {
+            GameObject intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
+        }
+        anim.SetTrigger("Attack");
+        
+        yield return new WaitForSeconds(0.8f);
+        count += 1;
+        GameObject.Find("EpicWorm").GetComponent<MoveManager>().longRange = false;
     }
 }
