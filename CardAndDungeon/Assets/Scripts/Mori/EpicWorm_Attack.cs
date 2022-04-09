@@ -18,7 +18,6 @@ public class EpicWorm_Attack : MonoBehaviour
 
     void FixedUpdate()
     {
-
         float dist = GameObject.Find("EpicWorm").GetComponent<MoveManager>().dist;
         float AttackRange = GameObject.Find("EpicWorm").GetComponent<MoveManager>().AttackRange;
 
@@ -33,16 +32,14 @@ public class EpicWorm_Attack : MonoBehaviour
     }
 
     IEnumerator Attack()
-    {
-
-        
+    {    
         GameObject.Find("EpicWorm").GetComponent<MoveManager>().longRange = true;
         if(count != 0) {
             GameObject intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);
         }
         anim.SetTrigger("Attack");
         
-        yield return new WaitForSeconds(0.8f);
+        yield return new WaitForSeconds(1.38f);
         count += 1;
         GameObject.Find("EpicWorm").GetComponent<MoveManager>().longRange = false;
     }

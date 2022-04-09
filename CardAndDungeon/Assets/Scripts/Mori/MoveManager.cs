@@ -23,7 +23,7 @@ public class MoveManager : MonoBehaviour
     public Rigidbody2D rigid;
 
     //타겟
-    public GameObject Player;
+    Transform Player;
 
     //위아래 움직임
     public int widthMove;
@@ -70,14 +70,15 @@ public class MoveManager : MonoBehaviour
     }
 
     void FixedUpdate() {
+        Player =  GameObject.FindWithTag("Player").transform;
         targetPos = Vector2Int.RoundToInt(Player.transform.position);
         startPos = Vector2Int.RoundToInt(this.transform.position);
 
         startY = this.transform.position.y - 0.33f;
-        targetY = Player.transform.position.y + 0.4f;
+        targetY = Player.position.y + 0.4f;
 
         Vector2 Start = new Vector2(this.transform.position.x, startY);
-        Vector2 Target = new Vector2(Player.transform.position.x, targetY);
+        Vector2 Target = new Vector2(Player.position.x, targetY);
 
         dist = Vector2.Distance(Start, Target);
 
@@ -92,7 +93,7 @@ public class MoveManager : MonoBehaviour
 
     void Update()   {
         //플레이어 위치에 따라 좌우 반전해서 바라보기
-        float x = this.transform.position.x - Player.transform.position.x;
+        float x = this.transform.position.x - Player.position.x;
         float y = this.transform.position.x * x;
         if(y < 0)
             transform.eulerAngles = new Vector2(0, 180);
@@ -179,7 +180,6 @@ public class MoveManager : MonoBehaviour
             if (allowDiagonal) if (NodeArray[CurNode.x - bottomLeft.x, checkY - bottomLeft.y].isWall && NodeArray[checkX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
             // 코너를 가로질러 가지 않을시, 이동 중에 수직수평 장애물이 있으면 안됨
             if (dontCrossCorner) if (NodeArray[CurNode.x - bottomLeft.x, checkY - bottomLeft.y].isWall || NodeArray[checkX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
-
             
             // 이웃노드에 넣고, 직선은 10, 대각선은 14비용
             Node NeighborNode = NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y];

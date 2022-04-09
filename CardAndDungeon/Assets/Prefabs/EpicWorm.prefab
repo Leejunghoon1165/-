@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &779352192
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 779352193}
+  m_Layer: 0
+  m_Name: EW_bulletPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &779352193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779352192}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.15, y: -0.125, z: 0}
+  m_LocalScale: {x: 0.28571427, y: 0.28571427, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4442050423886421384}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4951744411411873048
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,6 +44,7 @@ GameObject:
   - component: {fileID: 1801708121350957213}
   - component: {fileID: 5176758070886590383}
   - component: {fileID: 1801708121350957212}
+  - component: {fileID: 595181861}
   m_Layer: 0
   m_Name: EpicWorm
   m_TagString: Untagged
@@ -28,10 +59,11 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4951744411411873048}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.865556, y: 0.045100212, z: 13.723126}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 779352193}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -130,7 +162,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.27, y: 0.14}
+  m_Size: {x: 0.25, y: 0.14}
   m_EdgeRadius: 0
 --- !u!50 &5176758070886590383
 Rigidbody2D:
@@ -152,7 +184,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1801708121350957212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,21 +198,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 3851910625532374844}
-  Player: {fileID: 0}
+  rigid: {fileID: 0}
   widthMove: 0
   highMove: 0
   IdleMove: 0
   MovementSpeed: 1.5
   HP: 200
-  AttackRange: 5
+  AttackRange: 3
   FindRange: 10
   Strengh: 10
   dist: 0
   touch: 0
-  bottomLeft: {x: -1, y: -1}
-  topRight: {x: 20, y: 10}
+  longRange: 0
+  bottomLeft: {x: -5, y: -5}
+  topRight: {x: 55, y: 35}
   startPos: {x: 0, y: 0}
   targetPos: {x: 0, y: 0}
   FinalNodeList: []
   allowDiagonal: 0
-  dontCrossCorner: 0
+  dontCrossCorner: 1
+--- !u!114 &595181861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951744411411873048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 574f5c38601aeb74c84dc140bfd8c9bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  bullet: {fileID: 2389865352893897758, guid: 64e06ed5a0349224ebee554e6508a332, type: 3}
+  bulletPos: {fileID: 779352193}
