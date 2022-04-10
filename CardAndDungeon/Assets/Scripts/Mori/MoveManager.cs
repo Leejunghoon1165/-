@@ -20,10 +20,10 @@ public class Node
 public class MoveManager : MonoBehaviour
 {
     public Animator anim;
-    Rigidbody2D rigid;
+    public Rigidbody2D rigid;
 
     //타겟
-    public GameObject Player;
+    Transform Player;
 
     //위아래 움직임
     public int widthMove;
@@ -40,10 +40,11 @@ public class MoveManager : MonoBehaviour
     //플레이어와의 거리 변수
     public float dist;
 
-    //닿일때 멈추게 하기 위한 변수
-    public bool touch;
+    //공격변수
+    public bool touch;      //근접
+    public bool longRange;  //원거리
 
-    //맞을때 색깔 변경하기 위한 함수
+    //맞을때 색깔 변경하기 위한 변수
     SpriteRenderer sprite;
     float startY, targetY;
 
@@ -57,22 +58,27 @@ public class MoveManager : MonoBehaviour
     List<Node> OpenList, ClosedList;
 
     void Awake() {
-        IdleMove = true;
         anim = GetComponent<Animator>();
         rigid = GetComponent<Rigidbody2D>();
         sprite = gameObject.GetComponent<SpriteRenderer>();
+        //공격변수 초기화
         touch = false;
+        longRange = false;
+
+        //Idle 무빙 초기화
+        IdleMove = true;
     }
 
     void FixedUpdate() {
+        Player =  GameObject.FindWithTag("Player").transform;
         targetPos = Vector2Int.RoundToInt(Player.transform.position);
         startPos = Vector2Int.RoundToInt(this.transform.position);
 
         startY = this.transform.position.y - 0.33f;
-        targetY = Player.transform.position.y + 0.4f;
+        targetY = Player.position.y + 0.4f;
 
         Vector2 Start = new Vector2(this.transform.position.x, startY);
-        Vector2 Target = new Vector2(Player.transform.position.x, targetY);
+        Vector2 Target = new Vector2(Player.position.x, targetY);
 
         dist = Vector2.Distance(Start, Target);
 
@@ -83,6 +89,16 @@ public class MoveManager : MonoBehaviour
             anim.SetTrigger("Die");
             Destroy(gameObject, 1f);
         }
+    }
+
+    void Update()   {
+        //플레이어 위치에 따라 좌우 반전해서 바라보기
+        float x = this.transform.position.x - Player.position.x;
+        float y = this.transform.position.x * x;
+        if(y < 0)
+            transform.eulerAngles = new Vector2(0, 180);
+        else
+            transform.eulerAngles = new Vector2(0, 0);
     }
 
     public void PathFinding()
@@ -164,7 +180,6 @@ public class MoveManager : MonoBehaviour
             if (allowDiagonal) if (NodeArray[CurNode.x - bottomLeft.x, checkY - bottomLeft.y].isWall && NodeArray[checkX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
             // 코너를 가로질러 가지 않을시, 이동 중에 수직수평 장애물이 있으면 안됨
             if (dontCrossCorner) if (NodeArray[CurNode.x - bottomLeft.x, checkY - bottomLeft.y].isWall || NodeArray[checkX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
-
             
             // 이웃노드에 넣고, 직선은 10, 대각선은 14비용
             Node NeighborNode = NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y];
@@ -184,6 +199,8 @@ public class MoveManager : MonoBehaviour
     {   
         if(touch == true)
             Attack();
+        else if(longRange == true)
+            LongRangeAttack();
         else if(FindRange >= dist)
             Chase();
         else
@@ -226,10 +243,8 @@ public class MoveManager : MonoBehaviour
     }
 
     //공격 모션 실행
-    void Attack()
-    {
-        anim.SetTrigger("Attack");
-    }
+    void Attack() { }
+    void LongRangeAttack() { }
 
     //피격시 스프라이트를 일시적으로 빨갛게 표시하는 코루틴함수
     IEnumerator HitedColor()
