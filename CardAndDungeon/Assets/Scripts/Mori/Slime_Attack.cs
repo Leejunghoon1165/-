@@ -12,7 +12,7 @@ public class Slime_Attack : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         float dist = GameObject.Find("Slime").GetComponent<MoveManager>().dist;
         float AttackRange = GameObject.Find("Slime").GetComponent<MoveManager>().AttackRange;

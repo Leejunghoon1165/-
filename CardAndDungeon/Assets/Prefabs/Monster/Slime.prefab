@@ -163,7 +163,7 @@ MonoBehaviour:
   IdleMove: 0
   MovementSpeed: 1
   HP: 10
-  AttackRange: 3
+  AttackRange: 1.5
   FindRange: 5
   Strengh: 0
   dist: 0

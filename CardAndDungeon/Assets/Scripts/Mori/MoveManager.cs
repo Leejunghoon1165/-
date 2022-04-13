@@ -89,6 +89,8 @@ public class MoveManager : MonoBehaviour
             anim.SetTrigger("Die");
             Destroy(gameObject, 1f);
         }
+
+        Debug.Log(longRange);
     }
 
     void Update()   {
@@ -223,14 +225,12 @@ public class MoveManager : MonoBehaviour
         if(IdleMove == true)
         {
             StartCoroutine(IdleMoving());
-        rigid.velocity = new Vector2(widthMove, highMove);
+            rigid.velocity = new Vector2(widthMove, highMove);
         }
         if(widthMove != 0 || highMove != 0)
-         anim.SetTrigger("Walk");
+            anim.SetTrigger("Walk");
         else
-         anim.SetTrigger("Idle");
-
-        anim.SetTrigger("Idle");
+            anim.SetTrigger("Idle");
     }
 
     //Idle상태일 때 자동적으로 이동하는 모습 구현을 위한 코루틴함수
@@ -244,7 +244,9 @@ public class MoveManager : MonoBehaviour
 
     //공격 모션 실행
     void Attack() { }
-    void LongRangeAttack() { }
+    void LongRangeAttack() {
+        rigid.velocity = new Vector2(0, 0);
+    }
 
     //피격시 스프라이트를 일시적으로 빨갛게 표시하는 코루틴함수
     IEnumerator HitedColor()
