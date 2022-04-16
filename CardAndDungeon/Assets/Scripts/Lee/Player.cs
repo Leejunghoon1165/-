@@ -82,7 +82,9 @@ public class Player : MonoBehaviour
         Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
         foreach (Collider2D collider in collider2Ds)
         {
-            //collider.GetComponent<MoveManager>().TakeDamage(damage);
+            if(collider.gameObject.tag=="Enemy")
+                collider.GetComponent<MoveManager>().TakeDamage(damage);
+
         }
         anim.SetTrigger("Attk");
         StartCoroutine(CountAttack());
@@ -110,18 +112,14 @@ public class Player : MonoBehaviour
         hpBar.value = Mathf.Lerp(hpBar.value, (float)curHp / (float)maxHp, Time.deltaTime * 10);
     }
 
+    public void TakeDamage(float damamge)
+    {
+        curHp = curHp - damage;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            if(curHp > 0)
-            {
-                curHp = curHp - collision.gameObject.GetComponent<MoveManager>().Strengh;
-            }
-            if (curHp <= 0)
-                Die();
-           
-        }
+       
     }
 
    
