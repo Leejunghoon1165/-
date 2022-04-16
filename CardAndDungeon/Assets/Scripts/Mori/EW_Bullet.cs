@@ -6,7 +6,7 @@ public class EW_Bullet : MonoBehaviour
 {
     private Vector2 playerPos;
     public float speed;
-    int strengh;
+    float strengh;
 
     void Awake()
     {
@@ -27,8 +27,8 @@ public class EW_Bullet : MonoBehaviour
     {
         if(collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Player") 
             Destroy(gameObject);
-        if(collision.gameObject.tag == "Player")
-            gameObject.GetComponent<Player>().TakeDamage(strengh);
-            
+        if(collision.gameObject.tag == "Player"){
+            Player.TakeDamage(strengh);
+        }
     }
 }

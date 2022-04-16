@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Worm_Attack : MonoBehaviour
 {
-    int strengh;
+    float strengh;
     bool attacking;
     // Start is called before the first frame update
     void Awake()
@@ -31,7 +31,7 @@ public class Worm_Attack : MonoBehaviour
     IEnumerator attck()
     {
         attacking = true;
-        gameObject.GetComponent<Player>().TakeDamage(strengh);
+        Player.TakeDamage(strengh);
         yield return new WaitForSeconds(0.33f);
         attacking = false;
     }

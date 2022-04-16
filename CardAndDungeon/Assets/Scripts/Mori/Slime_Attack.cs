@@ -8,7 +8,7 @@ public class Slime_Attack : MonoBehaviour
     public Animator anim;
     public Transform pos;
     public Vector2 boxSize;
-    int strengh;
+    float strengh;
 
     void Awake()
     {
@@ -34,7 +34,7 @@ public class Slime_Attack : MonoBehaviour
         foreach (Collider2D collider in collider2Ds)
         {
             if(collider.gameObject.tag=="Player")
-                collider.GetComponent<Player>().TakeDamage(strengh);
+                Player.TakeDamage(strengh);
         }
     }
 

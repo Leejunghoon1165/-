@@ -9,7 +9,7 @@ public class Mushroom_Attack : MonoBehaviour
     bool bombCount;
     public Transform pos;
     public Vector2 boxSize;
-    int strengh;
+    float strengh;
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -45,8 +45,9 @@ public class Mushroom_Attack : MonoBehaviour
         Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
         foreach (Collider2D collider in collider2Ds)
         {
-            if(collider.gameObject.tag=="Player")
-                collider.GetComponent<Player>().TakeDamage(strengh);
+            if(collider.gameObject.tag=="Player") {
+                Player.TakeDamage(strengh);
+            }
         }
     }
 
