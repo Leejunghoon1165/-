@@ -45,10 +45,8 @@ public class Mushroom_Attack : MonoBehaviour
         Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
         foreach (Collider2D collider in collider2Ds)
         {
-            /*
             if(collider.gameObject.tag=="Player")
-                collider.GetComponent<Player>().TakeDamage(Strengh);
-            */
+                collider.GetComponent<Player>().TakeDamage(strengh);
         }
     }
 
