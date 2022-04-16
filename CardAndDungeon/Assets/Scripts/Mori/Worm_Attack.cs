@@ -2,33 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Worm_Attack : MoveManager
+public class Worm_Attack : MonoBehaviour
 {
-    bool attack;
-    bool damage;
+    int strengh;
+    bool attacking;
+    // Start is called before the first frame update
     void Awake()
     {
-        attack = false;
-        damage = false;
+        strengh = GameObject.Find("Slime").GetComponent<MoveManager>().Strengh;
+        attacking = false;
     }
 
-    void FixedUpdate()
+    // Update is called once per frame
+    void Update()
     {
-        if(dist < AttackRange)
+        
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
         {
-            attack = true;
-            if(damage == false)
-                StartCoroutine(Attack());
-        }
-
+            if(collision.gameObject.tag == "Player" && attacking == false)
+            StartCoroutine(attck());
+        } 
     }
 
-    IEnumerator Attack()
+    IEnumerator attck()
     {
-        damage = true;
-        yield return new WaitForSeconds(.33f);
-        if(attack == true)
-            //데이지함수 호출
-        damage = false;
+        attacking = true;
+        gameObject.GetComponent<Player>().TakeDamage(strengh);
+        yield return new WaitForSeconds(0.33f);
+        attacking = false;
     }
 }
