@@ -35,19 +35,19 @@ public class Player : MonoBehaviour
         HandleHp();
     }
 
-    //ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Ìµï¿½ 
+    //ÇÃ·¹ÀÌ¾î ÀÌµ¿ 
     void PlayerMove()
     {
         float x = joy.Horizontal;
         float y = joy.Vertical;
 
-        //ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ï¿½ Ã¼ï¿½ï¿½ï¿½ï¿½ 0ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        //ÇÃ·¹ÀÌ¾îÀÇ Ã¼·ÂÀÌ 0º¸´Ù Å¬¶§¸¸ ¿òÁ÷ÀÓ °¡´É
         if (curHp > 0)
         {
             moveVec = new Vector2(x, y) * speed * Time.deltaTime;
             rigid.MovePosition(rigid.position + moveVec);
 
-            //ï¿½Ìµï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½  ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½Â¿ï¿½ ï¿½ï¿½ï¿½ï¿½ 
+            //ÀÌµ¿ ¾Ö´Ï¸ÞÀÌ¼Ç  ¹× ÇÃ·¹ÀÌ¾î ÁÂ¿ì ¹ÝÀü 
             if (joy.Horizontal < 0)
             {
                 transform.eulerAngles = new Vector2(0, 0);
@@ -75,14 +75,16 @@ public class Player : MonoBehaviour
     public Transform pos;
     public Vector2 boxSize;
     
-    //ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+    //°ø°Ý ±â´É
     public void Attack()
     {
 
         Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
         foreach (Collider2D collider in collider2Ds)
         {
-            //collider.GetComponent<MoveManager>().TakeDamage(damage);
+            if(collider.gameObject.tag=="Enemy")
+                collider.GetComponent<MoveManager>().TakeDamage(damage);
+
         }
         anim.SetTrigger("Attk");
         StartCoroutine(CountAttack());
@@ -98,7 +100,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         attackMotion.SetActive(false);
     }
-    //ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½
+    //ÇÃ·¹ÀÌ¾î °ø°Ý ¿µ¿ª º¸¿©ÁÖ±â
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
@@ -110,18 +112,14 @@ public class Player : MonoBehaviour
         hpBar.value = Mathf.Lerp(hpBar.value, (float)curHp / (float)maxHp, Time.deltaTime * 10);
     }
 
+    public void TakeDamage(float damamge)
+    {
+        curHp = curHp - damage;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            if(curHp > 0)
-            {
-                curHp = curHp - collision.gameObject.GetComponent<MoveManager>().Strengh;
-            }
-            if (curHp <= 0)
-                Die();
-           
-        }
+       
     }
 
    
