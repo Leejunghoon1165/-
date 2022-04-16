@@ -16,7 +16,7 @@ public class EpicWorm_Attack : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         float dist = GameObject.Find("EpicWorm").GetComponent<MoveManager>().dist;
         float AttackRange = GameObject.Find("EpicWorm").GetComponent<MoveManager>().AttackRange;

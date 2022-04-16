@@ -69,7 +69,7 @@ public class MoveManager : MonoBehaviour
         IdleMove = true;
     }
 
-    void FixedUpdate() {
+    void Update() {
         Player =  GameObject.FindWithTag("Player").transform;
         targetPos = Vector2Int.RoundToInt(Player.transform.position);
         startPos = Vector2Int.RoundToInt(this.transform.position);
@@ -81,8 +81,6 @@ public class MoveManager : MonoBehaviour
         Vector2 Target = new Vector2(Player.position.x, targetY);
 
         dist = Vector2.Distance(Start, Target);
-
-        PathFinding();
         Movement();
 
         if(HP <= 0 ){
@@ -90,10 +88,8 @@ public class MoveManager : MonoBehaviour
             Destroy(gameObject, 1f);
         }
 
-        Debug.Log(longRange);
-    }
-
-    void Update()   {
+        PathFinding();
+        
         //플레이어 위치에 따라 좌우 반전해서 바라보기
         float x = this.transform.position.x - Player.position.x;
         float y = this.transform.position.x * x;
@@ -102,7 +98,6 @@ public class MoveManager : MonoBehaviour
         else
             transform.eulerAngles = new Vector2(0, 0);
     }
-
     public void PathFinding()
     {
         // NodeArray의 크기 정해주고, isWall, x, y 대입

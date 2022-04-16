@@ -210,7 +210,7 @@ MonoBehaviour:
   dist: 0
   touch: 0
   longRange: 0
-  bottomLeft: {x: -5, y: -5}
+  bottomLeft: {x: 0, y: 0}
   topRight: {x: 55, y: 35}
   startPos: {x: 0, y: 0}
   targetPos: {x: 0, y: 0}

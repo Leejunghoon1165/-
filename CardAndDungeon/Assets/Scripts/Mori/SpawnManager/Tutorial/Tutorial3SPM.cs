@@ -6,7 +6,6 @@ public class Tutorial3SPM : MonoBehaviour
 {
 
     public GameObject Worm;
-
     public GameObject EpicWorm;
     public Transform spawnpoint1;
     public Transform spawnpoint2;
@@ -23,8 +22,11 @@ public class Tutorial3SPM : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(spawn == false)
-            Spawn();      
+        if(spawn == false) {
+            Spawn();
+        }
+
+
     }
 
     void Spawn()

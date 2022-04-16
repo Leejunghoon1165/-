@@ -10,6 +10,8 @@ public class TestCamera : MonoBehaviour
     public Transform CameraLimit;
     public Transform[] Limit;
 
+    public int MapNum;
+
    
     float height;
     float width;
@@ -28,10 +30,12 @@ public class TestCamera : MonoBehaviour
         width = height * Screen.width / Screen.height;
 
         ChangeLimit(0);
+        MapNum = 0;
     }
     public void ChangeLimit(int x)
     {
         CameraLimit = Limit[x];
+        MapNum = x;
     }
     private void LateUpdate()
     {
