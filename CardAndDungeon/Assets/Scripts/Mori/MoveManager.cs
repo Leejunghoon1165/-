@@ -35,7 +35,7 @@ public class MoveManager : MonoBehaviour
     public float HP;
     public float AttackRange;
     public int FindRange;
-    public int Strengh;
+    public float Strengh;
 
     //플레이어와의 거리 변수
     public float dist;
