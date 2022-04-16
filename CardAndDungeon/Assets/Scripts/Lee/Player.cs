@@ -15,8 +15,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private Slider hpBar;
-    private float maxHp = 100;
-    private float curHp = 100;
+    static float maxHp = 100;
+    static float curHp = 100;
 
     static float damage = 10;
 
@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+
         PlayerMove();
         HandleHp();
     }
@@ -112,9 +113,10 @@ public class Player : MonoBehaviour
         hpBar.value = Mathf.Lerp(hpBar.value, (float)curHp / (float)maxHp, Time.deltaTime * 10);
     }
 
-    public void TakeDamage(float damamge)
+    public static void TakeDamage(float damamge)
     {
         curHp = curHp - damage;
+        Debug.Log("¾Æ¾ß");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
