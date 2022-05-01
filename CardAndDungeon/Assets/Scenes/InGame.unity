@@ -402,12 +402,12 @@ PrefabInstance:
     - target: {fileID: 289408938080830331, guid: b25a0c6898d33d34682d0b3f7fe87c03,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.35
+      value: 39.73
       objectReference: {fileID: 0}
     - target: {fileID: 289408938080830331, guid: b25a0c6898d33d34682d0b3f7fe87c03,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.66
+      value: 5.23
       objectReference: {fileID: 0}
     - target: {fileID: 289408938080830331, guid: b25a0c6898d33d34682d0b3f7fe87c03,
         type: 3}
@@ -4412,6 +4412,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cdc6dd6533fb2e4e92bf9db6082e01b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1790833154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790833146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81d79958f46d4e14dbf2ad96826536bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mob_num: 0
+  spawnPoint: {fileID: 0}
 --- !u!1 &1845917697
 GameObject:
   m_ObjectHideFlags: 0
@@ -4714,6 +4728,7 @@ MonoBehaviour:
   - {fileID: 1570933065}
   - {fileID: 1400498584}
   - {fileID: 1161765845}
+  MapNum: 0
 --- !u!114 &1946747270
 MonoBehaviour:
   m_ObjectHideFlags: 0

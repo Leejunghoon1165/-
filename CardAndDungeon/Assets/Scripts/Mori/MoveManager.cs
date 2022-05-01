@@ -46,6 +46,8 @@ public class MoveManager : MonoBehaviour
 
     //맞을때 색깔 변경하기 위한 변수
     SpriteRenderer sprite;
+    
+    //좌표위치조정
     float startY, targetY;
 
     //Astar에 쓰이는 변수
@@ -81,15 +83,12 @@ public class MoveManager : MonoBehaviour
         Vector2 Target = new Vector2(Player.position.x, targetY);
 
         dist = Vector2.Distance(Start, Target);
-        Movement();
 
         if(HP <= 0 ){
             anim.SetTrigger("Die");
             Destroy(gameObject, 1f);
         }
 
-        PathFinding();
-        
         //플레이어 위치에 따라 좌우 반전해서 바라보기
         float x = this.transform.position.x - Player.position.x;
         float y = this.transform.position.x * x;
