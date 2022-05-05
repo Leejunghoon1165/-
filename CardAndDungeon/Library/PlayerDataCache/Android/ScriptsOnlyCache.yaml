@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraResolution
     - GameManager
+    - MoveManager
     - PauseMenu
     - Player
     - SPUM_HorseSpriteList
@@ -14,6 +15,7 @@ ScriptsOnlyBuild:
     - TestCamera
     - Timer
     - VariableJoystick
+    - Worm_Attack
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
@@ -83,43 +85,47 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1462}
     - Class: 114
-      Script: {instanceID: 1576}
+      Script: {instanceID: 1612}
     - Class: 114
-      Script: {instanceID: 1742}
+      Script: {instanceID: 1778}
     - Class: 114
-      Script: {instanceID: 2112}
+      Script: {instanceID: 2148}
     - Class: 114
-      Script: {instanceID: 2274}
+      Script: {instanceID: 2310}
     - Class: 114
-      Script: {instanceID: 2728}
+      Script: {instanceID: 2764}
     - Class: 114
-      Script: {instanceID: 2906}
+      Script: {instanceID: 2942}
     - Class: 114
-      Script: {instanceID: 2990}
+      Script: {instanceID: 3026}
     - Class: 114
-      Script: {instanceID: 3152}
+      Script: {instanceID: 3188}
     - Class: 114
-      Script: {instanceID: 3180}
+      Script: {instanceID: 3216}
     - Class: 114
-      Script: {instanceID: 3232}
+      Script: {instanceID: 3268}
     - Class: 114
-      Script: {instanceID: 3360}
+      Script: {instanceID: 3396}
     - Class: 114
-      Script: {instanceID: 3406}
+      Script: {instanceID: 3442}
     - Class: 114
-      Script: {instanceID: 3528}
+      Script: {instanceID: 3566}
     - Class: 114
-      Script: {instanceID: 4214}
+      Script: {instanceID: 3904}
     - Class: 114
-      Script: {instanceID: 4432}
+      Script: {instanceID: 4152}
     - Class: 114
-      Script: {instanceID: 4904}
+      Script: {instanceID: 4258}
     - Class: 114
-      Script: {instanceID: 5412}
+      Script: {instanceID: 4478}
     - Class: 114
-      Script: {instanceID: 47640}
+      Script: {instanceID: 4952}
     - Class: 114
-      Script: {instanceID: 98858}
+      Script: {instanceID: 5460}
+    - Class: 114
+      Script: {instanceID: 5750}
+    - Class: 114
+      Script: {instanceID: 5898}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -265,10 +271,10 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 99fe39003d54183babc157a0cfadf3b9
+      Hash: 6e5af7c8650863d418471c6d2ee8952d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: Worm_Attack
+    className: EpicWorm_Attack
   - hash:
       serializedVersion: 2
       Hash: a9f902d7c11339c5453f8453a18a82fb
@@ -499,6 +505,12 @@ ScriptsOnlyBuild:
     className: Scrollbar
   - hash:
       serializedVersion: 2
+      Hash: 5a76b73060b5b1903cdd3b8936856837
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Mushroom_Attack
+  - hash:
+      serializedVersion: 2
       Hash: 5dea360fb0b147724ac344e6f399c2f3
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -571,6 +583,24 @@ ScriptsOnlyBuild:
     className: SPUM_Exporter
   - hash:
       serializedVersion: 2
+      Hash: 1db75ca0ac3b81ff53a34cdd727b4db2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tutorial3SPM
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Worm_Attack
+  - hash:
+      serializedVersion: 2
+      Hash: 5a76b73060b5b1903cdd3b8936856837
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Slime_Attack
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -607,7 +637,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 99fe39003d54183babc157a0cfadf3b9
+      Hash: eaadce4eabcc4b55bdc1d0869073fcaa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveManager
@@ -673,6 +703,12 @@ ScriptsOnlyBuild:
     className: Recorder
   - hash:
       serializedVersion: 2
+      Hash: 68427e04c877d2328b66d666dcdeb80e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tutorial2SPM
+  - hash:
+      serializedVersion: 2
       Hash: 87cef3c82381dc586f6772c3e27561b6
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
@@ -725,6 +761,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: 
     className: SpriteShapeGeometryCache
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EW_Bullet
   - hash:
       serializedVersion: 2
       Hash: b424b4eeb810aecb0ff91c62639241e9
@@ -865,6 +907,12 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -883,6 +931,12 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraResolution
+  - hash:
+      serializedVersion: 2
       Hash: abf1930d8126d0b2e00e9449129a0190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -899,18 +953,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JustRotate
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CameraResolution
   platform: 13
   scenePathNames:
   - Assets/Scenes/InGame.unity
