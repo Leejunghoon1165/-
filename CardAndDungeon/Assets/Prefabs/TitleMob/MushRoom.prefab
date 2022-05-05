@@ -43,8 +43,7 @@ GameObject:
   - component: {fileID: 8804933023032547780}
   - component: {fileID: 2469220109364582580}
   - component: {fileID: 859641485515705970}
-  - component: {fileID: 3168956425776795284}
-  - component: {fileID: 6000828889991095212}
+  - component: {fileID: -1153144673954357722}
   m_Layer: 0
   m_Name: MushRoom
   m_TagString: Enemy
@@ -175,7 +174,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3168956425776795284
+--- !u!114 &-1153144673954357722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -184,22 +183,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7014274154226058557}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81d79958f46d4e14dbf2ad96826536bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 889c1916ec0221b46804623f944c19aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mob_num: 0
-  spawnPoint: {fileID: 0}
---- !u!114 &6000828889991095212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7014274154226058557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d4b43afb461c7845b6d58f09139e7dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigid: {fileID: 859641485515705970}
+  rigid: {fileID: 0}
   anim: {fileID: 8804933023032547780}

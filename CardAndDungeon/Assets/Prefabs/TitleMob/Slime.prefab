@@ -43,8 +43,7 @@ GameObject:
   - component: {fileID: 3062197055183638718}
   - component: {fileID: 8803379479512597032}
   - component: {fileID: 2776862056925905045}
-  - component: {fileID: 8503644442064704859}
-  - component: {fileID: 2776862057087698242}
+  - component: {fileID: 8490244363570194795}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -185,7 +184,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.075}
   m_EdgeRadius: 0
---- !u!114 &8503644442064704859
+--- !u!114 &8490244363570194795
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,22 +193,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3062197055183638717}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81d79958f46d4e14dbf2ad96826536bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 889c1916ec0221b46804623f944c19aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mob_num: 0
-  spawnPoint: {fileID: 0}
---- !u!114 &2776862057087698242
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3062197055183638717}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d4b43afb461c7845b6d58f09139e7dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigid: {fileID: 8803379479512597032}
+  rigid: {fileID: 0}
   anim: {fileID: 3062197055183638718}

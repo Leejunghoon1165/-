@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 780.8
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Game
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 392}
   m_MaxSize: {x: 10000, y: 10000}
@@ -102,7 +102,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 84
+  controlID: 164
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,7 +208,7 @@ MonoBehaviour:
   m_MinSize: {x: 911, y: 342}
   m_MaxSize: {x: 22006, y: 10021}
   vertical: 0
-  controlID: 147
+  controlID: 102
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -486,9 +486,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: d2780000
       m_LastClickedID: 0
-      m_ExpandedIDs: eef9ffff4cfaffff66fbfffff8430000
+      m_ExpandedIDs: 5464ffffaeb9ffff10bfffffaccaffffd4cbffff62cfffff06d4ffff5ae1000036e20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -545,7 +545,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 720
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
     m_IsLocked: 0
@@ -589,21 +589,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Monster/Bullet
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\rxg89\Desktop\CAD
+  m_LastProjectPath: C:\Users\rxg89\Desktop\Study\CardAndDungeon\CardAndDungeon
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 56470000
     m_LastClickedID: 18262
-    m_ExpandedIDs: 000000009e490000fc4c0000fe4c0000004d0000024d0000044d0000064d0000084d00000a4d00000c4d00000e4d0000104d0000124d0000144d0000164d0000184d00001a4d00001c4d00001e4d0000204d0000224d0000244d0000264d0000
+    m_ExpandedIDs: 000000001e3a0000627600006478000066780000687800006a7800006c7800006e78000070780000727800007478000076780000787800007a7800007c7800007e78000080780000827800008478000086780000887800008a780000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -631,21 +631,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000009e490000fc4c0000fe4c0000004d0000024d0000044d0000064d00000a4d00000c4d00000e4d0000104d0000124d0000144d0000164d0000184d00001a4d00001c4d00001e4d0000204d0000224d0000244d0000824d0000
+    m_ExpandedIDs: ffffffff000000001e3a0000627600006478000066780000687800006c7800006e78000070780000727800007478000076780000787800007a7800007c7800007e7800008078000082780000847800008678000088780000ce780000dc780000de780000e0780000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: EW_Bullet
-      m_OriginalName: EW_Bullet
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 19012
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -814,9 +814,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 14.011056, y: 3.2343845, z: 7.647728}
+    m_Target: {x: -27.275175, y: -7.370861, z: -1.2999268}
     speed: 2
-    m_Value: {x: 14.011056, y: 3.2343845, z: 7.647728}
+    m_Value: {x: -27.275175, y: -7.370861, z: -1.2999268}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -867,9 +867,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 3.082644
+    m_Target: 37.869072
     speed: 2
-    m_Value: 3.082644
+    m_Value: 37.869072
   m_Ortho:
     m_Target: 1
     speed: 2

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterMove : MonoBehaviour
 {
-    public Rigidbody2D rigid;
+    Rigidbody2D rigid;
     public Animator anim;
     bool IdleMove;
     int widthMove;
@@ -13,6 +13,7 @@ public class MonsterMove : MonoBehaviour
     void Start()
     {
         IdleMove = true;
+        rigid = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
