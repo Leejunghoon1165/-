@@ -15,11 +15,10 @@ public class Worm_Attack : MonoBehaviour
     
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player")
-        {
-            if(collision.gameObject.tag == "Player" && attacking == false)
+        if(collision.gameObject.tag == "Player" && attacking == false) {
             StartCoroutine(attck());
-        } 
+        }
+ 
     }
 
     IEnumerator attck()

@@ -10,24 +10,34 @@ public class Mushroom_Attack : MonoBehaviour
     public Transform pos;
     public Vector2 boxSize;
     float strengh;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
-        strengh = GameObject.Find("MushRoom").GetComponent<MoveManager>().Strengh;
+        strengh = this.gameObject.GetComponent<MoveManager>().Strengh;
         bombCount = false;
+        time = 0;
     }
     
     void Update()
     {
-        float dist = GameObject.Find("MushRoom").GetComponent<MoveManager>().dist;
-        float AttackRange = GameObject.Find("MushRoom").GetComponent<MoveManager>().AttackRange;
 
-        if(dist <= AttackRange)
-            bombCount = true;
+        if(this.gameObject.GetComponent<Spawn>().mob_num == GameObject.Find("Main Camera").GetComponent<TestCamera>().MapNum)
+        {
+            float dist = this.gameObject.GetComponent<MoveManager>().dist;
+            float AttackRange = this.gameObject.GetComponent<MoveManager>().AttackRange;
 
-        if(bombCount == true)
-            time += Time.deltaTime;
-        Bomb();
+            if(dist <= AttackRange) {
+                bombCount = true;
+            }
+
+            if(bombCount == true) {
+                time += Time.deltaTime;
+                Bomb();
+            }
+        }
+
+
     }
 
     void Bomb()

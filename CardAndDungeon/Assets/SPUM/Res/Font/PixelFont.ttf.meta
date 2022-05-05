@@ -3,12 +3,11 @@ guid: 3e53c1bee5e5e43219f0342dc04f5be0
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
-  forceTextureCase: -2
+  fontSize: 60
+  forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Victor's Pixel Font
   fontNames:
   - Victor's Pixel Font
   fallbackFontReferences: []

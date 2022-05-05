@@ -11,18 +11,17 @@ public class Spawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(mob_num == map_num)
-            this.gameObject.SetActive(true);
-        else
-            {
-                this.gameObject.SetActive(false);
-                this.gameObject.transform.position = spawnPoint.position;
-            }
+        map_num = GameObject.Find("Main Camera").GetComponent<TestCamera>().MapNum;
+        
+        if(mob_num != map_num) {
+            this.gameObject.transform.position = spawnPoint.position;
+            this.gameObject.GetComponent<MoveManager>().cur_HP = this.gameObject.GetComponent<MoveManager>().max_HP;
+        }
     }
 }
