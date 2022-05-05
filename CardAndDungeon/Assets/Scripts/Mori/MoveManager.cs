@@ -32,7 +32,8 @@ public class MoveManager : MonoBehaviour
 
     //스탯
     public float MovementSpeed;
-    public float HP;
+    public float max_HP;
+    public float cur_HP;
     public float AttackRange;
     public int FindRange;
     public float Strengh;
@@ -46,6 +47,8 @@ public class MoveManager : MonoBehaviour
 
     //맞을때 색깔 변경하기 위한 변수
     SpriteRenderer sprite;
+    
+    //좌표위치조정
     float startY, targetY;
 
     //Astar에 쓰이는 변수
@@ -67,9 +70,12 @@ public class MoveManager : MonoBehaviour
 
         //Idle 무빙 초기화
         IdleMove = true;
+
+        cur_HP = max_HP;
+        dist = 10;
     }
 
-    void FixedUpdate() {
+    void Update() {
         Player =  GameObject.FindWithTag("Player").transform;
         targetPos = Vector2Int.RoundToInt(Player.transform.position);
         startPos = Vector2Int.RoundToInt(this.transform.position);
@@ -82,18 +88,18 @@ public class MoveManager : MonoBehaviour
 
         dist = Vector2.Distance(Start, Target);
 
-        PathFinding();
-        Movement();
-
-        if(HP <= 0 ){
+        if(cur_HP <= 0 ){
             anim.SetTrigger("Die");
+            rigid.constraints = RigidbodyConstraints2D.FreezePosition;
             Destroy(gameObject, 1f);
         }
+        
+        if(this.gameObject.GetComponent<Spawn>().mob_num == GameObject.Find("Main Camera").GetComponent<TestCamera>().MapNum)
+        {
+            PathFinding();
+            Movement();
+        }
 
-        Debug.Log(longRange);
-    }
-
-    void Update()   {
         //플레이어 위치에 따라 좌우 반전해서 바라보기
         float x = this.transform.position.x - Player.position.x;
         float y = this.transform.position.x * x;
@@ -101,8 +107,8 @@ public class MoveManager : MonoBehaviour
             transform.eulerAngles = new Vector2(0, 180);
         else
             transform.eulerAngles = new Vector2(0, 0);
-    }
 
+    }
     public void PathFinding()
     {
         // NodeArray의 크기 정해주고, isWall, x, y 대입
@@ -199,14 +205,22 @@ public class MoveManager : MonoBehaviour
 
     void Movement()
     {   
-        if(touch == true)
+        if(touch == true || AttackRange >= dist) {
             Attack();
-        else if(longRange == true)
+            Debug.Log("att");
+        }
+        else if(longRange == true) {
             LongRangeAttack();
-        else if(FindRange >= dist)
+            Debug.Log("lratt");
+        }
+        else if(FindRange >= dist) {
             Chase();
-        else
+            Debug.Log("chase");
+        }
+        else {
+            Debug.Log("idle");
             Idle();
+        }
     }
 
     void Chase()
@@ -258,7 +272,7 @@ public class MoveManager : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        HP = HP - damage;
+        cur_HP = cur_HP - damage;
         StartCoroutine(HitedColor());
     }
 

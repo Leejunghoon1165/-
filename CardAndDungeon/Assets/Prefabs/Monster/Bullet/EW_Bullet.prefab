@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -875105977182148248}
   - component: {fileID: 6394332152117697853}
   m_Layer: 0
-  m_Name: EW_bullet
+  m_Name: EW_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,7 +151,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1}
+  m_Size: {x: 0.03, y: 0.03}
   m_EdgeRadius: 0
 --- !u!114 &6394332152117697853
 MonoBehaviour:
@@ -165,5 +165,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bbfffd0fc8506e4481ca24e5daa5d85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  anim: {fileID: 467254533312784749}
   speed: 7
