@@ -13,8 +13,7 @@ GameObject:
   - component: {fileID: 7125338555162508767}
   - component: {fileID: 5662720288655981182}
   - component: {fileID: 1171358036642968908}
-  - component: {fileID: 8457435957732989958}
-  - component: {fileID: 6311502289172206489}
+  - component: {fileID: -7074348261806859791}
   m_Layer: 0
   m_Name: EpicWorm
   m_TagString: Enemy
@@ -155,7 +154,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8457435957732989958
+--- !u!114 &-7074348261806859791
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -164,24 +163,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1382275965296127995}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81d79958f46d4e14dbf2ad96826536bd, type: 3}
+  m_Script: {fileID: 11500000, guid: 889c1916ec0221b46804623f944c19aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mob_num: 0
-  spawnPoint: {fileID: 0}
---- !u!114 &6311502289172206489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382275965296127995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d4b43afb461c7845b6d58f09139e7dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigid: {fileID: 1171358036642968908}
+  rigid: {fileID: 0}
   anim: {fileID: 7125338555162508767}
 --- !u!1 &6311502287940364899
 GameObject:
