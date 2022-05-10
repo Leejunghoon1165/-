@@ -13,7 +13,7 @@ public class Slime_Attack : MonoBehaviour
     void Awake()
     {
         anim = GetComponent<Animator>();
-        strengh = GameObject.Find("Slime").GetComponent<MoveManager>().Strengh;
+        strengh = this.gameObject.GetComponent<MoveManager>().Strengh;
     }
 
     void Update()
@@ -38,8 +38,10 @@ public class Slime_Attack : MonoBehaviour
         Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
         foreach (Collider2D collider in collider2Ds)
         {
-            if(collider.gameObject.tag=="Player")
-                Player.TakeDamage(strengh);
+            if(collider.gameObject.tag=="Player"){
+                //Player.TakeDamage(strengh);
+                Debug.Log(strengh);
+            }
         }
     }
 

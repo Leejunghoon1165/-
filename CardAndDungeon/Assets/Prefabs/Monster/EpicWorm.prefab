@@ -236,10 +236,10 @@ MonoBehaviour:
   highMove: 0
   IdleMove: 0
   MovementSpeed: 1.5
-  max_HP: 0
+  max_HP: 100
   cur_HP: 0
-  AttackRange: 7
-  FindRange: 10
+  AttackRange: 8
+  FindRange: 12
   Strengh: 10
   dist: 0
   touch: 0

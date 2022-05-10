@@ -80,13 +80,7 @@ public class MoveManager : MonoBehaviour
         targetPos = Vector2Int.RoundToInt(Player.transform.position);
         startPos = Vector2Int.RoundToInt(this.transform.position);
 
-        startY = this.transform.position.y - 0.33f;
-        targetY = Player.position.y + 0.4f;
-
-        Vector2 Start = new Vector2(this.transform.position.x, startY);
-        Vector2 Target = new Vector2(Player.position.x, targetY);
-
-        dist = Vector2.Distance(Start, Target);
+        dist = Vector2.Distance(this.transform.position, Player.transform.position);
 
         if(cur_HP <= 0 ){
             anim.SetTrigger("Die");
@@ -107,7 +101,6 @@ public class MoveManager : MonoBehaviour
             transform.eulerAngles = new Vector2(0, 180);
         else
             transform.eulerAngles = new Vector2(0, 0);
-
     }
     public void PathFinding()
     {
@@ -207,18 +200,18 @@ public class MoveManager : MonoBehaviour
     {   
         if(touch == true || AttackRange >= dist) {
             Attack();
-            Debug.Log("att");
+            //Debug.Log("att");
         }
         else if(longRange == true) {
             LongRangeAttack();
-            Debug.Log("lratt");
+            //Debug.Log("lratt");
         }
         else if(FindRange >= dist) {
             Chase();
-            Debug.Log("chase");
+            //Debug.Log("chase");
         }
         else {
-            Debug.Log("idle");
+            //Debug.Log("idle");
             Idle();
         }
     }
@@ -229,7 +222,7 @@ public class MoveManager : MonoBehaviour
             for (int i = 0; i < FinalNodeList.Count - 1 && new Vector2(FinalNodeList[i].x, FinalNodeList[i].y) == startPos; i++)
                 {
                     Vector2Int path = new Vector2Int(FinalNodeList[i + 1].x, FinalNodeList[i + 1].y);
-                    transform.position = Vector2.MoveTowards(transform.position, path,Time.deltaTime * MovementSpeed);    
+                    transform.position = Vector2.MoveTowards(transform.position, path, Time.deltaTime * MovementSpeed);    
                 }
         }
         anim.SetTrigger("Walk");
@@ -287,5 +280,11 @@ public class MoveManager : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {   
         touch = false;
+    }
+
+     void OnDrawGizmos()
+    {
+        if(FinalNodeList.Count != 0) for (int i = 0; i < FinalNodeList.Count - 1; i++)
+                Gizmos.DrawLine(new Vector2(FinalNodeList[i].x, FinalNodeList[i].y), new Vector2(FinalNodeList[i + 1].x, FinalNodeList[i + 1].y));
     }
 }

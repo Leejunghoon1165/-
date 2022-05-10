@@ -11,12 +11,15 @@ public class Mushroom_Attack : MonoBehaviour
     public Vector2 boxSize;
     float strengh;
 
+    SpriteRenderer sprite;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
         strengh = this.gameObject.GetComponent<MoveManager>().Strengh;
         bombCount = false;
         time = 0;
+        sprite = gameObject.GetComponent<SpriteRenderer>();
     }
     
     void Update()
@@ -37,17 +40,20 @@ public class Mushroom_Attack : MonoBehaviour
             }
         }
 
-
     }
 
     void Bomb()
-    {    
-        if(time > 2f) {
+    {
+        sprite.color = Color.green;
+        if(time > .33f) {
             GameObject.Find("MushRoom").GetComponent<MoveManager>().longRange = true;
-            Attack();
             anim.SetTrigger("Attack");
+            if(time > 1.33f){
+                Attack();
+            }
             Destroy(gameObject, 1.5f);
         }
+        Debug.Log("boom");
     }
 
     void Attack()

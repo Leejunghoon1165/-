@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
+    public GameObject cardList;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,4 +21,15 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("InGame");
     }
+
+    public void OpenCardList()
+    {
+        cardList.SetActive(true);
+    }
+
+    public void CloseCardList()
+    {
+        cardList.SetActive(false);
+    }
+
 }
