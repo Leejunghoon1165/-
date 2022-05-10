@@ -207,18 +207,18 @@ public class MoveManager : MonoBehaviour
     {   
         if(touch == true || AttackRange >= dist) {
             Attack();
-            Debug.Log("att");
+           // Debug.Log("att");
         }
         else if(longRange == true) {
             LongRangeAttack();
-            Debug.Log("lratt");
+            //Debug.Log("lratt");
         }
         else if(FindRange >= dist) {
             Chase();
-            Debug.Log("chase");
+           // Debug.Log("chase");
         }
         else {
-            Debug.Log("idle");
+           // Debug.Log("idle");
             Idle();
         }
     }
