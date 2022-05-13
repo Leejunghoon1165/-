@@ -4,10 +4,20 @@ using UnityEngine;
 
 
 [System.Serializable]
-public class Item
+public class Item1
 {
     public string name;
     public int attack;
+    public Sprite sprite;
+    public string subname;
+    public string text;
+    public float percent;
+}
+[System.Serializable]
+public class Item2
+{
+    public string name;
+    public int number;
     public Sprite sprite;
     public string subname;
     public string text;
@@ -17,6 +27,6 @@ public class Item
 [CreateAssetMenu(fileName ="ItemSO", menuName = "Scriptable Object/ItemSO")]
 public class ItemSO : ScriptableObject
 {
-    public Item[] items;
-    
+    public Item1[] items1;
+    public Item2[] items2;
 }
