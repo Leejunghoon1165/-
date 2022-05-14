@@ -16,7 +16,6 @@ public class Order : MonoBehaviour
     public void SetOriginOrder(int originOrder)
     {
         this.originOrder = originOrder;
-        Debug.Log("üũ");
         SetOrder(originOrder);
     }
 

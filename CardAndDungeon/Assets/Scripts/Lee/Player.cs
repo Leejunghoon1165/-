@@ -20,6 +20,12 @@ public class Player : MonoBehaviour
 
     static float damage = 10;
 
+    private float curTime;
+    public float coolTime;
+    public Transform pos;
+    public Vector2 boxSize;
+    public bool AttCheck;
+
     private void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -27,6 +33,30 @@ public class Player : MonoBehaviour
         attackMotion.SetActive(false);
         hpBar.value = (float)curHp / (float)maxHp;
 
+    }
+
+    public void Update()
+    {
+        if(curTime <= 0)
+        {
+            if(AttCheck == true)
+            {
+                attackMotion.SetActive(true);
+                Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
+                foreach (Collider2D collider in collider2Ds)
+                {
+                    if (collider.gameObject.tag == "Enemy")
+                        collider.GetComponent<MoveManager>().TakeDamage(damage);
+
+                }
+                anim.SetTrigger("Attk");
+                curTime = coolTime;
+            }
+        }
+        else
+        {
+            curTime -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
@@ -66,40 +96,31 @@ public class Player : MonoBehaviour
                 return;
         }
         else
-            Die();
+            return;
+            //Die();
 
        
     }
-
-    private float curTime;
-    public float coolTime = 0.5f;
-    public Transform pos;
-    public Vector2 boxSize;
-    
     //공격 기능
     public void Attack()
     {
-
-        Collider2D[] collider2Ds = Physics2D.OverlapBoxAll(pos.position, boxSize, 0);
-        foreach (Collider2D collider in collider2Ds)
-        {
-            if(collider.gameObject.tag=="Enemy")
-                collider.GetComponent<MoveManager>().TakeDamage(damage);
-
-        }
-        anim.SetTrigger("Attk");
         StartCoroutine(CountAttack());
+        
+
+    }
+ 
+    IEnumerator CountAttack()
+    {
+        AttCheck = true;
+        yield return new WaitForSeconds(0.5f);
+        attackMotion.SetActive(false);
+        AttCheck = false;
+
     }
     void Die()
     {
         anim.SetTrigger("Die");
-       
-    }
-    IEnumerator CountAttack()
-    {
-        attackMotion.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
-        attackMotion.SetActive(false);
+
     }
     //플레이어 공격 영역 보여주기
     private void OnDrawGizmos()
