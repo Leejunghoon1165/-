@@ -46,7 +46,7 @@ public class Mushroom_Attack : MonoBehaviour
     {
         sprite.color = Color.green;
         if(time > .33f) {
-            GameObject.Find("MushRoom").GetComponent<MoveManager>().longRange = true;
+            this.gameObject.GetComponent<MoveManager>().longRange = true;
             anim.SetTrigger("Attack");
             if(time > 1.33f){
                 Attack();

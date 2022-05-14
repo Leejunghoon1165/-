@@ -20,10 +20,16 @@ public class Node
 public class MoveManager : MonoBehaviour
 {
     public Animator anim;
-    public Rigidbody2D rigid;
+    Rigidbody2D rigid;
 
     //타겟
     Transform Player;
+
+    //경험치
+    public GameObject EXP;
+    bool dropEXP;
+    public int EXPCount;
+    int dropCount;
 
     //위아래 움직임
     public int widthMove;
@@ -73,6 +79,9 @@ public class MoveManager : MonoBehaviour
 
         cur_HP = max_HP;
         dist = 10;
+
+        dropEXP = false;
+        dropCount = 0;
     }
 
     void Update() {
@@ -83,15 +92,20 @@ public class MoveManager : MonoBehaviour
         dist = Vector2.Distance(this.transform.position, Player.transform.position);
 
         if(cur_HP <= 0 ){
+            //if(anim.IsInTransition(0) == false)
             anim.SetTrigger("Die");
             rigid.constraints = RigidbodyConstraints2D.FreezePosition;
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 1.5f);
+            dropEXP = true;
+            DropEXT();
         }
         
         if(this.gameObject.GetComponent<Spawn>().mob_num == GameObject.Find("Main Camera").GetComponent<TestCamera>().MapNum)
         {
-            PathFinding();
-            Movement();
+            if(cur_HP > 0) {
+                PathFinding();
+                Movement();
+            }
         }
 
         //플레이어 위치에 따라 좌우 반전해서 바라보기
@@ -200,10 +214,12 @@ public class MoveManager : MonoBehaviour
     {   
         if(touch == true || AttackRange >= dist) {
             Attack();
+            rigid.velocity = new Vector2(0, 0);
             //Debug.Log("att");
         }
         else if(longRange == true) {
             LongRangeAttack();
+            rigid.velocity = new Vector2(0, 0);
             //Debug.Log("lratt");
         }
         else if(FindRange >= dist) {
@@ -226,6 +242,7 @@ public class MoveManager : MonoBehaviour
                 }
         }
         anim.SetTrigger("Walk");
+        rigid.velocity = new Vector2(0, 0);
     }
     void Idle()
     {
@@ -263,6 +280,17 @@ public class MoveManager : MonoBehaviour
         sprite.color = Color.white;
     }
 
+    //경험치를 떨구는 함수
+    void DropEXT()
+    {
+        if(dropCount <= EXPCount) {
+        EXP = Instantiate(EXP, transform.position, transform.rotation);
+        }
+        dropCount += 1;
+    }
+
+
+    //플레이어에게 데미지 주는 함수
     public void TakeDamage(float damage)
     {
         cur_HP = cur_HP - damage;

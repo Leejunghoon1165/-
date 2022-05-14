@@ -169,13 +169,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2982411473007611454}
-  rigid: {fileID: 5547650487883192330}
+  EXP: {fileID: 1714400547666806144, guid: bb78d1b8b41e94147b31bc2490cea49f, type: 3}
+  EXPCount: 1
   widthMove: 0
   highMove: 0
   IdleMove: 0
   MovementSpeed: 1.75
-  max_HP: 70
-  cur_HP: 0
+  max_HP: 30
+  cur_HP: 30
   AttackRange: 0.66
   FindRange: 12
   Strengh: 10

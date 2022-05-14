@@ -21,8 +21,8 @@ public class Slime_Attack : MonoBehaviour
 
         if(this.gameObject.GetComponent<Spawn>().mob_num == GameObject.Find("Main Camera").GetComponent<TestCamera>().MapNum)
         {
-            float dist = GameObject.Find("Slime").GetComponent<MoveManager>().dist;
-            float AttackRange = GameObject.Find("Slime").GetComponent<MoveManager>().AttackRange;
+            float dist = this.gameObject.GetComponent<MoveManager>().dist;
+            float AttackRange = this.gameObject.GetComponent<MoveManager>().AttackRange;
 
             if(dist <= AttackRange){
                 anim.SetTrigger("Attack");
