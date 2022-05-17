@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject cardList;
+
     // Start is called before the first frame update
     void Start()
     {

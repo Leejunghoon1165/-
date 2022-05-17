@@ -21,7 +21,6 @@ public class MoveManager : MonoBehaviour
 {
     public Animator anim;
     Rigidbody2D rigid;
-
     //타겟
     Transform Player;
 
@@ -85,7 +84,7 @@ public class MoveManager : MonoBehaviour
     }
 
     void Update() {
-        Player =  GameObject.FindWithTag("Player").transform;
+        Player = GameObject.FindWithTag("PlayerPos").transform;
         targetPos = Vector2Int.RoundToInt(Player.transform.position);
         startPos = Vector2Int.RoundToInt(this.transform.position);
 
