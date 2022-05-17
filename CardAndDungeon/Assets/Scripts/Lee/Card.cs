@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-//using DG.Tweening;
+using DG.Tweening;
 
 public class Card : MonoBehaviour
 {
@@ -17,6 +17,8 @@ public class Card : MonoBehaviour
     public Item1 item1;
     public Item2 item2;
     bool isFront;
+    public PRS originPRS;
+
     // Start is called before the first frame update
     public void Setup(Item1 item1, bool isFront)
     {
@@ -55,6 +57,34 @@ public class Card : MonoBehaviour
             main_name_TMP.text = "";
             sub_name_TMP.text = "";
             text_TMP.text = "";
+        }
+    }
+
+    void OnMouseOver()
+    {
+        if (isFront)
+            CardManager.Inst.CardMouseOver(this);
+    }
+
+    void OnMouseExit()
+    {
+        if (isFront)
+            CardManager.Inst.CardMouseExit(this);
+    }
+
+    public void MoveTransform(PRS prs, bool useDotween, float dotweenTime = 0)
+    {
+        if(useDotween)
+        {
+            transform.DOMove(prs.pos, dotweenTime);
+            transform.DORotateQuaternion(prs.rot, dotweenTime);
+            transform.DOScale(prs.scale, dotweenTime);
+        }
+        else
+        {
+            transform.position = prs.pos;
+            transform.rotation = prs.rot;
+            transform.localScale = prs.scale;
         }
     }
 

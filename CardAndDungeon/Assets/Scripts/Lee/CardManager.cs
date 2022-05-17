@@ -10,7 +10,10 @@ public class CardManager : MonoBehaviour
     [SerializeField] ItemSO itemSO;
     [SerializeField] GameObject cardPrefab;
     [SerializeField] List<Card> myCards;
-
+    [SerializeField] Transform cardSpawnPoint;
+    [SerializeField] Transform myCardLeft;
+    [SerializeField] Transform myCardRight;
+    [SerializeField] Camera mainCamera;
     int r = 0;
 
     List<Item1> itemBuffer;
@@ -25,6 +28,7 @@ public class CardManager : MonoBehaviour
         itemBuffer.RemoveAt(0);
         return item1;
     }
+
     public Item2 PopItem2()
     {
         if (itemBuffer2.Count == 0)
@@ -76,6 +80,7 @@ public class CardManager : MonoBehaviour
     private void Start()
     {
         SetupItemBuffer();
+        SetupItemBuffer2();
     }
 
     private void Update()
@@ -83,7 +88,6 @@ public class CardManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             r = Random.Range(0, 2);
-           // Debug.Log(r+ "숫자 확인");
             AddCard(true);
         }
             
@@ -91,7 +95,8 @@ public class CardManager : MonoBehaviour
 
     void AddCard(bool isMine)
     {
-        var cardObject = Instantiate(cardPrefab, Vector3.zero, Quaternion.identity);
+        var cardObject = Instantiate(cardPrefab, cardSpawnPoint.position, Utils.QI);
+        cardObject.transform.parent = mainCamera.transform;
         var card = cardObject.GetComponent<Card>();
         if(r == 0)
         {
@@ -104,11 +109,14 @@ public class CardManager : MonoBehaviour
                
         if (isMine == true)
         {
-            myCards.Add(card);
+            if(myCards.Count <4)    //배열 4 미만일때만 패에 추가하기 
+                myCards.Add(card);
         }
         else
             return;
+
         SetOriginOrder(isMine);
+        CardAlignment(isMine); 
 
     }
     void SetOriginOrder(bool isMine)
@@ -121,4 +129,74 @@ public class CardManager : MonoBehaviour
             targetCard?.GetComponentInChildren<Order>().SetOriginOrder(i);
         }
     }
+
+    void CardAlignment(bool isMine)
+    {
+        List<PRS> originCardPRSs = new List<PRS>();
+        if (isMine)
+        {
+            originCardPRSs = RoundAlignment(myCardLeft, myCardRight, myCards.Count, 0.5f, Vector3.one * 1.0f);
+        }
+        var targetCards = myCards;
+        
+        for(int i = 0; i< targetCards.Count; i++)
+        {
+            var targetCard = targetCards[i];
+
+            targetCard.originPRS = originCardPRSs[i];
+            targetCard.MoveTransform(targetCard.originPRS, true, 0.7f);
+         }
+        
+
+    }
+    List<PRS> RoundAlignment(Transform leftTr, Transform rightTr, int objCount, float height, Vector3 scale)
+    {
+        float[] objLerps = new float[objCount];
+        List<PRS> results = new List<PRS>(objCount);
+
+        switch(objCount)
+        {
+            case 1: objLerps = new float[] { 0.5f }; break;
+            case 2: objLerps = new float[] { 0.27f, 0.73f }; break;
+            case 3: objLerps = new float[] { 0.1f, 0.5f, 0.9f }; break;
+            case 4:
+                float interval = 1f / (objCount - 1);
+                for (int i = 0; i < objCount; i++)
+                    objLerps[i] = interval * i;
+                break;
+        }
+
+        for (int i = 0; i < objCount; i++)
+        {
+            var targetPos = Vector3.Lerp(leftTr.position, rightTr.position, objLerps[i]);
+            var targetRot = Utils.QI;
+            if (objCount == 4)
+            {
+                float curve = Mathf.Sqrt(Mathf.Pow(height, 2) - Mathf.Pow(objLerps[i] - 0.5f, 2));
+                curve = height >= 0 ? curve : -curve;
+                targetPos.y += curve;
+                targetRot = Quaternion.Slerp(leftTr.rotation, rightTr.rotation, objLerps[i]);
+
+            }
+
+
+            results.Add(new PRS(targetPos, targetRot, scale));
+        }
+        return results;
+    }
+
+    #region MyCard
+
+    public void CardMouseOver(Card card)
+    {
+        print("CardMouseOver");
+    }
+
+    public void CardMouseExit(Card card)
+    {
+        print("CardMouseExit");
+    }
+
+    #endregion
+
 }
