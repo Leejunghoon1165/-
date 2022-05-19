@@ -14,10 +14,14 @@ public class CardManager : MonoBehaviour
     [SerializeField] Transform myCardLeft;
     [SerializeField] Transform myCardRight;
     [SerializeField] Camera mainCamera;
+
+    public GameObject a;
     int r = 0;
 
     List<Item1> itemBuffer;
     List<Item2> itemBuffer2;
+
+    Card selectCard;
 
     public Item1 PopItem()
     {
@@ -85,18 +89,27 @@ public class CardManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            r = Random.Range(0, 2);
-            AddCard(true);
-        }
-            
+        
+        //if (Input.GetKeyDown(KeyCode.Q))
+        //{
+        //    r = Random.Range(0, 2);
+        //    AddCard(true);
+        //}
+       
+
+    }
+    public void Carddrow()
+    {
+        r = Random.Range(0, 2);
+        AddCard(true);
     }
 
     void AddCard(bool isMine)
     {
         var cardObject = Instantiate(cardPrefab, cardSpawnPoint.position, Utils.QI);
+         //cardObject.transform.parent = a.transform;
         cardObject.transform.parent = mainCamera.transform;
+
         var card = cardObject.GetComponent<Card>();
         if(r == 0)
         {
@@ -130,24 +143,22 @@ public class CardManager : MonoBehaviour
         }
     }
 
-    void CardAlignment(bool isMine)
+    public void CardAlignment(bool isMine)
     {
         List<PRS> originCardPRSs = new List<PRS>();
         if (isMine)
         {
-            originCardPRSs = RoundAlignment(myCardLeft, myCardRight, myCards.Count, 0.5f, Vector3.one * 1.0f);
+            originCardPRSs = RoundAlignment(myCardLeft, myCardRight, myCards.Count, 0.5f, Vector3.one * 0.7f);
         }
         var targetCards = myCards;
         
         for(int i = 0; i< targetCards.Count; i++)
         {
             var targetCard = targetCards[i];
-
             targetCard.originPRS = originCardPRSs[i];
             targetCard.MoveTransform(targetCard.originPRS, true, 0.7f);
          }
         
-
     }
     List<PRS> RoundAlignment(Transform leftTr, Transform rightTr, int objCount, float height, Vector3 scale)
     {
@@ -189,13 +200,35 @@ public class CardManager : MonoBehaviour
 
     public void CardMouseOver(Card card)
     {
-        print("CardMouseOver");
+        selectCard = card;
+        EnlargeCard(true, card);
     }
 
     public void CardMouseExit(Card card)
     {
-        print("CardMouseExit");
+        EnlargeCard(false, card);
     }
+
+    void EnlargeCard(bool isEnlarge, Card card)
+    {
+        if (isEnlarge)
+        {
+            
+            Vector3 enlargePos = new Vector3(card.originPRS.pos.x, 1.6f, -10f);
+           // Debug.Log(enlargePos.x + "인라지");
+           // card.MoveTransform(new PRS(, Utils.QI, Vector3.one * 1.2f), false);
+             card.MoveTransform(new PRS(enlargePos, Utils.QI, Vector3.one * 1.2f), false);
+            //Debug.Log(card.originPRS.pos.x + "와" + card.originPRS.pos.y);
+        }
+        else
+        {
+           card.MoveTransform(card.originPRS, false);
+        }
+           
+
+        card.GetComponentInChildren<Order>().SetMostFrontOrder(isEnlarge);
+    }
+
 
     #endregion
 

@@ -16,10 +16,10 @@ public class PRS
         this.scale = scale;
     }
 }
-
-
-public class Utils
+public class Utils : MonoBehaviour 
 {
     public static Quaternion QI => Quaternion.identity;
-   
+
+
 }
+

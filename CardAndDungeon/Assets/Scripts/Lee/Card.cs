@@ -13,11 +13,19 @@ public class Card : MonoBehaviour
     [SerializeField] TMP_Text text_TMP;
     [SerializeField] Sprite cardFront;
     [SerializeField] Sprite cardBack;
+    
 
     public Item1 item1;
     public Item2 item2;
     bool isFront;
     public PRS originPRS;
+
+    private void Update()
+    {
+        originPRS.pos.x = this.transform.position.x;
+        //Debug.Log(originPRS.pos +"");
+       // originPRS.pos = 
+    }
 
     // Start is called before the first frame update
     public void Setup(Item1 item1, bool isFront)
