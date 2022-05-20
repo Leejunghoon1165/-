@@ -13,6 +13,8 @@ public class Card : MonoBehaviour
     [SerializeField] TMP_Text text_TMP;
     [SerializeField] Sprite cardFront;
     [SerializeField] Sprite cardBack;
+    [SerializeField] Sprite card_outline;
+    [SerializeField] SpriteRenderer card_outlinecolor;
     
 
     public Item1 item1;
@@ -38,6 +40,8 @@ public class Card : MonoBehaviour
             main_name_TMP.text = this.item1.name;
             sub_name_TMP.text = this.item1.subname.ToString();
             text_TMP.text = this.item1.text.ToString();
+            card_outlinecolor.color = this.item1.color;
+            
         }
         else
         {
@@ -57,6 +61,8 @@ public class Card : MonoBehaviour
         {
             cardIcon.sprite = this.item2.sprite;
             main_name_TMP.text = this.item2.name;
+            sub_name_TMP.text = this.item2.subname.ToString();
+            text_TMP.text = this.item2.text.ToString();
         }
         else
         {

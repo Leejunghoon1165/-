@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5976945642617855732
 Transform:
   m_ObjectHideFlags: 0
@@ -181,8 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: " \uC801\uC5D0\uAC8C \uB370\uBBF8\uC9C0\uB97C 10 \n\uC90D\uB2C8\uB2E4.
-    !!"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65c0897d8e1ddcc40b360d611cd57496, type: 2}
   m_sharedMaterial: {fileID: 3279531262454636513, guid: 65c0897d8e1ddcc40b360d611cd57496,
@@ -441,7 +440,7 @@ MonoBehaviour:
   - {fileID: 1776443685933449134}
   - {fileID: 3279037165313186946}
   - {fileID: 7043457648884114657}
-  - {fileID: 0}
+  - {fileID: 8532191999925515468}
   - {fileID: 7043457648749005931}
   sortingLayerName: Card
 --- !u!1 &7043457648749005941
@@ -636,7 +635,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7043457649046958839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 3.77, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7043457648330083495}
@@ -671,6 +670,9 @@ MonoBehaviour:
     type: 3}
   cardBack: {fileID: -1481597448430017666, guid: 715992bfd34d41d4f95d977a88fc8829,
     type: 3}
+  card_outline: {fileID: -5406059611814818240, guid: 7925c5a97139a264499510ff29e4e028,
+    type: 3}
+  card_outlinecolor: {fileID: 7043457648884114657}
   item1:
     name: 
     attack: 0
@@ -678,6 +680,7 @@ MonoBehaviour:
     subname: 
     text: 
     percent: 0
+    color: {r: 0, g: 0, b: 0, a: 0}
   item2:
     name: 
     number: 0

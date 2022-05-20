@@ -12,6 +12,7 @@ public class Item1
     public string subname;
     public string text;
     public float percent;
+    public Color color;
 }
 [System.Serializable]
 public class Item2
