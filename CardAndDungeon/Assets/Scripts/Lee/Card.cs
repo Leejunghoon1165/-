@@ -23,7 +23,6 @@ public class Card : MonoBehaviour
     private void Update()
     {
         originPRS.pos.x = this.transform.position.x;
-        //Debug.Log(originPRS.pos +"");
        // originPRS.pos = 
     }
 
