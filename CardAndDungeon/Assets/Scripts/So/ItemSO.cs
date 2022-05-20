@@ -12,7 +12,10 @@ public class Item1
     public string subname;
     public string text;
     public float percent;
-    public Color color;
+    public Color color_outline;
+    public Color color_jewel;
+    public Color color_image;
+    public Color color_text;
 }
 [System.Serializable]
 public class Item2
@@ -23,6 +26,9 @@ public class Item2
     public string subname;
     public string text;
     public float percent;
+    public Color color_outline;
+    public Color color_jewel;
+   
 }
 
 [CreateAssetMenu(fileName ="ItemSO", menuName = "Scriptable Object/ItemSO")]

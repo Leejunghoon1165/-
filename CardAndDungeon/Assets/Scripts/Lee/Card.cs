@@ -13,19 +13,41 @@ public class Card : MonoBehaviour
     [SerializeField] TMP_Text text_TMP;
     [SerializeField] Sprite cardFront;
     [SerializeField] Sprite cardBack;
-    [SerializeField] Sprite card_outline;
     [SerializeField] SpriteRenderer card_outlinecolor;
+    [SerializeField] SpriteRenderer jewel_color;
+    [SerializeField] SpriteRenderer image_color;
+
     
 
     public Item1 item1;
     public Item2 item2;
     bool isFront;
     public PRS originPRS;
+    public PRS origin2PRS;
 
+    private void Start()
+    {
+        origin2PRS.pos = originPRS.pos;
+    }
+
+    private void FixedUpdate()
+    {
+        cardSet();
+    }
     private void Update()
     {
-        originPRS.pos.x = this.transform.position.x;
-       // originPRS.pos = 
+
+        //originPRS.pos.x = this.transform.position.x;
+        //originPRS.pos.x = Camera.main.transform.position.x + 1;
+
+
+        // originPRS.pos = 
+    }
+
+    void cardSet()
+    {
+        if (TestCamera.check == true)
+            originPRS.pos.x = this.transform.position.x;
     }
 
     // Start is called before the first frame update
@@ -40,7 +62,10 @@ public class Card : MonoBehaviour
             main_name_TMP.text = this.item1.name;
             sub_name_TMP.text = this.item1.subname.ToString();
             text_TMP.text = this.item1.text.ToString();
-            card_outlinecolor.color = this.item1.color;
+            card_outlinecolor.color = this.item1.color_outline;
+            jewel_color.color = this.item1.color_jewel;
+            image_color.color = this.item1.color_image;
+            sub_name_TMP.color = this.item1.color_text;
             
         }
         else
@@ -63,6 +88,8 @@ public class Card : MonoBehaviour
             main_name_TMP.text = this.item2.name;
             sub_name_TMP.text = this.item2.subname.ToString();
             text_TMP.text = this.item2.text.ToString();
+            card_outlinecolor.color = this.item2.color_outline;
+            jewel_color.color = this.item2.color_jewel;
         }
         else
         {
@@ -83,6 +110,18 @@ public class Card : MonoBehaviour
     {
         if (isFront)
             CardManager.Inst.CardMouseExit(this);
+    }
+
+    private void OnMouseDown()
+    {
+        if (isFront)
+            CardManager.Inst.CardMouseDown();
+    }
+
+    private void OnMouseUp()
+    {
+        if (isFront)
+            CardManager.Inst.CardMouseUp();
     }
 
     public void MoveTransform(PRS prs, bool useDotween, float dotweenTime = 0)

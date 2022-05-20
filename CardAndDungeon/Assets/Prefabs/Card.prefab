@@ -670,9 +670,9 @@ MonoBehaviour:
     type: 3}
   cardBack: {fileID: -1481597448430017666, guid: 715992bfd34d41d4f95d977a88fc8829,
     type: 3}
-  card_outline: {fileID: -5406059611814818240, guid: 7925c5a97139a264499510ff29e4e028,
-    type: 3}
   card_outlinecolor: {fileID: 7043457648884114657}
+  jewel_color: {fileID: 8532191999925515468}
+  image_color: {fileID: 7043457647126560641}
   item1:
     name: 
     attack: 0
@@ -680,7 +680,9 @@ MonoBehaviour:
     subname: 
     text: 
     percent: 0
-    color: {r: 0, g: 0, b: 0, a: 0}
+    color_outline: {r: 0, g: 0, b: 0, a: 0}
+    color_jewel: {r: 0, g: 0, b: 0, a: 0}
+    color_image: {r: 0, g: 0, b: 0, a: 0}
   item2:
     name: 
     number: 0
@@ -688,6 +690,8 @@ MonoBehaviour:
     subname: 
     text: 
     percent: 0
+    color_outline: {r: 0, g: 0, b: 0, a: 0}
+    color_jewel: {r: 0, g: 0, b: 0, a: 0}
   originPRS:
     pos: {x: 0, y: 5, z: 0}
     rot: {x: 0, y: 0, z: 0, w: 0}
@@ -931,7 +935,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.88, y: 0.82}
+  m_AnchoredPosition: {x: -0.68, y: 0.69}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!23 &1776443685933449134

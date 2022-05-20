@@ -1,7 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 public class CardManager : MonoBehaviour
 {
     public static CardManager Inst { get; private set; }
@@ -14,13 +15,13 @@ public class CardManager : MonoBehaviour
     [SerializeField] Transform myCardLeft;
     [SerializeField] Transform myCardRight;
     [SerializeField] Camera mainCamera;
-
-    public GameObject a;
     int r = 0;
 
     List<Item1> itemBuffer;
     List<Item2> itemBuffer2;
 
+    bool onMyCardArea;
+    bool isMyCardDrag;
     Card selectCard;
 
     public Item1 PopItem()
@@ -89,15 +90,14 @@ public class CardManager : MonoBehaviour
 
     private void Update()
     {
-        
-        //if (Input.GetKeyDown(KeyCode.Q))
-        //{
-        //    r = Random.Range(0, 2);
-        //    AddCard(true);
-        //}
-       
+        if (isMyCardDrag)
+            CardDrag();
+
+        DetectCardArea();
 
     }
+   
+
     public void Carddrow()
     {
         r = Random.Range(0, 2);
@@ -151,7 +151,6 @@ public class CardManager : MonoBehaviour
             originCardPRSs = RoundAlignment(myCardLeft, myCardRight, myCards.Count, 0.5f, Vector3.one * 0.7f);
         }
         var targetCards = myCards;
-        
         for(int i = 0; i< targetCards.Count; i++)
         {
             var targetCard = targetCards[i];
@@ -209,16 +208,42 @@ public class CardManager : MonoBehaviour
         EnlargeCard(false, card);
     }
 
+    public void CardMouseDown()
+    {
+        isMyCardDrag = true;
+    }
+
+    public void CardMouseUp()
+    {
+        isMyCardDrag = false;
+    }
+    void CardDrag()
+    {
+        if(!onMyCardArea)
+        {
+            selectCard.MoveTransform(new PRS(Utils.MousePos, Utils.QI, selectCard.originPRS.scale), false);
+        }
+    }
+    void DetectCardArea()
+    {
+        RaycastHit2D[] hits = Physics2D.RaycastAll(Utils.MousePos, Vector3.forward);
+        int layer = LayerMask.NameToLayer("MyCardArea");
+        onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
+    }
+
+
+    //카드 확대 
     void EnlargeCard(bool isEnlarge, Card card)
     {
         if (isEnlarge)
         {
+            Debug.Log(card.originPRS.pos);
             Vector3 enlargePos = new Vector3(card.originPRS.pos.x, 1.6f, -10f);
            // card.MoveTransform(new PRS(, Utils.QI, Vector3.one * 1.2f), false);
              card.MoveTransform(new PRS(enlargePos, Utils.QI, Vector3.one * 1.2f), false);
             //Debug.Log(card.originPRS.pos.x + "와" + card.originPRS.pos.y);
         }
-        else
+        else  //축소
         {
            card.MoveTransform(card.originPRS, false);
         }

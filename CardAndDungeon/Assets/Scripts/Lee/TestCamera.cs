@@ -6,10 +6,10 @@ public class TestCamera : MonoBehaviour
 {
     public Transform target;
     public float speed;
-
+    [SerializeField]
     public Transform CameraLimit;
     public Transform[] Limit;
-
+    public static bool check;
     public int MapNum;
 
     public GameObject Map1;
@@ -31,14 +31,15 @@ public class TestCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         height = Camera.main.orthographicSize -0.5f;
         width = height * Screen.width / Screen.height;
-
         ChangeLimit(0);
         MapNum = 0;
     }
     public void ChangeLimit(int x)
     {
+        
         CameraLimit = Limit[x];
         MapNum = x;
     }
@@ -50,7 +51,7 @@ public class TestCamera : MonoBehaviour
                 transform.position = Map1.transform.position;
                 break;
             case 1:
-                transform.position = Map2.transform.position;
+                transform.position = Map2.transform.position;  
                 break;
             case 2:
                 transform.position = Map3.transform.position;
