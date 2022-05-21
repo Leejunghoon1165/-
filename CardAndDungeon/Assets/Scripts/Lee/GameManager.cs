@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
-
+    private Touch tempTouchs;
+    private Vector2 touchedPos;
+    private bool touchOn;
 
     private void Awake()
     {
@@ -24,14 +27,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-            //for(int i =0; i<Input.touchCount; i++)
-            //{
-            //    tempTouchs = Input.GetTouch(i);
-            //    if(tempTouchs.phase == TouchPhase.Began)
-            //    {
-            //        touch
-            //    }
-            //}
+        
     }
 }

@@ -5,7 +5,7 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 
-public class Card : MonoBehaviour
+public class Card : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] SpriteRenderer card;
     [SerializeField] SpriteRenderer cardIcon;
@@ -29,10 +29,13 @@ public class Card : MonoBehaviour
     private Vector2 touchedPos;
     private bool touchOn;
 
-
+    private int rightFingerId;
+    float halfScreenWidth;
     private void Start()
     {
-        origin2PRS.pos = originPRS.pos;
+        this.rightFingerId = -1;
+        halfScreenWidth = Screen.width / 7;  
+
     }
 
     private void FixedUpdate()
@@ -41,24 +44,78 @@ public class Card : MonoBehaviour
     }
     private void Update()
     {
-        if(Input.touchCount >0)
+
+        if (Input.touchCount > 0)
         {
-            Touch touch = Input.GetTouch(0);
-            touchedPos = Camera.main.ScreenToWorldPoint(touch.position);
-               
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                Touch touch = Input.GetTouch(i);  //i번째 터치에 대한 정보
+                int index = touch.fingerId; //i번째 터치에 대한 id 값
+                Vector3 position = touch.position;  //i번째 터치의 위치
+
+                TouchPhase phase = touch.phase; //i번째 터치의 상태
+                Vector3 pos = Camera.main.ScreenToWorldPoint(touch.position);
+
+                RaycastHit2D hitInformation = Physics2D.Raycast(pos, Camera.main.transform.forward);
+
+                if(hitInformation.collider.tag =="Card")
+                {
+                    if(touch.phase == TouchPhase.Moved)
+                    {
+                        origin2PRS.pos = pos;
+                        if(isFront)
+                            CardManager.Inst.CardMouseDown();
+                    }
+                    if(touch.phase == TouchPhase.Stationary && touch.phase != TouchPhase.Moved)
+                    {
+                        if(isFront)
+                            CardManager.Inst.CardMouseOver(this);
+                    }
+                    if(touch.phase == TouchPhase.Ended)
+                    {
+                        CardManager.Inst.CardMouseExit(this);
+                        CardManager.Inst.CardMouseUp();
+                    }
+                    if(touch.phase == TouchPhase.Canceled)
+                    {
+                        CardManager.Inst.CardMouseExit(this);
+                        CardManager.Inst.CardMouseUp();
+                    }
+                    //switch(touch.phase)
+                    //{
+                    //    case TouchPhase.Stationary:
+                    //        if(touch.phase != TouchPhase.Moved)
+                    //        {
+                    //            if (isFront)
+                    //                CardManager.Inst.CardMouseOver(this);
+                    //        }
+
+                    //        break;
+
+                    //    case TouchPhase.Moved:
+                    //        origin2PRS.pos = pos;
+                    //        if (isFront)
+                    //            CardManager.Inst.CardMouseDown();
+                    //        break;
+                    //    case TouchPhase.Ended:
+                    //        if (isFront)
+                    //        {
+                    //            CardManager.Inst.CardMouseExit(this);
+                    //            CardManager.Inst.CardMouseUp();
+                    //        }
+                    //        break;
+
+                    //}
+
+                }
+
+            }
         }
-
-        Ray2D ray = new Ray2D(touchedPos, Vector2.zero);
-        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
-        //if (hit.collider.tag == ")
-        //    Debug.Log("Dd");
-        //originPRS.pos.x = this.transform.position.x;
-        //originPRS.pos.x = Camera.main.transform.position.x + 1;
-
-
-        // originPRS.pos = 
     }
+    public void OnPointerClick(PointerEventData eventData)
+    {
 
+    }
     void cardSet()
     {
         if (TestCamera.check == true)
@@ -115,40 +172,8 @@ public class Card : MonoBehaviour
         }
     }
 
-    void OnMouseOver()
-    {
-       
-    }
 
-    void OnMouseExit()
-    {
 
-    }
-
-    void MobileTouch()
-    {
-        CardManager.Inst.CardMouseDown();
-
-    }
-
-    private void OnMouseDown()
-    {
-        if (isFront)
-        {
-            CardManager.Inst.CardMouseOver(this);
-
-        }
-    }
-
-    private void OnMouseUp()
-    {
-        if (isFront)
-        {
-            CardManager.Inst.CardMouseExit(this);
-            CardManager.Inst.CardMouseUp();
-        }
-            
-    }
 
     public void MoveTransform(PRS prs, bool useDotween, float dotweenTime = 0)
     {
@@ -165,7 +190,6 @@ public class Card : MonoBehaviour
             transform.localScale = prs.scale;
         }
     }
-
 
 
 }

@@ -8,12 +8,8 @@ TagManager:
   - Wall
   - Card
   - PlayerPos
-  - PlayerPos
-  - PlayerPos
-  - PlayerPos
-  - PlayerPos
-  - PlayerPos
-  - PlayerPos
+  - New tag
+  - UI
   layers:
   - Default
   - TransparentFX

@@ -49,6 +49,7 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.Physics2DRaycaster
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
@@ -107,71 +108,73 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1500}
     - Class: 114
-      Script: {instanceID: 12888}
+      Script: {instanceID: 1616}
     - Class: 114
-      Script: {instanceID: 13056}
+      Script: {instanceID: 1784}
     - Class: 114
-      Script: {instanceID: 13186}
+      Script: {instanceID: 1914}
     - Class: 114
-      Script: {instanceID: 13432}
+      Script: {instanceID: 2160}
     - Class: 114
-      Script: {instanceID: 13500}
+      Script: {instanceID: 2228}
     - Class: 114
-      Script: {instanceID: 13596}
+      Script: {instanceID: 2324}
     - Class: 114
-      Script: {instanceID: 13598}
+      Script: {instanceID: 2326}
     - Class: 114
-      Script: {instanceID: 13612}
+      Script: {instanceID: 2340}
     - Class: 114
-      Script: {instanceID: 13792}
+      Script: {instanceID: 2520}
     - Class: 114
-      Script: {instanceID: 14064}
+      Script: {instanceID: 2794}
     - Class: 114
-      Script: {instanceID: 14246}
+      Script: {instanceID: 2976}
     - Class: 114
-      Script: {instanceID: 14330}
+      Script: {instanceID: 3060}
     - Class: 114
-      Script: {instanceID: 14468}
+      Script: {instanceID: 3198}
     - Class: 114
-      Script: {instanceID: 14498}
+      Script: {instanceID: 3228}
     - Class: 114
-      Script: {instanceID: 14526}
+      Script: {instanceID: 3256}
     - Class: 114
-      Script: {instanceID: 14578}
+      Script: {instanceID: 3308}
     - Class: 114
-      Script: {instanceID: 14710}
+      Script: {instanceID: 3440}
     - Class: 114
-      Script: {instanceID: 14756}
+      Script: {instanceID: 3486}
     - Class: 114
-      Script: {instanceID: 14888}
+      Script: {instanceID: 3618}
     - Class: 114
-      Script: {instanceID: 15290}
+      Script: {instanceID: 4020}
     - Class: 114
-      Script: {instanceID: 15360}
+      Script: {instanceID: 4092}
     - Class: 114
-      Script: {instanceID: 15492}
+      Script: {instanceID: 4206}
     - Class: 114
-      Script: {instanceID: 15586}
+      Script: {instanceID: 4226}
     - Class: 114
-      Script: {instanceID: 15808}
+      Script: {instanceID: 4320}
     - Class: 114
-      Script: {instanceID: 16180}
+      Script: {instanceID: 4542}
     - Class: 114
-      Script: {instanceID: 16218}
+      Script: {instanceID: 4916}
     - Class: 114
-      Script: {instanceID: 16296}
+      Script: {instanceID: 4954}
     - Class: 114
-      Script: {instanceID: 16348}
+      Script: {instanceID: 5032}
     - Class: 114
-      Script: {instanceID: 16502}
+      Script: {instanceID: 5084}
     - Class: 114
-      Script: {instanceID: 16764}
+      Script: {instanceID: 5238}
     - Class: 114
-      Script: {instanceID: 16822}
+      Script: {instanceID: 5500}
     - Class: 114
-      Script: {instanceID: 17124}
+      Script: {instanceID: 5558}
     - Class: 114
-      Script: {instanceID: 17274}
+      Script: {instanceID: 5860}
+    - Class: 114
+      Script: {instanceID: 6010}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -821,6 +824,12 @@ ScriptsOnlyBuild:
     className: BaseInput
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NewBehaviourScript
+  - hash:
+      serializedVersion: 2
       Hash: e63944317d2f5958e31963668bb29158
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -1278,4 +1287,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/InGame.unity
-  playerPath: C:/Users/gnswj/Desktop/TEST/build.apk
+  playerPath: "C:/Users/\uC774\uC815\uD6C8/Desktop/Test2/Test.apk"

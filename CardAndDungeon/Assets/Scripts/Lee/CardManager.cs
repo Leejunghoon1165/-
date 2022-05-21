@@ -24,6 +24,7 @@ public class CardManager : MonoBehaviour
     bool isMyCardDrag;
     Card selectCard;
 
+
     public Item1 PopItem()
     {
         if (itemBuffer.Count == 0)
@@ -94,6 +95,8 @@ public class CardManager : MonoBehaviour
             CardDrag();
 
         DetectCardArea();
+
+
 
     }
    
@@ -221,14 +224,18 @@ public class CardManager : MonoBehaviour
     {
         if(!onMyCardArea)
         {
-            selectCard.MoveTransform(new PRS(Utils.MousePos, Utils.QI, selectCard.originPRS.scale), false);
+            // Vector3 cardPos = new Vector3(selectCard.origin2PRS.pos)
+            // selectCard.MoveTransform(new PRS(Utils.MousePos, Utils.QI, selectCard.originPRS.scale), false);
+            Vector3 Cardpos = new Vector3(selectCard.origin2PRS.pos.x, selectCard.origin2PRS.pos.y, -10f);
+            selectCard.MoveTransform(new PRS(Cardpos, Utils.QI, selectCard.originPRS.scale), false);
         }
     }
     void DetectCardArea()
     {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(Utils.MousePos, Vector3.forward);
+        // RaycastHit2D[] hits = Physics2D.RaycastAll(Utils.MousePos, Vector3.forward);
+       // RaycastHit2D[] hits = Physics2D.RaycastAll(Utils.MousePos, Vector3.forward);
         int layer = LayerMask.NameToLayer("MyCardArea");
-        onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
+        //onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
     }
 
 
@@ -238,9 +245,7 @@ public class CardManager : MonoBehaviour
         if (isEnlarge)
         {
             Vector3 enlargePos = new Vector3(card.originPRS.pos.x, 1.6f, -10f);
-           // card.MoveTransform(new PRS(, Utils.QI, Vector3.one * 1.2f), false);
              card.MoveTransform(new PRS(enlargePos, Utils.QI, Vector3.one * 1.2f), false);
-            //Debug.Log(card.originPRS.pos.x + "¿Í" + card.originPRS.pos.y);
         }
         else  //Ãà¼Ò
         {

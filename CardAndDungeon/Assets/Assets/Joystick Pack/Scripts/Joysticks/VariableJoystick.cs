@@ -31,7 +31,12 @@ public class VariableJoystick : Joystick
         SetMode(joystickType);
     }
 
-    
+    private void Update()
+    {
+        
+    }
+
+
     public override void OnPointerDown(PointerEventData eventData)
     {
         if(joystickType != JoystickType.Fixed)

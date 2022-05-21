@@ -21,6 +21,10 @@ public class TestCamera : MonoBehaviour
     float height;
     float width;
 
+    float MaxDistance = 15f;
+    Vector3 MousePosition;
+    Camera Camera;
+
     //public Vector2 center;
     //public Vector2 size;
     //private void OnDrawGizmos()
@@ -31,7 +35,7 @@ public class TestCamera : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Camera = GetComponent<Camera>();
         height = Camera.main.orthographicSize -0.5f;
         width = height * Screen.width / Screen.height;
         ChangeLimit(0);
@@ -80,7 +84,7 @@ public class TestCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }
 
