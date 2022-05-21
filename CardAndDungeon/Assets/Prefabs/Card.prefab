@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 4490477115736028073}
   m_Layer: 0
   m_Name: Card
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -683,6 +683,7 @@ MonoBehaviour:
     color_outline: {r: 0, g: 0, b: 0, a: 0}
     color_jewel: {r: 0, g: 0, b: 0, a: 0}
     color_image: {r: 0, g: 0, b: 0, a: 0}
+    color_text: {r: 0, g: 0, b: 0, a: 0}
   item2:
     name: 
     number: 0
@@ -694,6 +695,10 @@ MonoBehaviour:
     color_jewel: {r: 0, g: 0, b: 0, a: 0}
   originPRS:
     pos: {x: 0, y: 5, z: 0}
+    rot: {x: 0, y: 0, z: 0, w: 0}
+    scale: {x: 0, y: 0, z: 0}
+  origin2PRS:
+    pos: {x: 0, y: 0, z: 0}
     rot: {x: 0, y: 0, z: 0, w: 0}
     scale: {x: 0, y: 0, z: 0}
 --- !u!60 &4490477115736028073

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+
+
     private void Awake()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;
@@ -22,6 +24,14 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+            //for(int i =0; i<Input.touchCount; i++)
+            //{
+            //    tempTouchs = Input.GetTouch(i);
+            //    if(tempTouchs.phase == TouchPhase.Began)
+            //    {
+            //        touch
+            //    }
+            //}
     }
 }

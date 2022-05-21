@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using UnityEngine.EventSystems;
 
 public class Card : MonoBehaviour
 {
@@ -17,13 +18,17 @@ public class Card : MonoBehaviour
     [SerializeField] SpriteRenderer jewel_color;
     [SerializeField] SpriteRenderer image_color;
 
-    
 
     public Item1 item1;
     public Item2 item2;
     bool isFront;
     public PRS originPRS;
     public PRS origin2PRS;
+
+    private Touch tempTouchs;
+    private Vector2 touchedPos;
+    private bool touchOn;
+
 
     private void Start()
     {
@@ -36,7 +41,17 @@ public class Card : MonoBehaviour
     }
     private void Update()
     {
+        if(Input.touchCount >0)
+        {
+            Touch touch = Input.GetTouch(0);
+            touchedPos = Camera.main.ScreenToWorldPoint(touch.position);
+               
+        }
 
+        Ray2D ray = new Ray2D(touchedPos, Vector2.zero);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction);
+        //if (hit.collider.tag == ")
+        //    Debug.Log("Dd");
         //originPRS.pos.x = this.transform.position.x;
         //originPRS.pos.x = Camera.main.transform.position.x + 1;
 
@@ -102,26 +117,37 @@ public class Card : MonoBehaviour
 
     void OnMouseOver()
     {
-        if (isFront)
-            CardManager.Inst.CardMouseOver(this);
+       
     }
 
     void OnMouseExit()
     {
-        if (isFront)
-            CardManager.Inst.CardMouseExit(this);
+
+    }
+
+    void MobileTouch()
+    {
+        CardManager.Inst.CardMouseDown();
+
     }
 
     private void OnMouseDown()
     {
         if (isFront)
-            CardManager.Inst.CardMouseDown();
+        {
+            CardManager.Inst.CardMouseOver(this);
+
+        }
     }
 
     private void OnMouseUp()
     {
         if (isFront)
+        {
+            CardManager.Inst.CardMouseExit(this);
             CardManager.Inst.CardMouseUp();
+        }
+            
     }
 
     public void MoveTransform(PRS prs, bool useDotween, float dotweenTime = 0)

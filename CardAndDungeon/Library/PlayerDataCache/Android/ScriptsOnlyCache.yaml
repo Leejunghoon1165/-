@@ -26,7 +26,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -108,71 +107,71 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1500}
     - Class: 114
-      Script: {instanceID: 12882}
+      Script: {instanceID: 12888}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13180}
+      Script: {instanceID: 13186}
     - Class: 114
-      Script: {instanceID: 13426}
+      Script: {instanceID: 13432}
     - Class: 114
-      Script: {instanceID: 13494}
+      Script: {instanceID: 13500}
     - Class: 114
-      Script: {instanceID: 13590}
+      Script: {instanceID: 13596}
     - Class: 114
-      Script: {instanceID: 13592}
+      Script: {instanceID: 13598}
     - Class: 114
-      Script: {instanceID: 13606}
+      Script: {instanceID: 13612}
     - Class: 114
-      Script: {instanceID: 13786}
+      Script: {instanceID: 13792}
     - Class: 114
-      Script: {instanceID: 14058}
+      Script: {instanceID: 14064}
     - Class: 114
-      Script: {instanceID: 14240}
+      Script: {instanceID: 14246}
     - Class: 114
-      Script: {instanceID: 14324}
+      Script: {instanceID: 14330}
     - Class: 114
-      Script: {instanceID: 14462}
+      Script: {instanceID: 14468}
     - Class: 114
-      Script: {instanceID: 14492}
+      Script: {instanceID: 14498}
     - Class: 114
-      Script: {instanceID: 14520}
+      Script: {instanceID: 14526}
     - Class: 114
-      Script: {instanceID: 14572}
+      Script: {instanceID: 14578}
     - Class: 114
-      Script: {instanceID: 14704}
+      Script: {instanceID: 14710}
     - Class: 114
-      Script: {instanceID: 14750}
+      Script: {instanceID: 14756}
     - Class: 114
-      Script: {instanceID: 14882}
+      Script: {instanceID: 14888}
     - Class: 114
-      Script: {instanceID: 15284}
+      Script: {instanceID: 15290}
     - Class: 114
-      Script: {instanceID: 15354}
+      Script: {instanceID: 15360}
     - Class: 114
-      Script: {instanceID: 15486}
+      Script: {instanceID: 15492}
     - Class: 114
-      Script: {instanceID: 15580}
+      Script: {instanceID: 15586}
     - Class: 114
-      Script: {instanceID: 15802}
+      Script: {instanceID: 15808}
     - Class: 114
-      Script: {instanceID: 16174}
+      Script: {instanceID: 16180}
     - Class: 114
-      Script: {instanceID: 16212}
+      Script: {instanceID: 16218}
     - Class: 114
-      Script: {instanceID: 16290}
+      Script: {instanceID: 16296}
     - Class: 114
-      Script: {instanceID: 16342}
+      Script: {instanceID: 16348}
     - Class: 114
-      Script: {instanceID: 16496}
+      Script: {instanceID: 16502}
     - Class: 114
-      Script: {instanceID: 16758}
+      Script: {instanceID: 16764}
     - Class: 114
-      Script: {instanceID: 16816}
+      Script: {instanceID: 16822}
     - Class: 114
-      Script: {instanceID: 17118}
+      Script: {instanceID: 17124}
     - Class: 114
-      Script: {instanceID: 17268}
+      Script: {instanceID: 17274}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -414,7 +413,7 @@ ScriptsOnlyBuild:
     className: SPUM_Manager
   - hash:
       serializedVersion: 2
-      Hash: fe8bb4261643fc3b313019bb1cf3b848
+      Hash: fd4b2bc58994ca5e42c7173b2fd64de1
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CardManager
@@ -588,7 +587,7 @@ ScriptsOnlyBuild:
     className: Camera169
   - hash:
       serializedVersion: 2
-      Hash: 60db87e348fd858dd8f211c4bc526dfb
+      Hash: 5d7fadacb75fd486a5d28be89972333a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Card
@@ -876,7 +875,7 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
-      Hash: 4e2d6cd4f05a7378979dda759cc1b2e6
+      Hash: ae5bc6ad121da3bace8d3f885d93f579
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TestCamera
@@ -1086,7 +1085,7 @@ ScriptsOnlyBuild:
     className: JoystickPlayerExample
   - hash:
       serializedVersion: 2
-      Hash: 5d6c6b99305e7eda67b5717f7a590331
+      Hash: fbf0eb29d599079fe8402aa780222271
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ItemSO
@@ -1276,19 +1275,7 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JustRotate
-  - hash:
-      serializedVersion: 2
-      Hash: ea2d316f5ca8a9fe56ec2a0c64655bda
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CardMove
-  - hash:
-      serializedVersion: 2
-      Hash: ea2d316f5ca8a9fe56ec2a0c64655bda
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CardMove2
   platform: 13
   scenePathNames:
   - Assets/Scenes/InGame.unity
-  playerPath: "C:/Users/\uC774\uC815\uD6C8/Desktop/Test2/Test.apk"
+  playerPath: C:/Users/gnswj/Desktop/TEST/build.apk

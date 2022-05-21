@@ -6,12 +6,19 @@ TagManager:
   tags:
   - Enemy
   - Wall
+  - Card
+  - PlayerPos
+  - PlayerPos
+  - PlayerPos
+  - PlayerPos
+  - PlayerPos
+  - PlayerPos
   - PlayerPos
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Card
   - Water
   - UI
   - Player
