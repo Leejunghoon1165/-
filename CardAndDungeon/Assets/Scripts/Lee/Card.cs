@@ -5,7 +5,7 @@ using TMPro;
 using DG.Tweening;
 using UnityEngine.EventSystems;
 
-public class Card : MonoBehaviour, IPointerClickHandler
+public class Card : MonoBehaviour
 {
     [SerializeField] SpriteRenderer card;
     [SerializeField] SpriteRenderer cardIcon;
@@ -24,6 +24,7 @@ public class Card : MonoBehaviour, IPointerClickHandler
     bool isFront;
     public PRS originPRS;
     public PRS origin2PRS;
+    public PRS origin3PRS;
 
     private Touch tempTouchs;
     private Vector2 touchedPos;
@@ -58,61 +59,44 @@ public class Card : MonoBehaviour, IPointerClickHandler
 
                 RaycastHit2D hitInformation = Physics2D.Raycast(pos, Camera.main.transform.forward);
 
-                if(hitInformation.collider.tag =="Card")
+                if(hitInformation.collider.tag=="Card")
                 {
-                    if(touch.phase == TouchPhase.Moved)
+                    origin2PRS.pos = pos;
+                    switch (touch.phase)
                     {
-                        origin2PRS.pos = pos;
-                        if(isFront)
-                            CardManager.Inst.CardMouseDown();
-                    }
-                    if(touch.phase == TouchPhase.Stationary && touch.phase != TouchPhase.Moved)
-                    {
-                        if(isFront)
-                            CardManager.Inst.CardMouseOver(this);
-                    }
-                    if(touch.phase == TouchPhase.Ended)
-                    {
-                        CardManager.Inst.CardMouseExit(this);
-                        CardManager.Inst.CardMouseUp();
-                    }
-                    if(touch.phase == TouchPhase.Canceled)
-                    {
-                        CardManager.Inst.CardMouseExit(this);
-                        CardManager.Inst.CardMouseUp();
-                    }
-                    //switch(touch.phase)
-                    //{
-                    //    case TouchPhase.Stationary:
-                    //        if(touch.phase != TouchPhase.Moved)
-                    //        {
-                    //            if (isFront)
-                    //                CardManager.Inst.CardMouseOver(this);
-                    //        }
+                        case TouchPhase.Stationary:
+                            CardManager.Inst.CardMouseOver(hitInformation.collider.gameObject.GetComponent<Card>());
+                            break;
 
-                    //        break;
+                        case TouchPhase.Moved:
+                            origin3PRS.pos = pos;                      
+                            if (isFront)
+                                CardManager.Inst.CardMouseDown();
+                            break;
 
-                    //    case TouchPhase.Moved:
-                    //        origin2PRS.pos = pos;
-                    //        if (isFront)
-                    //            CardManager.Inst.CardMouseDown();
-                    //        break;
-                    //    case TouchPhase.Ended:
-                    //        if (isFront)
-                    //        {
-                    //            CardManager.Inst.CardMouseExit(this);
-                    //            CardManager.Inst.CardMouseUp();
-                    //        }
-                    //        break;
+                        case TouchPhase.Ended:
+                            if (isFront)
+                            {
+                                CardManager.Inst.CardMouseExit(hitInformation.collider.gameObject.GetComponent<Card>());
+                                CardManager.Inst.CardMouseUp();
+                            }
+                            break;
+                        case TouchPhase.Canceled:
+                            if (isFront)
+                            {
+                                CardManager.Inst.CardMouseExit(hitInformation.collider.gameObject.GetComponent<Card>());
+                                CardManager.Inst.CardMouseUp();
+                            }
+                            break;
 
-                    //}
 
+                    }
                 }
 
             }
         }
     }
-    public void OnPointerClick(PointerEventData eventData)
+    public void CardPlusBtn()
     {
 
     }

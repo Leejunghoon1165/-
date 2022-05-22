@@ -244,8 +244,10 @@ public class CardManager : MonoBehaviour
     {
         if (isEnlarge)
         {
-            Vector3 enlargePos = new Vector3(card.originPRS.pos.x, 1.6f, -10f);
-             card.MoveTransform(new PRS(enlargePos, Utils.QI, Vector3.one * 1.2f), false);
+            Vector3 enlargePos = new Vector3(card.origin2PRS.pos.x, card.origin2PRS.pos.y, -10f);
+            card.MoveTransform(new PRS(enlargePos, Utils.QI, Vector3.one * 1.2f), false);
+
+           
         }
         else  //√‡º“
         {
@@ -255,6 +257,7 @@ public class CardManager : MonoBehaviour
 
         card.GetComponentInChildren<Order>().SetMostFrontOrder(isEnlarge);
     }
+
 
 
     #endregion
