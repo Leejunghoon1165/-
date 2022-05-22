@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579954097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.01, y: 0.044, z: 0}
   m_LocalScale: {x: 0.22222224, y: 0.22222224, z: 1}
   m_Children: []
   m_Father: {fileID: 934073245901524481}
@@ -124,10 +124,10 @@ GameObject:
   - component: {fileID: 934073245901524494}
   - component: {fileID: 934073245901524495}
   - component: {fileID: 6675046765169745049}
-  - component: {fileID: 1191943716}
   - component: {fileID: 3844390924511051995}
   - component: {fileID: 6648954607679624434}
   - component: {fileID: -3419807972566365206}
+  - component: {fileID: 5497695054878078}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -243,32 +243,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &1191943716
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934073245901524492}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.02, y: -0.02}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.6, y: 0.25}
-    oldSize: {x: 0.48, y: 0.25}
-    newSize: {x: 0.48, y: 0.25}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.13, y: 0.08}
-  m_EdgeRadius: 0
 --- !u!114 &3844390924511051995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +306,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mob_num: 0
   spawnPoint: {fileID: 0}
+--- !u!70 &5497695054878078
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934073245901524492}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.1, y: 0.1}
+  m_Direction: 0
 --- !u!1 &2128991428201608222
 GameObject:
   m_ObjectHideFlags: 0
