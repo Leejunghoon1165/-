@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Tutorial : MonoBehaviour
 {
-    public GameObject a, b, c;
+    public GameObject a, b, c, d, e;
     int count;
     // Start is called before the first frame update
     void Start()
@@ -25,17 +25,38 @@ public class Tutorial : MonoBehaviour
             a.SetActive(true);
             b.SetActive(false);
             c.SetActive(false);
+            d.SetActive(false);
+            e.SetActive(false);
         }
         if(count == 2){
             a.SetActive(false);
             b.SetActive(true);
             c.SetActive(false);
+            d.SetActive(false);
+            e.SetActive(false);
         }
         if(count == 3){
             a.SetActive(false);
             b.SetActive(false);
             c.SetActive(true);
+            d.SetActive(false);
+            e.SetActive(false);
         }
+        if(count == 4){
+            a.SetActive(false);
+            b.SetActive(false);
+            c.SetActive(false);
+            d.SetActive(true);
+            e.SetActive(false);
+        }
+        if(count == 5){
+            a.SetActive(false);
+            b.SetActive(false);
+            c.SetActive(false);
+            d.SetActive(false);
+            e.SetActive(true);
+        }
+
 
         /*
         if( Input.touchCount == 1){
