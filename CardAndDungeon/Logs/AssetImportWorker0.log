@@ -15,11 +15,11 @@ C:/Users/user/Documents/Study/22-1/Capstone/CardAndDungeon/CardAndDungeon
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-3620
+12493
 Successfully changed project path to: C:/Users/user/Documents/Study/22-1/Capstone/CardAndDungeon/CardAndDungeon
 C:/Users/user/Documents/Study/22-1/Capstone/CardAndDungeon/CardAndDungeon
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 102.04 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 119.45 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.30f1 (1fb1bf06830e)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Resources/UnitySubsystems
@@ -31,163 +31,1145 @@ Direct3D:
     Vendor:   
     VRAM:     6052 MB
     Driver:   30.0.14.9709
-Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56296
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56600
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.30f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003232 seconds.
+Registered in 0.003343 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 72.61 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 85.24 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.690 seconds
+- Completed reload, in  0.781 seconds
 Domain Reload Profiling:
-	ReloadAssembly (691ms)
-		BeginReloadAssembly (85ms)
+	ReloadAssembly (782ms)
+		BeginReloadAssembly (86ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (523ms)
-			LoadAssemblies (81ms)
+		EndReloadAssembly (605ms)
+			LoadAssemblies (82ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (175ms)
+			SetupTypeCache (181ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (26ms)
-			SetupLoadedEditorAssemblies (200ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (248ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (73ms)
-				BeforeProcessingInitializeOnLoad (13ms)
-				ProcessInitializeOnLoadAttributes (83ms)
-				ProcessInitializeOnLoadMethodAttributes (26ms)
+				RefreshPlugins (85ms)
+				BeforeProcessingInitializeOnLoad (14ms)
+				ProcessInitializeOnLoadAttributes (98ms)
+				ProcessInitializeOnLoadMethodAttributes (44ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.006117 seconds.
+Registered in 0.011239 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000028CF7522A30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
+Symbol file data-00000227816286B0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF296AE20 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
+Symbol file data-000002297C6FC720 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF75A9470 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-0000022780BFE6C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF86CEA40 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
+Symbol file data-000002297D00F040 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF7D36C20 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file data-0000022781596E90 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF7D49E30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\PsdPlugin.dll
+Symbol file data-000002278164D2C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\PsdPlugin.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF7535650 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-000002278138F220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF78C0020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-0000022781AF1220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF7D49E30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-0000022781AF1220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF754A860 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-0000022781596E90 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF6B92010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-000002297D081C30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF6BC0220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-00000227813A4430 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF75A9470 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
+Symbol file data-00000227814F1C40 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF6BC0220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file data-00000227813A4430 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF78C0020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
+Symbol file data-0000022781AF1220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF709BC30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
+Symbol file data-0000022781AF1220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF313F030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
+Symbol file data-000002297CEB8CD0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF78C0020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-0000022781AF1220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF6B48120 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file data-0000022781506010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF7552870 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-0000022781549C70 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF6B59D30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-0000022780C97A30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF323F510 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file data-00000227815B7020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF75A9470 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
+Symbol file data-0000022780BFE6C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF78C0020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file data-0000022781549C70 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF326D120 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file data-0000022781506010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF7D51440 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
+Symbol file data-0000022780BE3400 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF30EA4A0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
+Symbol file data-000002278173D640 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF2D9D010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-00000227815B7020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF3592430 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-0000022780D14630 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF32CE190 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file data-000002297CE90820 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF6B32CC0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
+Symbol file data-0000022782122B70 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF3281330 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
+Symbol file data-0000022780A9C440 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF75A9470 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
+Symbol file data-0000022781AFAA30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000028CF3592430 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
+Symbol file data-0000022781258630 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 72.27 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 81.78 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.257 seconds
+- Completed reload, in  2.797 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1258ms)
-		BeginReloadAssembly (172ms)
+	ReloadAssembly (2798ms)
+		BeginReloadAssembly (1129ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (19ms)
-		EndReloadAssembly (1014ms)
-			LoadAssemblies (144ms)
+			CreateAndSetChildDomain (59ms)
+		EndReloadAssembly (1540ms)
+			LoadAssemblies (637ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (333ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (50ms)
-			SetupLoadedEditorAssemblies (380ms)
+			SetupTypeCache (558ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (92ms)
+			SetupLoadedEditorAssemblies (491ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (3ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (72ms)
-				BeforeProcessingInitializeOnLoad (92ms)
-				ProcessInitializeOnLoadAttributes (184ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
-				AfterProcessingInitializeOnLoad (11ms)
+				RefreshPlugins (82ms)
+				BeforeProcessingInitializeOnLoad (138ms)
+				ProcessInitializeOnLoadAttributes (227ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (15ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 2.58 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2271 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 115.4 MB.
-System memory in use after: 115.6 MB.
+Unloading 2317 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 118.6 MB.
+System memory in use after: 118.5 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2727.
-Total: 4.096600 ms (FindLiveObjects: 0.199000 ms CreateObjectMapping: 0.109600 ms MarkObjects: 3.722100 ms  DeleteObjects: 0.064400 ms)
+Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2766.
+Total: 4.074200 ms (FindLiveObjects: 0.307300 ms CreateObjectMapping: 0.171900 ms MarkObjects: 2.699100 ms  DeleteObjects: 0.894200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/Lee/PauseMenu.cs
+  artifactKey: Guid(59c7519618ae38047a1e126933c9ea94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lee/PauseMenu.cs using Guid(59c7519618ae38047a1e126933c9ea94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b49c8d4ec60bf3d53bc7577107374aa') in 0.082541 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007023 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000022781ABA010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022952521C50 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227812CD4C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785D401C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227864B4090 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278200E850 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784144020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781F80C50 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227864B4090 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227864B4090 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227840C0080 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784EB2020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002297D36CA20 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784144020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782814C20 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022780FE9030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782459750 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782887C20 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278289E040 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781DE4050 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785BC0010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227809A16E0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785BCEED0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227808020A0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784311030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278570D470 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782901680 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784311030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227864B4090 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227843A5050 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782122B70 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782814C20 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002297D36CA20 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227864B4090 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.175 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1175ms)
+		BeginReloadAssembly (146ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (957ms)
+			LoadAssemblies (129ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (330ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (49ms)
+			SetupLoadedEditorAssemblies (344ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (118ms)
+				ProcessInitializeOnLoadAttributes (191ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (14ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.73 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2304 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.5 MB.
+System memory in use after: 117.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2768.
+Total: 4.115200 ms (FindLiveObjects: 0.184300 ms CreateObjectMapping: 0.091600 ms MarkObjects: 3.574600 ms  DeleteObjects: 0.263600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 39.346806 seconds.
+  path: Assets/Scripts/Lee/PauseMenu.cs
+  artifactKey: Guid(59c7519618ae38047a1e126933c9ea94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Lee/PauseMenu.cs using Guid(59c7519618ae38047a1e126933c9ea94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a01a34f2684240476f96b3c9062b729b') in 0.007039 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007286 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000227842C7020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022952521C50 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278579A8D0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784D310B0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227842EBC30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781260640 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784D31060 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227852CE020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227842EBC30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227842EBC30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781005020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785008030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781731220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784D31060 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227852CE020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227813B6040 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278588CB70 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227852CE020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781618010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278507DA50 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227812F4020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227809A16E0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227864505C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227808020A0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227812F4020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002297CEBD6D0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022780E9A720 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784311030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227842EBC30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784AEB050 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227821227D0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227852CE020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781172930 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781308230 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.377 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1378ms)
+		BeginReloadAssembly (303ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (85ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (79ms)
+		EndReloadAssembly (1006ms)
+			LoadAssemblies (143ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (340ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (344ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (131ms)
+				ProcessInitializeOnLoadAttributes (183ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2304 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.5 MB.
+System memory in use after: 117.4 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2770.
+Total: 3.001200 ms (FindLiveObjects: 0.190700 ms CreateObjectMapping: 0.094000 ms MarkObjects: 2.465900 ms  DeleteObjects: 0.249800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 25.211509 seconds.
+  path: Assets/Scenes/InGame.unity
+  artifactKey: Guid(9f67f3deeb1790f4ab543930a80dc8c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/InGame.unity using Guid(9f67f3deeb1790f4ab543930a80dc8c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '65576bd0930d5b76be11e59808257207') in 0.023290 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006051 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000227828B0010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785DA39B0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786CF64C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227825E41C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278663F010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782452C20 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278663F010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227864A6020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278663F010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227828B0010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278273DF10 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227860ED680 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278663F010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002297D24C420 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786C648F0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278608F5C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227808020A0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785451010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227809A16E0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781300CD0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227808020A0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785451010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002297CF21A30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278598EC20 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227856CF050 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227864A6020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227842B4030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782122D40 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227860ED680 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784385030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.252 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1253ms)
+		BeginReloadAssembly (140ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (1037ms)
+			LoadAssemblies (130ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (358ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (50ms)
+			SetupLoadedEditorAssemblies (377ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (137ms)
+				ProcessInitializeOnLoadAttributes (207ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2304 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.6 MB.
+System memory in use after: 117.5 MB.
+
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 2772.
+Total: 3.493200 ms (FindLiveObjects: 0.218600 ms CreateObjectMapping: 0.110400 ms MarkObjects: 2.894900 ms  DeleteObjects: 0.268200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 72.4 MB.
+System memory in use after: 72.3 MB.
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2772.
+Total: 4.655300 ms (FindLiveObjects: 1.244900 ms CreateObjectMapping: 0.573800 ms MarkObjects: 2.615300 ms  DeleteObjects: 0.220400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 123.808773 seconds.
+  path: Assets/TextMesh Pro
+  artifactKey: Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro using Guid(f54d1bd14bd3ca042bd867b519fee8cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '16b4cbde9565bf190136f1148817e1ea') in 0.013797 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007514 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000227828B0010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784317F10 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002297D2D6630 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227860CF1D0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782890040 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022780C64010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786CFB030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782890040 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782890040 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786002360 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278273DF10 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227860F0210 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786CFB030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002297CF91030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786A09010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278603B550 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781155020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785451010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227809A16E0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227846DDAC0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227808020A0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785451010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785553A20 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227813BD720 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785EBC0D0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782890040 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781159830 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782122430 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785465220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227860F0210 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782890040 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.268 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1269ms)
+		BeginReloadAssembly (137ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (1052ms)
+			LoadAssemblies (132ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (336ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (389ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (168ms)
+				ProcessInitializeOnLoadAttributes (186ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2263 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.7 MB.
+System memory in use after: 115.9 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2774.
+Total: 2.944900 ms (FindLiveObjects: 0.270100 ms CreateObjectMapping: 0.146200 ms MarkObjects: 2.487400 ms  DeleteObjects: 0.040000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005397 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000227828B0010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784315150 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022787033890 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227860C9660 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278579B020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022780C64010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278663F010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278139E010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278579B020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786002360 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278273DF10 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278606E5A0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278663F010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785709020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786A02C80 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278608F5C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782736020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785451010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227809A16E0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227871FF8C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785926020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278553F010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785926020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227841016F0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785EBC0D0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278139E010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785F8D250 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782122D40 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784727020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278606E5A0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278579B020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.34 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.146 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1146ms)
+		BeginReloadAssembly (139ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (938ms)
+			LoadAssemblies (130ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (293ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (316ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (116ms)
+				ProcessInitializeOnLoadAttributes (170ms)
+				ProcessInitializeOnLoadMethodAttributes (11ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2263 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.6 MB.
+System memory in use after: 115.8 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2776.
+Total: 3.288400 ms (FindLiveObjects: 0.298700 ms CreateObjectMapping: 0.141900 ms MarkObjects: 2.785900 ms  DeleteObjects: 0.061000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006507 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000227828B0010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227843136A0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227821FD480 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785A4B4A0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785FC7010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022780C64010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785C34020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781189070 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785FC7010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786002360 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278273DF10 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227812E0030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785C34020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227867B3030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786A058C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781E5B010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227842C7020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781155020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227864D5020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227809A16E0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022787049AD0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785987540 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278553F010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227812E0030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781CCED30 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781B35070 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781189070 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781159830 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782122D40 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022780BAAC50 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278882A220 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785FC7010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.263 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1264ms)
+		BeginReloadAssembly (139ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (1041ms)
+			LoadAssemblies (131ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (306ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (73ms)
+			SetupLoadedEditorAssemblies (356ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (138ms)
+				ProcessInitializeOnLoadAttributes (187ms)
+				ProcessInitializeOnLoadMethodAttributes (12ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2263 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.7 MB.
+System memory in use after: 115.9 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2778.
+Total: 2.940900 ms (FindLiveObjects: 0.180100 ms CreateObjectMapping: 0.085300 ms MarkObjects: 2.617000 ms  DeleteObjects: 0.057800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.11 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 71.2 MB.
+System memory in use after: 71.4 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2778.
+Total: 2.908500 ms (FindLiveObjects: 0.175800 ms CreateObjectMapping: 0.088500 ms MarkObjects: 2.628200 ms  DeleteObjects: 0.015400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008097 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000227828B0010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022784318A80 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEngineBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785457C90 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278247D1B0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786AB3020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022780C64010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\PsdPlugin.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227843A5050 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785BDA030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781189070 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786AB3020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786002360 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278273DF10 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227860F0210 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227812D4010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785BDA030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Psdimporter.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785709020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Path.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022786A079F0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785BDA030 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227842C7020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785551020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785ECE010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227809A16E0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785C5A6C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785551020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785FE20C0 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Triangle.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781738040 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781CD1170 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.PixelPerfect.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227841FA010 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022781189070 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002278472D040 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782122260 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022785709020 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000227860F0210 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.Common.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000022782716060 doesn't match image C:\Users\user\Documents\Study\22-1\Capstone\CardAndDungeon\CardAndDungeon\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.351 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1352ms)
+		BeginReloadAssembly (174ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1088ms)
+			LoadAssemblies (151ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (334ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (375ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (133ms)
+				ProcessInitializeOnLoadAttributes (210ms)
+				ProcessInitializeOnLoadMethodAttributes (13ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Switching build target platform(19) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(537395200) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2263 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 115.7 MB.
+System memory in use after: 115.9 MB.
+
+Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2780.
+Total: 3.587800 ms (FindLiveObjects: 0.202400 ms CreateObjectMapping: 0.126400 ms MarkObjects: 3.236400 ms  DeleteObjects: 0.021700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 811.024510 seconds.
+  path: Assets/Prefabs/PlayerImage.prefab
+  artifactKey: Guid(e2ad181106529b54986f4e9aa30bf175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/PlayerImage.prefab using Guid(e2ad181106529b54986f4e9aa30bf175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f4a275fd9f0c60fc556bc9d7c78eb6c') in 0.153098 seconds 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 74.8 MB.
+System memory in use after: 75.0 MB.
+
+Unloading 12 unused Assets to reduce memory usage. Loaded Objects now: 2787.
+Total: 4.170200 ms (FindLiveObjects: 0.300900 ms CreateObjectMapping: 0.133300 ms MarkObjects: 3.674800 ms  DeleteObjects: 0.060200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 

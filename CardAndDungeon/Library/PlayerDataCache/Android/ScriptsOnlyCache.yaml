@@ -33,6 +33,7 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
+    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -110,73 +111,73 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 630}
-    - Class: 114
-      Script: {instanceID: 1462}
-    - Class: 114
-      Script: {instanceID: 1464}
-    - Class: 114
-      Script: {instanceID: 1466}
-    - Class: 114
-      Script: {instanceID: 1468}
-    - Class: 114
-      Script: {instanceID: 1470}
-    - Class: 114
-      Script: {instanceID: 1472}
+      Script: {instanceID: 654}
     - Class: 114
       Script: {instanceID: 1486}
     - Class: 114
-      Script: {instanceID: 1516}
+      Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 1606}
+      Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 1830}
+      Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 2134}
+      Script: {instanceID: 1494}
     - Class: 114
-      Script: {instanceID: 2296}
+      Script: {instanceID: 1496}
     - Class: 114
-      Script: {instanceID: 2490}
+      Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 2592}
+      Script: {instanceID: 1540}
     - Class: 114
-      Script: {instanceID: 2932}
+      Script: {instanceID: 1630}
     - Class: 114
-      Script: {instanceID: 3016}
+      Script: {instanceID: 1858}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 2168}
     - Class: 114
-      Script: {instanceID: 3258}
+      Script: {instanceID: 2330}
     - Class: 114
-      Script: {instanceID: 3388}
+      Script: {instanceID: 2524}
     - Class: 114
-      Script: {instanceID: 3434}
+      Script: {instanceID: 2626}
     - Class: 114
-      Script: {instanceID: 3448}
+      Script: {instanceID: 2972}
     - Class: 114
-      Script: {instanceID: 3888}
+      Script: {instanceID: 3056}
     - Class: 114
-      Script: {instanceID: 3930}
+      Script: {instanceID: 3248}
     - Class: 114
-      Script: {instanceID: 4134}
+      Script: {instanceID: 3300}
     - Class: 114
-      Script: {instanceID: 4240}
+      Script: {instanceID: 3432}
     - Class: 114
-      Script: {instanceID: 4456}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 4728}
+      Script: {instanceID: 3492}
     - Class: 114
-      Script: {instanceID: 4734}
+      Script: {instanceID: 3938}
     - Class: 114
-      Script: {instanceID: 4928}
+      Script: {instanceID: 3980}
     - Class: 114
-      Script: {instanceID: 5438}
+      Script: {instanceID: 4190}
     - Class: 114
-      Script: {instanceID: 5716}
+      Script: {instanceID: 4296}
     - Class: 114
-      Script: {instanceID: 5730}
+      Script: {instanceID: 4516}
     - Class: 114
-      Script: {instanceID: 5878}
+      Script: {instanceID: 4796}
+    - Class: 114
+      Script: {instanceID: 4802}
+    - Class: 114
+      Script: {instanceID: 4996}
+    - Class: 114
+      Script: {instanceID: 5516}
+    - Class: 114
+      Script: {instanceID: 5804}
+    - Class: 114
+      Script: {instanceID: 5818}
+    - Class: 114
+      Script: {instanceID: 5968}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -229,45 +230,45 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1462}
-    - Class: 114
-      Script: {instanceID: 1464}
-    - Class: 114
-      Script: {instanceID: 1466}
-    - Class: 114
-      Script: {instanceID: 1468}
-    - Class: 114
-      Script: {instanceID: 1470}
-    - Class: 114
-      Script: {instanceID: 1472}
-    - Class: 114
-      Script: {instanceID: 1474}
-    - Class: 114
-      Script: {instanceID: 1476}
-    - Class: 114
-      Script: {instanceID: 1478}
-    - Class: 114
       Script: {instanceID: 1486}
     - Class: 114
       Script: {instanceID: 1488}
     - Class: 114
       Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 2932}
+      Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 1494}
     - Class: 114
-      Script: {instanceID: 3206}
+      Script: {instanceID: 1496}
     - Class: 114
-      Script: {instanceID: 3318}
+      Script: {instanceID: 1498}
     - Class: 114
-      Script: {instanceID: 3388}
+      Script: {instanceID: 1500}
     - Class: 114
-      Script: {instanceID: 3434}
+      Script: {instanceID: 1502}
     - Class: 114
-      Script: {instanceID: 3784}
+      Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 5874}
+      Script: {instanceID: 1512}
+    - Class: 114
+      Script: {instanceID: 1514}
+    - Class: 114
+      Script: {instanceID: 2972}
+    - Class: 114
+      Script: {instanceID: 3136}
+    - Class: 114
+      Script: {instanceID: 3248}
+    - Class: 114
+      Script: {instanceID: 3362}
+    - Class: 114
+      Script: {instanceID: 3432}
+    - Class: 114
+      Script: {instanceID: 3478}
+    - Class: 114
+      Script: {instanceID: 3834}
+    - Class: 114
+      Script: {instanceID: 5964}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -322,27 +323,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 630}
+      Script: {instanceID: 654}
     - Class: 114
-      Script: {instanceID: 1464}
+      Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 1466}
+      Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 1468}
+      Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 1474}
+      Script: {instanceID: 1498}
     - Class: 114
-      Script: {instanceID: 2642}
+      Script: {instanceID: 2676}
     - Class: 114
-      Script: {instanceID: 2708}
+      Script: {instanceID: 2744}
     - Class: 114
-      Script: {instanceID: 2932}
+      Script: {instanceID: 2972}
     - Class: 114
-      Script: {instanceID: 3094}
+      Script: {instanceID: 3136}
     - Class: 114
-      Script: {instanceID: 3434}
+      Script: {instanceID: 3478}
     - Class: 114
-      Script: {instanceID: 5200}
+      Script: {instanceID: 5270}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -528,16 +529,16 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: ce669872a2be11bc686ea22961d8a3bb
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Joystick
-  - hash:
-      serializedVersion: 2
       Hash: a8ff3dbad3ce08f4e964ec1f28e6f711
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SPUM_EyeSet
+  - hash:
+      serializedVersion: 2
+      Hash: ce669872a2be11bc686ea22961d8a3bb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Joystick
   - hash:
       serializedVersion: 2
       Hash: bc0b6b86b1e63cb4d226e9479fef371d
@@ -642,7 +643,7 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: 19ec98a81e651e4d81e2383fde859d02
+      Hash: 4bfcd3f5c6fcb98d40848647b3f35d5e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Tutorial
@@ -774,7 +775,7 @@ ScriptsOnlyBuild:
     className: JoystickSetterExample
   - hash:
       serializedVersion: 2
-      Hash: e13cb60d1a07b9a113825b0ff004177d
+      Hash: 4d4f6da331380f96ec787daa846d00d4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -1008,7 +1009,7 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: b4ce0f804362ee3577fa73b79271806c
+      Hash: b3fd8319e64a53ef4c6157c961ad1c48
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EngravingMenu
@@ -1215,4 +1216,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Title.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/InGame.unity
-  playerPath: C:/Users/rxg89/Desktop/test.apk
+  playerPath: C:/Users/user/Desktop/test.apk

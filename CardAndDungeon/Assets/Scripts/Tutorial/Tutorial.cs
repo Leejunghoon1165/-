@@ -56,6 +56,13 @@ public class Tutorial : MonoBehaviour
             d.SetActive(false);
             e.SetActive(true);
         }
+        if(count >= 6){
+            a.SetActive(false);
+            b.SetActive(false);
+            c.SetActive(false);
+            d.SetActive(false);
+            e.SetActive(false);
+        }
 
 
         /*
