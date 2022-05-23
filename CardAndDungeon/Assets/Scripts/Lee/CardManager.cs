@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using DG.Tweening;
 public class CardManager : MonoBehaviour
 {
     public static CardManager Inst { get; private set; }
@@ -20,9 +21,11 @@ public class CardManager : MonoBehaviour
     List<Item1> itemBuffer;
     List<Item2> itemBuffer2;
 
-    bool onMyCardArea;
+    public static bool onMyCardArea;
     bool isMyCardDrag;
     Card selectCard;
+
+    int myPutCount;
 
 
     public Item1 PopItem()
@@ -40,7 +43,7 @@ public class CardManager : MonoBehaviour
         if (itemBuffer2.Count == 0)
             SetupItemBuffer2();
         Item2 item2 = itemBuffer2[0];
-        itemBuffer2.RemoveAt(1);
+        itemBuffer2.RemoveAt(0);
         return item2;
     }
 
@@ -88,15 +91,11 @@ public class CardManager : MonoBehaviour
         SetupItemBuffer();
         SetupItemBuffer2();
     }
-
     private void Update()
     {
         if (isMyCardDrag)
             CardDrag();
-
-        DetectCardArea();
-
-
+      //  DetectCardArea();
 
     }
    
@@ -104,10 +103,14 @@ public class CardManager : MonoBehaviour
     public void Carddrow()
     {
         r = Random.Range(0, 2);
-        AddCard(true);
+        if(myCards.Count <4)
+        {
+            AddCard(true);
+        }
+
     }
 
-    void AddCard(bool isMine)
+    public void AddCard(bool isMine)
     {
         var cardObject = Instantiate(cardPrefab, cardSpawnPoint.position, Utils.QI);
          //cardObject.transform.parent = a.transform;
@@ -124,9 +127,8 @@ public class CardManager : MonoBehaviour
         }
                
         if (isMine == true)
-        {
-            if(myCards.Count <4)    //배열 4 미만일때만 패에 추가하기 
-                myCards.Add(card);
+        {  
+            myCards.Add(card);
         }
         else
             return;
@@ -198,6 +200,42 @@ public class CardManager : MonoBehaviour
         return results;
     }
 
+    public bool TryPutCard(bool isMine)
+    {
+        if (isMine && myPutCount >= 100)
+            return false;
+        if (!isMine)
+            return false;
+
+
+        Card card = selectCard;
+        var targetCards = myCards;
+
+        if(EntityManager.Inst.SpawnEntity(isMine,card.item1))
+        {
+            targetCards.Remove(card);
+            card.transform.DOKill();
+            DestroyImmediate(card.gameObject);
+           if(card.item1.name != null || card.item2.name != null)
+            {
+                CardSkill(card);
+            }
+            if(isMine)
+            {
+                selectCard = null;
+                myPutCount++;
+            }
+            CardAlignment(isMine);
+            return true;
+        }
+        else
+        {
+            targetCards.ForEach(x => x.GetComponent<Order>().SetMostFrontOrder(false));
+            CardAlignment(isMine);
+            return false;
+        }
+    }
+
     #region MyCard
 
     public void CardMouseOver(Card card)
@@ -219,6 +257,10 @@ public class CardManager : MonoBehaviour
     public void CardMouseUp()
     {
         isMyCardDrag = false;
+        if (onMyCardArea)
+            EntityManager.Inst.RemoveMyEmptyEntity();
+        else
+            TryPutCard(true);
     }
     void CardDrag()
     {
@@ -228,13 +270,15 @@ public class CardManager : MonoBehaviour
             // selectCard.MoveTransform(new PRS(Utils.MousePos, Utils.QI, selectCard.originPRS.scale), false);
             Vector3 Cardpos = new Vector3(selectCard.origin2PRS.pos.x, selectCard.origin2PRS.pos.y, -10f);
             selectCard.MoveTransform(new PRS(Cardpos, Utils.QI, selectCard.originPRS.scale), false);
+            EntityManager.Inst.InsertMyEmptyEntity(Cardpos.x);
         }
     }
-    void DetectCardArea()
+    public void DetectCardArea()
     {
         // RaycastHit2D[] hits = Physics2D.RaycastAll(Utils.MousePos, Vector3.forward);
-       // RaycastHit2D[] hits = Physics2D.RaycastAll(Utils.MousePos, Vector3.forward);
-        int layer = LayerMask.NameToLayer("MyCardArea");
+
+       // RaycastHit2D[] hits = Physics2D.RaycastAll(selectCard.origin2PRS.pos, Vector3.forward);
+        //int layer = LayerMask.NameToLayer("MyCardArea");
         //onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
     }
 
@@ -244,22 +288,69 @@ public class CardManager : MonoBehaviour
     {
         if (isEnlarge)
         {
-            Vector3 enlargePos = new Vector3(card.origin2PRS.pos.x, card.origin2PRS.pos.y, -10f);
+            Vector3 enlargePos = new Vector3(card.origin2PRS.pos.x, card.origin2PRS.pos.y + 3.5f, -10f);
             card.MoveTransform(new PRS(enlargePos, Utils.QI, Vector3.one * 1.2f), false);
 
-           
         }
-        else  //축소
+        else //축소
         {
            card.MoveTransform(card.originPRS, false);
         }
-           
+
+
 
         card.GetComponentInChildren<Order>().SetMostFrontOrder(isEnlarge);
     }
 
 
 
+
     #endregion
+
+
+    void CardSkill(Card card)
+    {
+        if(card.item2.name == "")
+        {
+            switch (card.item1.name)
+            {
+                case "시공간 폭발":
+                    Debug.Log("시공간 폭발");
+                    break;
+
+                case "매직 미사일":
+                    Debug.Log("매직 미사일");
+                    break;
+
+                case "화염의 허리케인":
+                    Debug.Log("화염의 허리케인");
+                    break;
+
+                case "인탱글":
+                    Debug.Log("인탱글");
+                    break;
+
+                case "산성 비":
+                    Debug.Log("산성 비");
+                    break;
+
+                case "대지의 뿔":
+                    Debug.Log("대지의 뿔");
+                    break;
+            }
+
+        }
+        else
+        {
+            switch (card.item2.name)
+            {
+                case "일반 카드팩":
+                    Debug.Log("카드 드로우");
+                    break;
+            }
+        }
+       
+       
+    }
 
 }

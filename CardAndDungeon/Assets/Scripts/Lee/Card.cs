@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,17 +26,17 @@ public class Card : MonoBehaviour
     public PRS originPRS;
     public PRS origin2PRS;
     public PRS origin3PRS;
+    public Vector3 originPos;
 
     private Touch tempTouchs;
     private Vector2 touchedPos;
-    private bool touchOn;
+    public static bool touchOn;
+    public bool isMine;
 
-    private int rightFingerId;
-    float halfScreenWidth;
+
     private void Start()
     {
-        this.rightFingerId = -1;
-        halfScreenWidth = Screen.width / 7;  
+
 
     }
 
@@ -45,7 +46,14 @@ public class Card : MonoBehaviour
     }
     private void Update()
     {
+        TouchCheck();
+        DetectCardArea();
 
+
+    }
+
+    public void TouchCheck()
+    {
         if (Input.touchCount > 0)
         {
             for (int i = 0; i < Input.touchCount; i++)
@@ -59,17 +67,19 @@ public class Card : MonoBehaviour
 
                 RaycastHit2D hitInformation = Physics2D.Raycast(pos, Camera.main.transform.forward);
 
-                if(hitInformation.collider.tag=="Card")
+                if (hitInformation.collider.tag == "Card")
                 {
                     origin2PRS.pos = pos;
                     switch (touch.phase)
                     {
+
                         case TouchPhase.Stationary:
+                            touchOn = true;
                             CardManager.Inst.CardMouseOver(hitInformation.collider.gameObject.GetComponent<Card>());
                             break;
 
                         case TouchPhase.Moved:
-                            origin3PRS.pos = pos;                      
+                            origin3PRS.pos = pos;
                             if (isFront)
                                 CardManager.Inst.CardMouseDown();
                             break;
@@ -96,9 +106,13 @@ public class Card : MonoBehaviour
             }
         }
     }
-    public void CardPlusBtn()
-    {
 
+
+    public void DetectCardArea()
+    {
+        RaycastHit2D[] hits = Physics2D.RaycastAll(origin2PRS.pos, Camera.main.transform.forward);
+        int layer = LayerMask.NameToLayer("MyCardArea");
+        CardManager.onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
     }
     void cardSet()
     {
@@ -146,6 +160,7 @@ public class Card : MonoBehaviour
             text_TMP.text = this.item2.text.ToString();
             card_outlinecolor.color = this.item2.color_outline;
             jewel_color.color = this.item2.color_jewel;
+            image_color.color = this.item2.color_image;
         }
         else
         {
@@ -155,7 +170,6 @@ public class Card : MonoBehaviour
             text_TMP.text = "";
         }
     }
-
 
 
 

@@ -28,6 +28,7 @@ public class Item2
     public float percent;
     public Color color_outline;
     public Color color_jewel;
+    public Color color_image;
    
 }
 
