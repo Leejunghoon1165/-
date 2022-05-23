@@ -80,7 +80,7 @@ MonoBehaviour:
   items2:
   - name: "\uC77C\uBC18 \uCE74\uB4DC\uD329"
     number: 1
-    sprite: {fileID: 21300000, guid: 1aba030645430e441b79c3670d098c27, type: 3}
+    sprite: {fileID: 21300000, guid: dec23dcb35c29264c8939624242c8738, type: 3}
     subname: "\uD14C\uC2A4\uD2B82"
     text: "\uC77C\uBC18 \uB4F1\uAE09\uC744 \uC81C\uC678\uD55C \uCE74\uB4DC 1\uC7A5\uC744
       \uAC00\uC838\uC628\uB2E4."

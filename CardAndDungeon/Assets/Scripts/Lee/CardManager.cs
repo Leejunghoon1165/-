@@ -20,8 +20,8 @@ public class CardManager : MonoBehaviour
 
     List<Item1> itemBuffer;
     List<Item2> itemBuffer2;
-
-    public static bool onMyCardArea;
+    bool onMyCardArea;
+    //public static bool onMyCardArea;
     bool isMyCardDrag;
     Card selectCard;
 
@@ -95,7 +95,7 @@ public class CardManager : MonoBehaviour
     {
         if (isMyCardDrag)
             CardDrag();
-      //  DetectCardArea();
+          DetectCardArea();
 
     }
    
@@ -211,7 +211,7 @@ public class CardManager : MonoBehaviour
         Card card = selectCard;
         var targetCards = myCards;
 
-        if(EntityManager.Inst.SpawnEntity(isMine,card.item1))
+        if(EntityManager.Inst.SpawnEntity(isMine, card.item1))
         {
             targetCards.Remove(card);
             card.transform.DOKill();
@@ -256,11 +256,22 @@ public class CardManager : MonoBehaviour
 
     public void CardMouseUp()
     {
-        isMyCardDrag = false;
-        if (onMyCardArea)
-            EntityManager.Inst.RemoveMyEmptyEntity();
+        if(selectCard !=null)
+        {
+            isMyCardDrag = false;
+            if (onMyCardArea)
+            {
+                EntityManager.Inst.RemoveMyEmptyEntity();
+            }    
+            else
+                TryPutCard(true);
+        }
         else
-            TryPutCard(true);
+        {
+  
+        }
+      
+            
     }
     void CardDrag()
     {
@@ -268,18 +279,40 @@ public class CardManager : MonoBehaviour
         {
             // Vector3 cardPos = new Vector3(selectCard.origin2PRS.pos)
             // selectCard.MoveTransform(new PRS(Utils.MousePos, Utils.QI, selectCard.originPRS.scale), false);
-            Vector3 Cardpos = new Vector3(selectCard.origin2PRS.pos.x, selectCard.origin2PRS.pos.y, -10f);
-            selectCard.MoveTransform(new PRS(Cardpos, Utils.QI, selectCard.originPRS.scale), false);
-            EntityManager.Inst.InsertMyEmptyEntity(Cardpos.x);
+            if(selectCard != null)
+            {
+                Vector3 Cardpos = new Vector3(selectCard.origin2PRS.pos.x, selectCard.origin2PRS.pos.y, -100);
+                selectCard.MoveTransform(new PRS(Cardpos, Utils.QI, selectCard.originPRS.scale), false);
+                EntityManager.Inst.InsertMyEmptyEntity(Cardpos.x);
+            }
+            
         }
     }
     public void DetectCardArea()
     {
-        // RaycastHit2D[] hits = Physics2D.RaycastAll(Utils.MousePos, Vector3.forward);
+        //if (Input.touchCount > 0)
+        //{
+        //    for (int i = 0; i < Input.touchCount; i++)
+        //    {
+        //        Touch touch = Input.GetTouch(i);  //i번째 터치에 대한 정보
+        //        int index = touch.fingerId; //i번째 터치에 대한 id 값
+        //        Vector3 position = touch.position;  //i번째 터치의 위치
+
+        //        TouchPhase phase = touch.phase; //i번째 터치의 상태
+        //        Vector3 pos = Camera.main.ScreenToWorldPoint(touch.position);
+        //        Vector3 originCard = new Vector3(pos.x, pos.y, -10);
+        //        RaycastHit2D[] hits = Physics2D.RaycastAll(originCard, Camera.main.transform.forward);
+                
+        //        int layer = LayerMask.NameToLayer("MyCardArea");
+        //        onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
+        //    }
+        //}
+
+        
+
 
        // RaycastHit2D[] hits = Physics2D.RaycastAll(selectCard.origin2PRS.pos, Vector3.forward);
-        //int layer = LayerMask.NameToLayer("MyCardArea");
-        //onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
+    
     }
 
 
@@ -288,18 +321,16 @@ public class CardManager : MonoBehaviour
     {
         if (isEnlarge)
         {
-            Vector3 enlargePos = new Vector3(card.origin2PRS.pos.x, card.origin2PRS.pos.y + 3.5f, -10f);
+            Vector3 enlargePos = new Vector3(card.origin2PRS.pos.x, card.origin2PRS.pos.y + 3.5f, -100);
             card.MoveTransform(new PRS(enlargePos, Utils.QI, Vector3.one * 1.2f), false);
 
         }
         else //축소
         {
-           card.MoveTransform(card.originPRS, false);
+            card.MoveTransform(card.originPRS, false);
         }
 
-
-
-        card.GetComponentInChildren<Order>().SetMostFrontOrder(isEnlarge);
+            card.GetComponentInChildren<Order>().SetMostFrontOrder(isEnlarge);
     }
 
 

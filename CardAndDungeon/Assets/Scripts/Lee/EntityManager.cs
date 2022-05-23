@@ -15,7 +15,7 @@ public class EntityManager : MonoBehaviour
     const int MAX_ENTITY_COUNT = 100;
     public bool IsFullMyEntities => myEntities.Count >= MAX_ENTITY_COUNT && !ExistMyEmptyEntity;
     bool ExistMyEmptyEntity => myEntities.Exists(x => x == myEmptyEntity);
-    int MyEmptyEntityIndex => myEntities.FindIndex(x => x == myEmptyEntity);
+   // int MyEmptyEntityIndex => myEntities.FindIndex(x => x == myEmptyEntity);
 
 
     // Start is called before the first frame update
@@ -41,7 +41,7 @@ public class EntityManager : MonoBehaviour
         emptyEntityPos.x = xPos;
         myEmptyEntity.transform.position = emptyEntityPos;
 
-        int _emptyEntityIndex = MyEmptyEntityIndex;
+       // int _emptyEntityIndex = MyEmptyEntityIndex;
         myEntities.Sort((entity1, entity2) => entity1.transform.position.x.CompareTo(entity2.transform.position.x));
         //if(MyEmptyEntityIndex != _emptyEntityIndex)
             
@@ -50,7 +50,7 @@ public class EntityManager : MonoBehaviour
 
     public void RemoveMyEmptyEntity()
     {
-      //  myEntities.RemoveAt(MyEmptyEntityIndex);
+       // myEntities.RemoveAt(MyEmptyEntityIndex);
 
     }
 
@@ -59,7 +59,7 @@ public class EntityManager : MonoBehaviour
 
         var entity = entityPrefab.GetComponent<Card>();
         if (isMine)
-            myEntities[MyEmptyEntityIndex] = entity;
+           // myEntities[MyEmptyEntityIndex] = entity;
         entity.isMine = isMine;
         entity.Setup(item1, true);
         return true;

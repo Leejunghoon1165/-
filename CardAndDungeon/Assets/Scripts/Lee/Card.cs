@@ -32,6 +32,7 @@ public class Card : MonoBehaviour
     private Vector2 touchedPos;
     public static bool touchOn;
     public bool isMine;
+    public int i;
 
 
     private void Start()
@@ -47,7 +48,7 @@ public class Card : MonoBehaviour
     private void Update()
     {
         TouchCheck();
-        DetectCardArea();
+       // DetectCardArea();
 
 
     }
@@ -66,13 +67,13 @@ public class Card : MonoBehaviour
                 Vector3 pos = Camera.main.ScreenToWorldPoint(touch.position);
 
                 RaycastHit2D hitInformation = Physics2D.Raycast(pos, Camera.main.transform.forward);
-
+                RaycastHit2D[] hits = Physics2D.RaycastAll(pos, Camera.main.transform.forward);
+     
                 if (hitInformation.collider.tag == "Card")
-                {
+                {   
                     origin2PRS.pos = pos;
                     switch (touch.phase)
                     {
-
                         case TouchPhase.Stationary:
                             touchOn = true;
                             CardManager.Inst.CardMouseOver(hitInformation.collider.gameObject.GetComponent<Card>());
@@ -98,7 +99,14 @@ public class Card : MonoBehaviour
                                 CardManager.Inst.CardMouseUp();
                             }
                             break;
-
+                    }
+                }
+                else
+                {
+                    if (touch.phase == TouchPhase.Ended)
+                    {
+                        CardManager.Inst.CardMouseUp();
+                        //CardManager.Inst.CardMouseExit(this);
 
                     }
                 }
@@ -110,9 +118,10 @@ public class Card : MonoBehaviour
 
     public void DetectCardArea()
     {
-        RaycastHit2D[] hits = Physics2D.RaycastAll(origin2PRS.pos, Camera.main.transform.forward);
+        RaycastHit2D[] hits = Physics2D.RaycastAll(origin2PRS.pos, Vector3.forward);
+        origin2PRS.pos.z = -10;
         int layer = LayerMask.NameToLayer("MyCardArea");
-        CardManager.onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
+       // CardManager.onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
     }
     void cardSet()
     {
