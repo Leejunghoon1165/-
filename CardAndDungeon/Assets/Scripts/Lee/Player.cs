@@ -116,7 +116,6 @@ public class Player : MonoBehaviour
     public static void TakeDamage(float damamge)
     {
         curHp = curHp - damage;
-        Debug.Log("¾Æ¾ß");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

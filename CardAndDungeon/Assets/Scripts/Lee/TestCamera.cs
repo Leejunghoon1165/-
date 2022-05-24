@@ -15,6 +15,8 @@ public class TestCamera : MonoBehaviour
     public GameObject Map1;
     public GameObject Map2;
     public GameObject Map3;
+    public GameObject Map4;
+    public GameObject Map5;
 
     public PRS Cameraorigin;
 
@@ -59,6 +61,12 @@ public class TestCamera : MonoBehaviour
                 break;
             case 2:
                 transform.position = Map3.transform.position;
+                break;
+            case 3:
+                transform.position = Map4.transform.position;
+                break;
+            case 4:
+                transform.position = Map5.transform.position;
                 break;
             default:
                 break;
