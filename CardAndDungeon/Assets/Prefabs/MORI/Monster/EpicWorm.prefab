@@ -232,6 +232,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 3851910625532374844}
   EXP: {fileID: 1714400547666806144, guid: bb78d1b8b41e94147b31bc2490cea49f, type: 3}
+  Card: {fileID: 8613163023734453121, guid: 62f946292b8549942992da02d8becab5, type: 3}
   EXPCount: 3
   widthMove: 0
   highMove: 0
@@ -242,12 +243,11 @@ MonoBehaviour:
   AttackRange: 8
   FindRange: 12
   Strengh: 10
-  card: {fileID: 7043457649046958839, guid: 6733d48839632934ea7ef025678bfb74, type: 3}
   dist: 0
   touch: 0
   longRange: 0
   bottomLeft: {x: 0, y: 0}
-  topRight: {x: 55, y: 35}
+  topRight: {x: 55, y: 15}
   startPos: {x: 0, y: 0}
   targetPos: {x: 0, y: 0}
   FinalNodeList: []

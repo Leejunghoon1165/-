@@ -16,7 +16,7 @@ public class CardManager : MonoBehaviour
     [SerializeField] Transform myCardLeft;
     [SerializeField] Transform myCardRight;
     [SerializeField] Camera mainCamera;
-    int r = 0;
+    float r = 0;
 
     List<Item1> itemBuffer;
     List<Item2> itemBuffer2;
@@ -96,14 +96,14 @@ public class CardManager : MonoBehaviour
         if (isMyCardDrag)
             CardDrag();
           DetectCardArea();
-
+       
     }
    
 
     public void Carddrow()
     {
-        r = Random.Range(0, 2);
-        if(myCards.Count <4)
+        r = CardData.num;
+        if (myCards.Count <4)
         {
             AddCard(true);
         }
