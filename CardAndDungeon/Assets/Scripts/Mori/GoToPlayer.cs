@@ -38,7 +38,8 @@ public class GoToPlayer : MonoBehaviour
     }
 
     private void OnCollisionEnter2D(Collision2D col) {
-        if (col.gameObject.tag == "Player") {
+        if (col.gameObject.tag == "Player")
+        {
             /*
             //경험치일 때, 경험치 추가 함수 호출
             //카드일 때는 ㅈ도 없음
@@ -46,7 +47,13 @@ public class GoToPlayer : MonoBehaviour
 
             }
             */
+            if(!isthisexp)
+            {
+ 
+                CardManager.Inst.Carddrow();
+            }
             Destroy(gameObject, .01f);
+
         }
     }
     

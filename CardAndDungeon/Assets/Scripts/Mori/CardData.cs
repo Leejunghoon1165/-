@@ -5,7 +5,7 @@ using UnityEngine;
 public class CardData : MonoBehaviour
 {
     public GameObject A, B;
-    static float num;
+    public static float num;
     // Start is called before the first frame update
     void Start()
     {
