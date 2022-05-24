@@ -340,7 +340,7 @@ public class CardManager : MonoBehaviour
                 return;
 
             Vector3 OriginCard = new Vector3(selectCard.originPRS.pos.x, selectCard.originPRS.pos.y, -100);
-            selectCard.MoveTransform(new PRS(OriginCard, Utils.QI, selectCard.originPRS.scale), false);
+            selectCard.MoveTransform(new PRS(OriginCard, card.originPRS.rot, selectCard.originPRS.scale), false);
   
             //card.MoveTransform(card.originPRS, false);
         }
