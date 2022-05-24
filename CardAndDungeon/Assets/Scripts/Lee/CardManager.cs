@@ -23,7 +23,7 @@ public class CardManager : MonoBehaviour
     bool onMyCardArea;
     //public static bool onMyCardArea;
     bool isMyCardDrag;
-    Card selectCard;
+    public Card selectCard;
 
     int myPutCount;
 
@@ -162,6 +162,7 @@ public class CardManager : MonoBehaviour
             targetCard.originPRS = originCardPRSs[i];
             targetCard.MoveTransform(targetCard.originPRS, true, 0.7f);
          }
+       
         
     }
     List<PRS> RoundAlignment(Transform leftTr, Transform rightTr, int objCount, float height, Vector3 scale)
@@ -247,11 +248,9 @@ public class CardManager : MonoBehaviour
 
     public void CardMouseExit(Card card)
     {
-            EnlargeCard(false, card);
-            selectCard = null;
+        EnlargeCard(false, card);
+       // selectCard = null;
        
-
-    
     }
 
     public void CardMouseDown()
@@ -338,14 +337,18 @@ public class CardManager : MonoBehaviour
         {
             if (selectCard == null)
                 return;
-
             Vector3 OriginCard = new Vector3(selectCard.originPRS.pos.x, selectCard.originPRS.pos.y, -100);
             selectCard.MoveTransform(new PRS(OriginCard, card.originPRS.rot, selectCard.originPRS.scale), false);
-  
             //card.MoveTransform(card.originPRS, false);
+            selectCard = null;
         }
-        if(card !=null)
+        if (card == null)
+            return;
+        else
+        {
             card.GetComponentInChildren<Order>().SetMostFrontOrder(isEnlarge);
+        }
+           
     }
 
 

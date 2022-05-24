@@ -915,7 +915,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.9931736, y: -5.1289673}
+  m_Offset: {x: 0.9931736, y: -4.099674}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -926,7 +926,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.937622, y: 4.235304}
+  m_Size: {x: 10.937622, y: 6.2938895}
   m_EdgeRadius: 0
 --- !u!1 &197296124
 GameObject:
@@ -1584,7 +1584,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433162464}
-  m_LocalRotation: {x: 0, y: -0, z: -0.17364825, w: 0.9848078}
+  m_LocalRotation: {x: 0, y: 0, z: -0.17364818, w: 0.9848077}
   m_LocalPosition: {x: 4.5, y: -6.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -3540,6 +3540,8 @@ MonoBehaviour:
     scale: {x: 0, y: 0, z: 0}
   originPos: {x: 0, y: 0, z: 0}
   isMine: 0
+  CheckOne: 0
+  CheckTwo: 0
   i: 0
 --- !u!1 &1249505009
 GameObject:
@@ -4233,6 +4235,7 @@ MonoBehaviour:
   myCardLeft: {fileID: 614724586}
   myCardRight: {fileID: 433162465}
   mainCamera: {fileID: 1946747267}
+  selectCard: {fileID: 0}
 --- !u!4 &1399992690
 Transform:
   m_ObjectHideFlags: 0
@@ -5986,6 +5989,8 @@ MonoBehaviour:
     scale: {x: 0, y: 0, z: 0}
   originPos: {x: 0, y: 0, z: 0}
   isMine: 0
+  CheckOne: 0
+  CheckTwo: 0
   i: 0
 --- !u!1 &1857514487
 GameObject:
