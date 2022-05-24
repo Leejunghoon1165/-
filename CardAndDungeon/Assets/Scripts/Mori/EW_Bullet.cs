@@ -8,7 +8,7 @@ public class EW_Bullet : MonoBehaviour
     Vector2 playerPos;
     Vector2 pos;
     public float speed;
-    float strengh;
+    public float strengh;
     bool touch;
 
     void Awake()
@@ -16,8 +16,6 @@ public class EW_Bullet : MonoBehaviour
         Vector2.MoveTowards(this.transform.position, playerPos, speed);
 
         playerPos = new Vector2(GameObject.FindWithTag("Player").transform.position.x, GameObject.FindWithTag("Player").transform.position.y + 0.4f);
-
-        strengh = GameObject.Find("EpicWorm").GetComponent<MoveManager>().Strengh;
         touch = false;
     }
 

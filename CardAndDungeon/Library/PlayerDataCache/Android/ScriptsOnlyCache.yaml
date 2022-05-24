@@ -4,6 +4,8 @@ ScriptsOnlyBuild:
     - Camera169
     - CameraResolution
     - EW_Bullet
+    - EXP
+    - EngravingMenu
     - EpicWorm_Attack
     - GameManager
     - MainMenu
@@ -24,6 +26,7 @@ ScriptsOnlyBuild:
     - Timer
     - TitleCameraMove
     - TitleScene
+    - Tutorial
     - VariableJoystick
     - Worm_Attack
     Unity.2D.Animation.Editor.dll:
@@ -44,11 +47,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnimatorStateTransitionInspector
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -59,10 +59,16 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.Mask
+    - UnityEngine.UI.RawImage
+    - UnityEngine.UI.ScrollRect
+    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
@@ -82,6 +88,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
     - Class: 70
@@ -94,6 +102,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 84
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -101,63 +111,73 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 628}
+      Script: {instanceID: 654}
     - Class: 114
-      Script: {instanceID: 1460}
+      Script: {instanceID: 1486}
     - Class: 114
-      Script: {instanceID: 1466}
+      Script: {instanceID: 1488}
+    - Class: 114
+      Script: {instanceID: 1490}
+    - Class: 114
+      Script: {instanceID: 1492}
+    - Class: 114
+      Script: {instanceID: 1494}
     - Class: 114
       Script: {instanceID: 1496}
     - Class: 114
-      Script: {instanceID: 1586}
+      Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 1752}
+      Script: {instanceID: 1540}
     - Class: 114
-      Script: {instanceID: 1816}
+      Script: {instanceID: 1630}
     - Class: 114
-      Script: {instanceID: 2120}
+      Script: {instanceID: 1854}
     - Class: 114
-      Script: {instanceID: 2282}
+      Script: {instanceID: 2158}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 2320}
     - Class: 114
-      Script: {instanceID: 2916}
+      Script: {instanceID: 2514}
     - Class: 114
-      Script: {instanceID: 3000}
+      Script: {instanceID: 2616}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3194}
+      Script: {instanceID: 3040}
     - Class: 114
-      Script: {instanceID: 3246}
+      Script: {instanceID: 3230}
     - Class: 114
-      Script: {instanceID: 3376}
+      Script: {instanceID: 3282}
     - Class: 114
-      Script: {instanceID: 3422}
+      Script: {instanceID: 3412}
     - Class: 114
-      Script: {instanceID: 3438}
+      Script: {instanceID: 3458}
     - Class: 114
-      Script: {instanceID: 3544}
+      Script: {instanceID: 3472}
     - Class: 114
-      Script: {instanceID: 3880}
+      Script: {instanceID: 3912}
     - Class: 114
-      Script: {instanceID: 3922}
+      Script: {instanceID: 3954}
     - Class: 114
-      Script: {instanceID: 4126}
+      Script: {instanceID: 4158}
     - Class: 114
-      Script: {instanceID: 4232}
+      Script: {instanceID: 4264}
     - Class: 114
-      Script: {instanceID: 4450}
+      Script: {instanceID: 4480}
     - Class: 114
-      Script: {instanceID: 4726}
+      Script: {instanceID: 4752}
     - Class: 114
-      Script: {instanceID: 4922}
+      Script: {instanceID: 4758}
     - Class: 114
-      Script: {instanceID: 5430}
+      Script: {instanceID: 4952}
     - Class: 114
-      Script: {instanceID: 5722}
+      Script: {instanceID: 5462}
     - Class: 114
-      Script: {instanceID: 5870}
+      Script: {instanceID: 5740}
+    - Class: 114
+      Script: {instanceID: 5754}
+    - Class: 114
+      Script: {instanceID: 5902}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -210,35 +230,45 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1460}
+      Script: {instanceID: 1486}
     - Class: 114
-      Script: {instanceID: 1466}
+      Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 1468}
+      Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 1690}
+      Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 1752}
+      Script: {instanceID: 1494}
     - Class: 114
-      Script: {instanceID: 1794}
+      Script: {instanceID: 1496}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 1498}
     - Class: 114
-      Script: {instanceID: 2916}
+      Script: {instanceID: 1500}
     - Class: 114
-      Script: {instanceID: 3080}
+      Script: {instanceID: 1502}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 1510}
     - Class: 114
-      Script: {instanceID: 3194}
+      Script: {instanceID: 1512}
     - Class: 114
-      Script: {instanceID: 3306}
+      Script: {instanceID: 1514}
     - Class: 114
-      Script: {instanceID: 3376}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3422}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3544}
+      Script: {instanceID: 3230}
+    - Class: 114
+      Script: {instanceID: 3342}
+    - Class: 114
+      Script: {instanceID: 3412}
+    - Class: 114
+      Script: {instanceID: 3458}
+    - Class: 114
+      Script: {instanceID: 3808}
+    - Class: 114
+      Script: {instanceID: 5898}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -284,6 +314,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
+    - Class: 84
+      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -291,27 +323,27 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 628}
+      Script: {instanceID: 654}
     - Class: 114
-      Script: {instanceID: 1466}
+      Script: {instanceID: 1488}
     - Class: 114
-      Script: {instanceID: 1794}
+      Script: {instanceID: 1490}
     - Class: 114
-      Script: {instanceID: 2736}
+      Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 2808}
+      Script: {instanceID: 1498}
     - Class: 114
-      Script: {instanceID: 2916}
+      Script: {instanceID: 2666}
     - Class: 114
-      Script: {instanceID: 3076}
+      Script: {instanceID: 2732}
     - Class: 114
-      Script: {instanceID: 3080}
+      Script: {instanceID: 2956}
     - Class: 114
-      Script: {instanceID: 3166}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3422}
+      Script: {instanceID: 3458}
     - Class: 114
-      Script: {instanceID: 5646}
+      Script: {instanceID: 5224}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -347,22 +379,46 @@ ScriptsOnlyBuild:
     className: Image
   - hash:
       serializedVersion: 2
-      Hash: 0fd6822f6177297bd0eb4d83cc7a9030
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: ToggleGroup
-  - hash:
-      serializedVersion: 2
-      Hash: bcaee4c2a83047257b5f47d6ed264b75
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Toggle
-  - hash:
-      serializedVersion: 2
       Hash: 699619b86d9359741a4f58540298c80b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: a1aa98c78061c6f03a8c124cda576e67
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: 69415240821be7986b27e72bf9609a30
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 21a9c6dbf300fc1f6dc15ca7e2c39a37
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 0dbc3be398b4869a5c8d0d8481ee402c
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: LayoutElement
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
@@ -371,22 +427,52 @@ ScriptsOnlyBuild:
     className: HorizontalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: aba7b2852ef61d175dd9602e7723d5e5
+      Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
-    className: Mask
-  - hash:
-      serializedVersion: 2
-      Hash: a306e12d896ddcca949923c805691027
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: InputField
+    className: ToggleGroup
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: bcaee4c2a83047257b5f47d6ed264b75
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: aba7b2852ef61d175dd9602e7723d5e5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 040dd48e3a027d5424519a5fa2009df4
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: f7858108331b563fb41b80b729297acd
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: a81d4c2c1cf3ad164d277d927a193679
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: a306e12d896ddcca949923c805691027
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: InputField
   - hash:
       serializedVersion: 2
       Hash: 824e8d4cb47ffd88ddf959dbd4526585
@@ -437,22 +523,10 @@ ScriptsOnlyBuild:
     className: CCDSolver2D
   - hash:
       serializedVersion: 2
-      Hash: 0dbc3be398b4869a5c8d0d8481ee402c
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: LayoutElement
-  - hash:
-      serializedVersion: 2
       Hash: 6bc76e17f0d5e93f3eea7f5a2fe227f3
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
-  - hash:
-      serializedVersion: 2
-      Hash: 21a9c6dbf300fc1f6dc15ca7e2c39a37
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Slider
   - hash:
       serializedVersion: 2
       Hash: ce669872a2be11bc686ea22961d8a3bb
@@ -471,12 +545,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SpriteEyeSync
-  - hash:
-      serializedVersion: 2
-      Hash: caa533b001ae39b864ba8425019e2268
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Shadow
   - hash:
       serializedVersion: 2
       Hash: 6e5af7c8650863d418471c6d2ee8952d
@@ -575,22 +643,28 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: a1aa98c78061c6f03a8c124cda576e67
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: CanvasScaler
+      Hash: 4bfcd3f5c6fcb98d40848647b3f35d5e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tutorial
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TitleScene
+  - hash:
+      serializedVersion: 2
+      Hash: 06a422474ee973d823f5bf09e5034a93
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TitleCameraMove
   - hash:
       serializedVersion: 2
       Hash: 7223985316e348eca4cc1a2d45d850fe
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SPUM_SpriteEditManager
-  - hash:
-      serializedVersion: 2
-      Hash: dc8174ddac00fe298da1d162113b7ac1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MonsterMove
   - hash:
       serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
@@ -650,12 +724,6 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: TitleScene
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
     className: Camera169
   - hash:
       serializedVersion: 2
@@ -663,12 +731,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
-  - hash:
-      serializedVersion: 2
-      Hash: ae83e830e7a90c0aff918c4c2e520825
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GraphicRaycaster
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -713,7 +775,7 @@ ScriptsOnlyBuild:
     className: JoystickSetterExample
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 4d4f6da331380f96ec787daa846d00d4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainMenu
@@ -729,12 +791,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: StandaloneInputModule
-  - hash:
-      serializedVersion: 2
-      Hash: f7858108331b563fb41b80b729297acd
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Scrollbar
   - hash:
       serializedVersion: 2
       Hash: 5a76b73060b5b1903cdd3b8936856837
@@ -765,12 +821,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
-  - hash:
-      serializedVersion: 2
-      Hash: 69415240821be7986b27e72bf9609a30
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: 349d08daa6108b9a28f8c38fd40ce96f
@@ -851,7 +901,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 73d598b9b3e42d7a8383b85c11e95edd
+      Hash: a67eccbc9e822218d47711db3d078947
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveManager
@@ -923,12 +973,6 @@ ScriptsOnlyBuild:
     className: SpriteLibrary
   - hash:
       serializedVersion: 2
-      Hash: a81d4c2c1cf3ad164d277d927a193679
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Dropdown
-  - hash:
-      serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -965,7 +1009,13 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 62e26739982190612879b1f32b92c56e
+      Hash: b3fd8319e64a53ef4c6157c961ad1c48
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EngravingMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 82b5463ce0995e95efe1c8cd9be40233
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EW_Bullet
@@ -999,12 +1049,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalReceiver
-  - hash:
-      serializedVersion: 2
-      Hash: 040dd48e3a027d5424519a5fa2009df4
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: ScrollRect
   - hash:
       serializedVersion: 2
       Hash: 18c222bef9ae745ce69ddde9b74337ca
@@ -1055,6 +1099,12 @@ ScriptsOnlyBuild:
     className: SpriteLibraryAsset
   - hash:
       serializedVersion: 2
+      Hash: 659d6ceab26f9e4237abaaf29249f293
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MonsterMove
+  - hash:
+      serializedVersion: 2
       Hash: 63bdc2cf3273aa9bf650350f19d2af61
     assemblyName: Unity.2D.PixelPerfect.dll
     namespaceName: UnityEngine.U2D
@@ -1103,16 +1153,16 @@ ScriptsOnlyBuild:
     className: MoveCamera
   - hash:
       serializedVersion: 2
-      Hash: 06a422474ee973d823f5bf09e5034a93
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TitleCameraMove
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: BufferManager
+  - hash:
+      serializedVersion: 2
+      Hash: 28b47d6d7e0c8bd442b12836607c0d5a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EXP
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1166,4 +1216,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Title.unity
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/InGame.unity
-  playerPath: C:/Users/rxg89/Desktop/test.apk
+  playerPath: C:/Users/user/Desktop/test.apk

@@ -20,10 +20,15 @@ public class Node
 public class MoveManager : MonoBehaviour
 {
     public Animator anim;
-    public Rigidbody2D rigid;
-
+    Rigidbody2D rigid;
     //타겟
     Transform Player;
+
+    //경험치
+    public GameObject EXP;
+    bool dropEXP;
+    public int EXPCount;
+    int dropCount;
 
     //위아래 움직임
     public int widthMove;
@@ -73,31 +78,33 @@ public class MoveManager : MonoBehaviour
 
         cur_HP = max_HP;
         dist = 10;
+
+        dropEXP = false;
+        dropCount = 0;
     }
 
     void Update() {
-        Player =  GameObject.FindWithTag("Player").transform;
+        Player = GameObject.FindWithTag("PlayerPos").transform;
         targetPos = Vector2Int.RoundToInt(Player.transform.position);
         startPos = Vector2Int.RoundToInt(this.transform.position);
 
-        startY = this.transform.position.y - 0.33f;
-        targetY = Player.position.y + 0.4f;
-
-        Vector2 Start = new Vector2(this.transform.position.x, startY);
-        Vector2 Target = new Vector2(Player.position.x, targetY);
-
-        dist = Vector2.Distance(Start, Target);
+        dist = Vector2.Distance(this.transform.position, Player.transform.position);
 
         if(cur_HP <= 0 ){
+            //if(anim.IsInTransition(0) == false)
             anim.SetTrigger("Die");
             rigid.constraints = RigidbodyConstraints2D.FreezePosition;
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, 1.5f);
+            dropEXP = true;
+            DropEXT();
         }
         
         if(this.gameObject.GetComponent<Spawn>().mob_num == GameObject.Find("Main Camera").GetComponent<TestCamera>().MapNum)
         {
-            PathFinding();
-            Movement();
+            if(cur_HP > 0) {
+                PathFinding();
+                Movement();
+            }
         }
 
         //플레이어 위치에 따라 좌우 반전해서 바라보기
@@ -107,7 +114,6 @@ public class MoveManager : MonoBehaviour
             transform.eulerAngles = new Vector2(0, 180);
         else
             transform.eulerAngles = new Vector2(0, 0);
-
     }
     public void PathFinding()
     {
@@ -207,18 +213,20 @@ public class MoveManager : MonoBehaviour
     {   
         if(touch == true || AttackRange >= dist) {
             Attack();
-            Debug.Log("att");
+            rigid.velocity = new Vector2(0, 0);
+            //Debug.Log("att");
         }
         else if(longRange == true) {
             LongRangeAttack();
-            Debug.Log("lratt");
+            rigid.velocity = new Vector2(0, 0);
+            //Debug.Log("lratt");
         }
         else if(FindRange >= dist) {
             Chase();
-            Debug.Log("chase");
+            //Debug.Log("chase");
         }
         else {
-            Debug.Log("idle");
+            //Debug.Log("idle");
             Idle();
         }
     }
@@ -229,10 +237,11 @@ public class MoveManager : MonoBehaviour
             for (int i = 0; i < FinalNodeList.Count - 1 && new Vector2(FinalNodeList[i].x, FinalNodeList[i].y) == startPos; i++)
                 {
                     Vector2Int path = new Vector2Int(FinalNodeList[i + 1].x, FinalNodeList[i + 1].y);
-                    transform.position = Vector2.MoveTowards(transform.position, path,Time.deltaTime * MovementSpeed);    
+                    transform.position = Vector2.MoveTowards(transform.position, path, Time.deltaTime * MovementSpeed);    
                 }
         }
         anim.SetTrigger("Walk");
+        rigid.velocity = new Vector2(0, 0);
     }
     void Idle()
     {
@@ -270,6 +279,17 @@ public class MoveManager : MonoBehaviour
         sprite.color = Color.white;
     }
 
+    //경험치를 떨구는 함수
+    void DropEXT()
+    {
+        if(dropCount <= EXPCount) {
+        EXP = Instantiate(EXP, transform.position, transform.rotation);
+        }
+        dropCount += 1;
+    }
+
+
+    //플레이어에게 데미지 주는 함수
     public void TakeDamage(float damage)
     {
         cur_HP = cur_HP - damage;
@@ -287,5 +307,11 @@ public class MoveManager : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {   
         touch = false;
+    }
+
+     void OnDrawGizmos()
+    {
+        if(FinalNodeList.Count != 0) for (int i = 0; i < FinalNodeList.Count - 1; i++)
+                Gizmos.DrawLine(new Vector2(FinalNodeList[i].x, FinalNodeList[i].y), new Vector2(FinalNodeList[i + 1].x, FinalNodeList[i + 1].y));
     }
 }
