@@ -9,7 +9,7 @@ public class Worm_Attack : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        strengh = GameObject.Find("Worm").GetComponent<MoveManager>().Strengh;
+        strengh = this.gameObject.GetComponent<MoveManager>().Strengh;
         attacking = false;
     }
     
