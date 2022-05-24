@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     public VariableJoystick joy;
+    [SerializeField]
     public float speed;
 
     public GameObject attackMotion;
@@ -22,6 +23,9 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        speed = 2.5f;
+        maxHp = 100;
+        curHp = 100;
         rigid = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         attackMotion.SetActive(false);
@@ -66,7 +70,11 @@ public class Player : MonoBehaviour
                 return;
         }
         else
+        {
+
             Die();
+        }
+            
 
        
     }
