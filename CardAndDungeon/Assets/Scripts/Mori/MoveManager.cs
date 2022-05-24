@@ -25,8 +25,8 @@ public class MoveManager : MonoBehaviour
     Transform Player;
 
     //경험치
-    public GameObject EXP;
-    bool dropEXP;
+    public GameObject EXP, Card;
+    bool dropEXP, dropCARD;
     public int EXPCount;
     int dropCount;
 
@@ -97,6 +97,9 @@ public class MoveManager : MonoBehaviour
             Destroy(gameObject, 1.5f);
             dropEXP = true;
             DropEXT();
+            if(dropCARD == false) {
+                DropCard();
+            }
         }
         
         if(this.gameObject.GetComponent<Spawn>().mob_num == GameObject.Find("Main Camera").GetComponent<TestCamera>().MapNum)
@@ -288,6 +291,12 @@ public class MoveManager : MonoBehaviour
         dropCount += 1;
     }
 
+    //카드 떨구는 함수
+    void DropCard()
+    {
+        Card = Instantiate(Card, transform.position, transform.rotation);
+        dropCARD = true;
+    }
 
     //플레이어에게 데미지 주는 함수
     public void TakeDamage(float damage)
