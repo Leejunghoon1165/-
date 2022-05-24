@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingOrder: 1001
   m_Sprite: {fileID: -8745766463601185182, guid: 7925c5a97139a264499510ff29e4e028,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.08627451, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -181,7 +181,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uB370\uBBF8\uC9C0 x\uB97C \uC90D\uB2C8\uB2E4."
+  m_text: "\uC804\uBC29\uC5D0 \uD3ED\uBC1C\uC744 \uC77C\uC73C\uCF1C \uB370\uBBF8\uC9C0\uB97C
+    \uC900\uB2E4."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65c0897d8e1ddcc40b360d611cd57496, type: 2}
   m_sharedMaterial: {fileID: 3279531262454636513, guid: 65c0897d8e1ddcc40b360d611cd57496,
@@ -325,8 +326,8 @@ SpriteRenderer:
   m_SortingLayerID: 1957522469
   m_SortingLayer: 1
   m_SortingOrder: 1001
-  m_Sprite: {fileID: 21300000, guid: dd0909acab0d6564fbec91acbcbdf292, type: 3}
-  m_Color: {r: 0.32941177, g: 1, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: b8558a2189aac8046a65960a994fe757, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -676,16 +677,17 @@ MonoBehaviour:
   jewel_color: {fileID: 8532191999925515468}
   image_color: {fileID: 7043457647126560641}
   item1:
-    name: "\uC0B0\uC131 \uBE44"
+    name: "\uC2DC\uACF5\uAC04 \uD3ED\uBC1C"
     attack: 10
-    sprite: {fileID: 21300000, guid: dd0909acab0d6564fbec91acbcbdf292, type: 3}
-    subname: "\uD544\uB4DC"
-    text: "\uB370\uBBF8\uC9C0 x\uB97C \uC90D\uB2C8\uB2E4."
+    sprite: {fileID: 21300000, guid: b8558a2189aac8046a65960a994fe757, type: 3}
+    subname: "\uD14C\uC2A4\uD2B81"
+    text: "\uC804\uBC29\uC5D0 \uD3ED\uBC1C\uC744 \uC77C\uC73C\uCF1C \uB370\uBBF8\uC9C0\uB97C
+      \uC900\uB2E4."
     percent: 10
     color_outline: {r: 1, g: 0.47843137, b: 0.52156866, a: 1}
-    color_jewel: {r: 1, g: 1, b: 1, a: 1}
-    color_image: {r: 0.32941177, g: 1, b: 0, a: 1}
-    color_text: {r: 0, g: 0.23529412, b: 0.77254903, a: 1}
+    color_jewel: {r: 0.08627451, g: 1, b: 0, a: 1}
+    color_image: {r: 1, g: 1, b: 1, a: 1}
+    color_text: {r: 0, g: 0, b: 0, a: 0}
   item2:
     name: 
     number: 0
@@ -710,6 +712,8 @@ MonoBehaviour:
     scale: {x: 0, y: 0, z: 0}
   originPos: {x: 0, y: 0, z: 0}
   isMine: 1
+  CheckOne: 0
+  CheckTwo: 0
   i: 0
 --- !u!60 &4490477115736028073
 PolygonCollider2D:
@@ -843,7 +847,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC0B0\uC131 \uBE44"
+  m_text: "\uC2DC\uACF5\uAC04 \uD3ED\uBC1C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65c0897d8e1ddcc40b360d611cd57496, type: 2}
   m_sharedMaterial: {fileID: 3279531262454636513, guid: 65c0897d8e1ddcc40b360d611cd57496,
@@ -1014,7 +1018,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD544\uB4DC"
+  m_text: "\uD14C\uC2A4\uD2B81"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 65c0897d8e1ddcc40b360d611cd57496, type: 2}
   m_sharedMaterial: {fileID: 3279531262454636513, guid: 65c0897d8e1ddcc40b360d611cd57496,
@@ -1025,7 +1029,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4291116032
-  m_fontColor: {r: 0, g: 0.23529412, b: 0.77254903, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

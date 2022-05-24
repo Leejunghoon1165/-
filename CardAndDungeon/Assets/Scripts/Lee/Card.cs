@@ -32,6 +32,8 @@ public class Card : MonoBehaviour
     private Vector2 touchedPos;
     public static bool touchOn;
     public bool isMine;
+    public bool CheckOne;
+    public bool CheckTwo;
     public int i;
 
 
@@ -48,7 +50,8 @@ public class Card : MonoBehaviour
     private void Update()
     {
         TouchCheck();
-       // DetectCardArea();
+        // DetectCardArea();
+        
 
 
     }
@@ -87,6 +90,8 @@ public class Card : MonoBehaviour
                         case TouchPhase.Ended:
                             if (isFront)
                             {
+                                CheckOne = false;
+                                CheckTwo = false;
                                 CardManager.Inst.CardMouseUp();
                                 if (hitInformation.collider !=null)
                                 {
@@ -108,8 +113,24 @@ public class Card : MonoBehaviour
                 }
                 else
                 {
-                    if(hitInformation.collider.tag=="MyCardArea")
-                         CardManager.Inst.CardMouseExit(hitInformation.collider.gameObject.GetComponent<Card>());
+                    for (i = 0; i < hits.Length; i++)
+                    {
+                        if (hits[i].collider.tag == "Card")
+                        {
+                            CheckOne = true;
+                        }
+                        if (hits[i].collider.tag == "MyCardArea")
+                        {
+                            CheckTwo = true;
+                        }
+
+                    }
+                    if (hitInformation.collider.tag=="MyCardArea")
+                    {
+                            CardManager.Inst.CardMouseExit(CardManager.Inst.selectCard);
+                            // CardManager.Inst.CardMouseExit(hitInformation.collider.gameObject.GetComponent<Card>());
+                    }
+                         
                     if (touch.phase == TouchPhase.Ended)
                     {
                         CardManager.Inst.CardMouseUp();
