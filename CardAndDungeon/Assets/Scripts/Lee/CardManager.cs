@@ -206,7 +206,8 @@ public class CardManager : MonoBehaviour
             return false;
         if (!isMine)
             return false;
-
+        if (selectCard == null)
+            return false;
 
         Card card = selectCard;
         var targetCards = myCards;
@@ -246,7 +247,11 @@ public class CardManager : MonoBehaviour
 
     public void CardMouseExit(Card card)
     {
-        EnlargeCard(false, card);
+            EnlargeCard(false, card);
+            selectCard = null;
+       
+
+    
     }
 
     public void CardMouseDown()
@@ -264,11 +269,15 @@ public class CardManager : MonoBehaviour
                 EntityManager.Inst.RemoveMyEmptyEntity();
             }    
             else
+            {
                 TryPutCard(true);
+                
+            }
+                
         }
         else
         {
-  
+            TryPutCard(true);
         }
       
             
@@ -290,29 +299,29 @@ public class CardManager : MonoBehaviour
     }
     public void DetectCardArea()
     {
-        //if (Input.touchCount > 0)
-        //{
-        //    for (int i = 0; i < Input.touchCount; i++)
-        //    {
-        //        Touch touch = Input.GetTouch(i);  //i번째 터치에 대한 정보
-        //        int index = touch.fingerId; //i번째 터치에 대한 id 값
-        //        Vector3 position = touch.position;  //i번째 터치의 위치
+        if (Input.touchCount > 0)
+        {
+            for (int i = 0; i < Input.touchCount; i++)
+            {
+                Touch touch = Input.GetTouch(i);  //i번째 터치에 대한 정보
+                int index = touch.fingerId; //i번째 터치에 대한 id 값
+                Vector3 position = touch.position;  //i번째 터치의 위치
 
-        //        TouchPhase phase = touch.phase; //i번째 터치의 상태
-        //        Vector3 pos = Camera.main.ScreenToWorldPoint(touch.position);
-        //        Vector3 originCard = new Vector3(pos.x, pos.y, -10);
-        //        RaycastHit2D[] hits = Physics2D.RaycastAll(originCard, Camera.main.transform.forward);
-                
-        //        int layer = LayerMask.NameToLayer("MyCardArea");
-        //        onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
-        //    }
-        //}
+                TouchPhase phase = touch.phase; //i번째 터치의 상태
+                Vector3 pos = Camera.main.ScreenToWorldPoint(touch.position);
+                Vector3 originCard = new Vector3(pos.x, pos.y, -10);
+                RaycastHit2D[] hits = Physics2D.RaycastAll(originCard, Camera.main.transform.forward);
 
-        
+                int layer = LayerMask.NameToLayer("MyCardArea");
+                onMyCardArea = Array.Exists(hits, x => x.collider.gameObject.layer == layer);
+            }
+        }
 
 
-       // RaycastHit2D[] hits = Physics2D.RaycastAll(selectCard.origin2PRS.pos, Vector3.forward);
-    
+
+
+        // RaycastHit2D[] hits = Physics2D.RaycastAll(selectCard.origin2PRS.pos, Vector3.forward);
+
     }
 
 
@@ -327,9 +336,15 @@ public class CardManager : MonoBehaviour
         }
         else //축소
         {
-            card.MoveTransform(card.originPRS, false);
-        }
+            if (selectCard == null)
+                return;
 
+            Vector3 OriginCard = new Vector3(selectCard.originPRS.pos.x, selectCard.originPRS.pos.y, -100);
+            selectCard.MoveTransform(new PRS(OriginCard, Utils.QI, selectCard.originPRS.scale), false);
+  
+            //card.MoveTransform(card.originPRS, false);
+        }
+        if(card !=null)
             card.GetComponentInChildren<Order>().SetMostFrontOrder(isEnlarge);
     }
 

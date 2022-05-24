@@ -68,9 +68,8 @@ public class Card : MonoBehaviour
 
                 RaycastHit2D hitInformation = Physics2D.Raycast(pos, Camera.main.transform.forward);
                 RaycastHit2D[] hits = Physics2D.RaycastAll(pos, Camera.main.transform.forward);
-     
                 if (hitInformation.collider.tag == "Card")
-                {   
+                {
                     origin2PRS.pos = pos;
                     switch (touch.phase)
                     {
@@ -88,21 +87,29 @@ public class Card : MonoBehaviour
                         case TouchPhase.Ended:
                             if (isFront)
                             {
-                                CardManager.Inst.CardMouseExit(hitInformation.collider.gameObject.GetComponent<Card>());
                                 CardManager.Inst.CardMouseUp();
+                                if (hitInformation.collider !=null)
+                                {
+                                    
+                                    CardManager.Inst.CardMouseExit(hitInformation.collider.gameObject.GetComponent<Card>());
+                                }
+                              
                             }
                             break;
                         case TouchPhase.Canceled:
                             if (isFront)
                             {
-                                CardManager.Inst.CardMouseExit(hitInformation.collider.gameObject.GetComponent<Card>());
+                               
                                 CardManager.Inst.CardMouseUp();
+                                CardManager.Inst.CardMouseExit(hitInformation.collider.gameObject.GetComponent<Card>());
                             }
                             break;
                     }
                 }
                 else
                 {
+                    if(hitInformation.collider.tag=="MyCardArea")
+                         CardManager.Inst.CardMouseExit(hitInformation.collider.gameObject.GetComponent<Card>());
                     if (touch.phase == TouchPhase.Ended)
                     {
                         CardManager.Inst.CardMouseUp();
