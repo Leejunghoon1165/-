@@ -1,26 +1,40 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Bullet
     - CameraResolution
     - Card
+    - CardData
     - CardManager
+    - EarthHorn
+    - EngravingMenu
+    - Entangle
     - EntityManager
+    - Explosion
     - GameManager
+    - GoToPlayer
     - ItemSO
+    - MagicMissile
+    - MoveManager
     - Order
     - PauseMenu
     - Player
+    - RenderTextureDemo
     - SPUM_HorseSpriteList
     - SPUM_Prefabs
     - SPUM_SpriteList
+    - ShatterSpawner
     - SoundManager
+    - Spawn
     - SpritePos
     - Teleport
     - TestCamera
     - Timer
     - TurnManager
+    - Tutorial
     - Utils
     - VariableJoystick
+    - Worm_Attack
     DOTween.dll:
     - DG.Tweening.Core.DOTweenSettings
     Unity.2D.Animation.Editor.dll:
@@ -29,9 +43,14 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.IK.IKEditorManager
     - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.SceneViewOpenTilePaletteHelper
     - UnityEditor.Tilemaps.TileDragAndDropManager
@@ -75,15 +94,21 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 28
       Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 49
       Script: {instanceID: 0}
     - Class: 50
       Script: {instanceID: 0}
+    - Class: 58
+      Script: {instanceID: 0}
     - Class: 60
       Script: {instanceID: 0}
     - Class: 61
+      Script: {instanceID: 0}
+    - Class: 70
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -99,86 +124,118 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
+    - Class: 96
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 658}
+      Script: {instanceID: -592}
     - Class: 114
-      Script: {instanceID: 1490}
+      Script: {instanceID: 660}
     - Class: 114
-      Script: {instanceID: 1496}
+      Script: {instanceID: 1492}
     - Class: 114
-      Script: {instanceID: 1500}
+      Script: {instanceID: 1498}
     - Class: 114
-      Script: {instanceID: 1616}
+      Script: {instanceID: 1502}
     - Class: 114
-      Script: {instanceID: 1784}
+      Script: {instanceID: 1528}
     - Class: 114
-      Script: {instanceID: 1796}
+      Script: {instanceID: 1618}
     - Class: 114
-      Script: {instanceID: 1918}
+      Script: {instanceID: 1786}
     - Class: 114
-      Script: {instanceID: 2164}
+      Script: {instanceID: 1798}
     - Class: 114
-      Script: {instanceID: 2232}
+      Script: {instanceID: 1822}
     - Class: 114
-      Script: {instanceID: 2328}
+      Script: {instanceID: 1926}
     - Class: 114
-      Script: {instanceID: 2330}
+      Script: {instanceID: 2172}
     - Class: 114
-      Script: {instanceID: 2344}
+      Script: {instanceID: 2242}
     - Class: 114
-      Script: {instanceID: 2524}
+      Script: {instanceID: 2338}
     - Class: 114
-      Script: {instanceID: 2798}
+      Script: {instanceID: 2340}
     - Class: 114
-      Script: {instanceID: 2980}
+      Script: {instanceID: 2354}
     - Class: 114
-      Script: {instanceID: 3064}
+      Script: {instanceID: 2540}
     - Class: 114
-      Script: {instanceID: 3202}
+      Script: {instanceID: 2636}
     - Class: 114
-      Script: {instanceID: 3232}
+      Script: {instanceID: 2644}
     - Class: 114
-      Script: {instanceID: 3260}
+      Script: {instanceID: 2816}
     - Class: 114
-      Script: {instanceID: 3312}
+      Script: {instanceID: 3000}
     - Class: 114
-      Script: {instanceID: 3444}
+      Script: {instanceID: 3084}
     - Class: 114
-      Script: {instanceID: 3490}
+      Script: {instanceID: 3114}
     - Class: 114
-      Script: {instanceID: 3622}
+      Script: {instanceID: 3228}
     - Class: 114
-      Script: {instanceID: 4024}
+      Script: {instanceID: 3258}
     - Class: 114
-      Script: {instanceID: 4096}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 4210}
+      Script: {instanceID: 3338}
     - Class: 114
-      Script: {instanceID: 4230}
+      Script: {instanceID: 3470}
     - Class: 114
-      Script: {instanceID: 4324}
+      Script: {instanceID: 3516}
     - Class: 114
-      Script: {instanceID: 4546}
+      Script: {instanceID: 3650}
     - Class: 114
-      Script: {instanceID: 4920}
+      Script: {instanceID: 3658}
     - Class: 114
-      Script: {instanceID: 4958}
+      Script: {instanceID: 3988}
     - Class: 114
-      Script: {instanceID: 5036}
+      Script: {instanceID: 3990}
     - Class: 114
-      Script: {instanceID: 5088}
+      Script: {instanceID: 4058}
     - Class: 114
-      Script: {instanceID: 5242}
+      Script: {instanceID: 4130}
     - Class: 114
-      Script: {instanceID: 5504}
+      Script: {instanceID: 4246}
     - Class: 114
-      Script: {instanceID: 5562}
+      Script: {instanceID: 4254}
     - Class: 114
-      Script: {instanceID: 5864}
+      Script: {instanceID: 4266}
     - Class: 114
-      Script: {instanceID: 6014}
+      Script: {instanceID: 4360}
+    - Class: 114
+      Script: {instanceID: 4476}
+    - Class: 114
+      Script: {instanceID: 4578}
+    - Class: 114
+      Script: {instanceID: 4618}
+    - Class: 114
+      Script: {instanceID: 4876}
+    - Class: 114
+      Script: {instanceID: 4966}
+    - Class: 114
+      Script: {instanceID: 5004}
+    - Class: 114
+      Script: {instanceID: 5082}
+    - Class: 114
+      Script: {instanceID: 5134}
+    - Class: 114
+      Script: {instanceID: 5288}
+    - Class: 114
+      Script: {instanceID: 5552}
+    - Class: 114
+      Script: {instanceID: 5614}
+    - Class: 114
+      Script: {instanceID: 5904}
+    - Class: 114
+      Script: {instanceID: 5918}
+    - Class: 114
+      Script: {instanceID: 6066}
+    - Class: 114
+      Script: {instanceID: 6072}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -186,6 +243,10 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
       Script: {instanceID: 0}
     - Class: 210
       Script: {instanceID: 0}
@@ -354,6 +415,12 @@ ScriptsOnlyBuild:
     className: Joystick
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EarthHorn
+  - hash:
+      serializedVersion: 2
       Hash: bc0b6b86b1e63cb4d226e9479fef371d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -372,6 +439,12 @@ ScriptsOnlyBuild:
     className: EpicWorm_Attack
   - hash:
       serializedVersion: 2
+      Hash: 3f5031037e63abe5dcf87c278e01a4de
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo_RotateCamera
+  - hash:
+      serializedVersion: 2
       Hash: e6f0efd0e20669d577e9d21526b3d3f9
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -388,6 +461,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Entity
+  - hash:
+      serializedVersion: 2
+      Hash: 660deb0ce569359218f0ba85b7ce0e3a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_LightIntensityFade
   - hash:
       serializedVersion: 2
       Hash: 300fd99066f8c288e85f5e81ce65fe34
@@ -432,7 +511,7 @@ ScriptsOnlyBuild:
     className: SPUM_Manager
   - hash:
       serializedVersion: 2
-      Hash: fd4b2bc58994ca5e42c7173b2fd64de1
+      Hash: 3f9585062917d58a3d18b8a5b07754dd
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CardManager
@@ -444,7 +523,7 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
-      Hash: bd61913e06335b964ff87fa95f4718ef
+      Hash: 321b630b1a5ff20d75a2682d5d3cb45b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Order
@@ -474,6 +553,12 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
+      Hash: 4d4f6da331380f96ec787daa846d00d4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
+  - hash:
+      serializedVersion: 2
       Hash: c1d728126ff1918728036c59106d32b2
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -498,10 +583,16 @@ ScriptsOnlyBuild:
     className: IKManager2D
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: TitleScene
+    className: Bullet
+  - hash:
+      serializedVersion: 2
+      Hash: 4bfcd3f5c6fcb98d40848647b3f35d5e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Tutorial
   - hash:
       serializedVersion: 2
       Hash: 4f60ff347d4efee4ef8cc7f627735018
@@ -510,10 +601,10 @@ ScriptsOnlyBuild:
     className: Benchmark02
   - hash:
       serializedVersion: 2
-      Hash: 06a422474ee973d823f5bf09e5034a93
+      Hash: dad3a1f1e1ecb4691721bab721edd60a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: TitleCameraMove
+    className: CFX_AutoRotate
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -600,13 +691,19 @@ ScriptsOnlyBuild:
     className: TMP_TextSelector_A
   - hash:
       serializedVersion: 2
+      Hash: d1bf0f1c743fa88bb927369340595c33
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RenderTextureDemo
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Camera169
   - hash:
       serializedVersion: 2
-      Hash: 549702570deaf3d458e7e35f51a4f27f
+      Hash: 569c5596de7797ce34eef87d095bbe27
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Card
@@ -654,6 +751,12 @@ ScriptsOnlyBuild:
     className: LimbSolver2D
   - hash:
       serializedVersion: 2
+      Hash: 1d0beb1a2d4edee4c06b6835632e83a3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_AutoStopLoopedEffect
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -670,12 +773,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JoystickSetterExample
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MainMenu
   - hash:
       serializedVersion: 2
       Hash: 2738903cdafe03d8d0e70a2c936d1655
@@ -732,6 +829,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 5ab00caa3da4b3f0a9ec5733a7a938cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GlassBreaker
+  - hash:
+      serializedVersion: 2
       Hash: fe2d355deb0ca31d59a0a7cf4d141fc3
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -744,10 +847,22 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Explosion
+  - hash:
+      serializedVersion: 2
       Hash: 349d08daa6108b9a28f8c38fd40ce96f
     assemblyName: Unity.2D.SpriteShape.Runtime.dll
     namespaceName: UnityEngine.U2D
     className: SpriteShapeController
+  - hash:
+      serializedVersion: 2
+      Hash: e70e7b311a1620c2e899545b2e1fdfae
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo_RandomDirectionTranslate
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -784,6 +899,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SPUM_Exporter
+  - hash:
+      serializedVersion: 2
+      Hash: 1c7a0af84c2e46b9a6e1a82a0da7f4df
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CardData
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -846,6 +967,12 @@ ScriptsOnlyBuild:
     className: NewBehaviourScript
   - hash:
       serializedVersion: 2
+      Hash: 4aac268d7e435f7a65add91aaba819a4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo_RandomDir
+  - hash:
+      serializedVersion: 2
       Hash: e63944317d2f5958e31963668bb29158
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -870,7 +997,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 73d598b9b3e42d7a8383b85c11e95edd
+      Hash: a9d9d4581ce2334dd46f7ebccbb429ce
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MoveManager
@@ -930,6 +1057,12 @@ ScriptsOnlyBuild:
     className: EventTrigger
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Entangle
+  - hash:
+      serializedVersion: 2
       Hash: ce669872a2be11bc686ea22961d8a3bb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -948,6 +1081,12 @@ ScriptsOnlyBuild:
     className: SpriteLibrary
   - hash:
       serializedVersion: 2
+      Hash: 671420ad2c33f1ddaf6d076461adf15a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo_Translate
+  - hash:
+      serializedVersion: 2
       Hash: a81d4c2c1cf3ad164d277d927a193679
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -964,6 +1103,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a11da352f8abe1a3b3590f887ca7a9cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShatterSpawner
   - hash:
       serializedVersion: 2
       Hash: 22aa2df9b7aea903861923028e6d6e82
@@ -1014,7 +1159,13 @@ ScriptsOnlyBuild:
     className: SpriteShapeGeometryCache
   - hash:
       serializedVersion: 2
-      Hash: 62e26739982190612879b1f32b92c56e
+      Hash: b3fd8319e64a53ef4c6157c961ad1c48
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EngravingMenu
+  - hash:
+      serializedVersion: 2
+      Hash: 82b5463ce0995e95efe1c8cd9be40233
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EW_Bullet
@@ -1116,16 +1267,16 @@ ScriptsOnlyBuild:
     className: ItemSO
   - hash:
       serializedVersion: 2
+      Hash: 421b20ccd7815ebee5e2b14a986d2efc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_Demo_New
+  - hash:
+      serializedVersion: 2
       Hash: 28cfb4bd305dd11c6326cc3ee7c14138
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.Experimental.U2D.Animation
     className: SpriteLibraryAsset
-  - hash:
-      serializedVersion: 2
-      Hash: 659d6ceab26f9e4237abaaf29249f293
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MonsterMove
   - hash:
       serializedVersion: 2
       Hash: 63bdc2cf3273aa9bf650350f19d2af61
@@ -1146,6 +1297,12 @@ ScriptsOnlyBuild:
     className: SPUM_PreviewItem
   - hash:
       serializedVersion: 2
+      Hash: 659d6ceab26f9e4237abaaf29249f293
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MonsterMove
+  - hash:
+      serializedVersion: 2
       Hash: fe1fdeffc2067077b2f1a90b210c2532
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1164,6 +1321,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: e4db0ddf42150a3b60bd39cf2bc3def2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_LightFlicker
+  - hash:
+      serializedVersion: 2
       Hash: e80c1450883443c68d6c2dade213536f
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -1174,6 +1337,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: VertexColorCycler
+  - hash:
+      serializedVersion: 2
+      Hash: 5d27c6e85ec89cfab8577e9e26695e88
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CFX_AutoDestructShuriken
   - hash:
       serializedVersion: 2
       Hash: 49fe23f93b5adc27c0f8f39c3a56e2b0
@@ -1236,6 +1405,12 @@ ScriptsOnlyBuild:
     className: BufferManager
   - hash:
       serializedVersion: 2
+      Hash: 7fd8bfc93bca17dcc9d38f9cd5af35ba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GoToPlayer
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1246,6 +1421,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
     className: TMP_TextInfoDebugTool
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TitleScene
+  - hash:
+      serializedVersion: 2
+      Hash: 06a422474ee973d823f5bf09e5034a93
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TitleCameraMove
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
@@ -1260,10 +1447,10 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 7ab0e790220bdca831fdd886b339039d
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: GridLayoutGroup
+      Hash: 887cac549db08ba1d07912347c6bfb93
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MagicMissile
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1282,6 +1469,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
   - hash:
       serializedVersion: 2
       Hash: 762a30c8d779b11af16ed9ce1f2d32fa

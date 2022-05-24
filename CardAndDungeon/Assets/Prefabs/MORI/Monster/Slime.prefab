@@ -272,7 +272,7 @@ MonoBehaviour:
   touch: 0
   longRange: 0
   bottomLeft: {x: 0, y: 0}
-  topRight: {x: 55, y: 35}
+  topRight: {x: 55, y: 15}
   startPos: {x: 0, y: 0}
   targetPos: {x: 0, y: 0}
   FinalNodeList: []

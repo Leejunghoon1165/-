@@ -493,7 +493,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 262445565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 513ac37cc1d497d43a1763519017485d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a282d8ef40667f49b8132c72f945ce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cardList: {fileID: 881932945}
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 262445566}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: NotMake
         m_Mode: 1
@@ -2422,7 +2422,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 376030837}
   m_Direction: 2
   m_Value: 1.0000007
-  m_Size: 0.2053388
+  m_Size: 0.20533882
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2976,7 +2976,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 262445566}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: NotMake
         m_Mode: 1
