@@ -20,16 +20,21 @@ public class Teleport : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
+        {
             StartCoroutine(TeleportCoroutine());
+            
+        }
+           
     }
 
     IEnumerator TeleportCoroutine()
     {
-        yield return null;
         targetObject.transform.position = toObject.transform.position;
         Camera.main.GetComponent<TestCamera>().ChangeLimit(mapNum);
-
-       
+        TestCamera.check = true;
+        yield return new WaitForSeconds(0.1f);
+        TestCamera.check = false;
+        
     }
     // Start is called before the first frame update
     void Start()

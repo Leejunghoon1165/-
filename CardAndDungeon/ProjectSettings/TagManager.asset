@@ -6,16 +6,19 @@ TagManager:
   tags:
   - Enemy
   - Wall
+  - Card
   - PlayerPos
+  - New tag
+  - UI
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Card
   - Water
   - UI
   - Player
-  - 
+  - MyCardArea
   - 
   - 
   - Wall
@@ -43,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Card
+    uniqueID: 1957522469
     locked: 0

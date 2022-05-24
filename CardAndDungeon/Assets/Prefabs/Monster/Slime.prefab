@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579954097}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 0.044, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.22222224, y: 0.22222224, z: 1}
   m_Children: []
   m_Father: {fileID: 934073245901524481}
@@ -124,10 +124,10 @@ GameObject:
   - component: {fileID: 934073245901524494}
   - component: {fileID: 934073245901524495}
   - component: {fileID: 6675046765169745049}
+  - component: {fileID: 1191943716}
   - component: {fileID: 3844390924511051995}
   - component: {fileID: 6648954607679624434}
   - component: {fileID: -3419807972566365206}
-  - component: {fileID: 5497695054878078}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -234,7 +234,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10000
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -243,6 +243,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!61 &1191943716
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934073245901524492}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.07, y: -0.04}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.48, y: 0.25}
+    newSize: {x: 0.48, y: 0.25}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.1}
+  m_EdgeRadius: 0
 --- !u!114 &3844390924511051995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,16 +282,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 934073245901524495}
-  EXP: {fileID: 1714400547666806144, guid: bb78d1b8b41e94147b31bc2490cea49f, type: 3}
-  EXPCount: 2
+  rigid: {fileID: 0}
   widthMove: 0
   highMove: 0
   IdleMove: 0
   MovementSpeed: 1
-  max_HP: 50
-  cur_HP: 50
+  max_HP: 0
+  cur_HP: 0
   AttackRange: 1.5
-  FindRange: 12
+  FindRange: 5
   Strengh: 10
   dist: 0
   touch: 0
@@ -291,7 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 934073245901524495}
   pos: {fileID: 579954098}
-  boxSize: {x: 1.5, y: 1}
+  boxSize: {x: 2, y: 1.5}
 --- !u!114 &-3419807972566365206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,22 +331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mob_num: 0
   spawnPoint: {fileID: 0}
---- !u!70 &5497695054878078
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 934073245901524492}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.1, y: 0.1}
-  m_Direction: 0
 --- !u!1 &2128991428201608222
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +355,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2128991428201608222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: -0.06, z: 0}
+  m_LocalPosition: {x: 0.066, y: -0.12, z: 0}
   m_LocalScale: {x: 0.6, y: 0.4, z: 0}
   m_Children:
   - {fileID: 5083884128966377811}

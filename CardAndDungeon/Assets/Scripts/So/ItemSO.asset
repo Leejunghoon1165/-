@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9685493c328b48c4a94cf1332321982e, type: 3}
+  m_Name: ItemSO
+  m_EditorClassIdentifier: 
+  items1:
+  - name: "\uC2DC\uACF5\uAC04 \uD3ED\uBC1C"
+    attack: 10
+    sprite: {fileID: 21300000, guid: b8558a2189aac8046a65960a994fe757, type: 3}
+    subname: "\uD14C\uC2A4\uD2B81"
+    text: "\uC804\uBC29\uC5D0 \uD3ED\uBC1C\uC744 \uC77C\uC73C\uCF1C \uB370\uBBF8\uC9C0\uB97C
+      \uC900\uB2E4."
+    percent: 10
+    color_outline: {r: 1, g: 0.47843137, b: 0.52156866, a: 1}
+    color_jewel: {r: 0.08627451, g: 1, b: 0, a: 1}
+    color_image: {r: 1, g: 1, b: 1, a: 1}
+    color_text: {r: 0, g: 0, b: 0, a: 0}
+  - name: "\uB9E4\uC9C1 \uBBF8\uC0AC\uC77C"
+    attack: 10
+    sprite: {fileID: 21300000, guid: 1aca98d6d0a395d4ba9b293c6e89ca0c, type: 3}
+    subname: "\uD14C\uC2A4\uD2B81"
+    text: "\uBB34\uC791\uC704 \uC801 \uD558\uB098\uC5D0\uAC8C \uB370\uBBF8\uC9C0\uB97C
+      \uC90D\uB2C8\uB2E4."
+    percent: 10
+    color_outline: {r: 1, g: 0.47843137, b: 0.52156866, a: 1}
+    color_jewel: {r: 0.08627451, g: 1, b: 0, a: 1}
+    color_image: {r: 1, g: 1, b: 1, a: 1}
+    color_text: {r: 0, g: 0, b: 0, a: 0}
+  - name: "\uD654\uC5FC\uC758 \uD5C8\uB9AC\uCF00\uC778"
+    attack: 10
+    sprite: {fileID: 21300000, guid: 224db534a4c1b154396cc56517784edb, type: 3}
+    subname: "\uD14C\uC2A4\uD2B81"
+    text: "3\uAC1C\uC758 \uD68C\uC624\uB9AC\uB97C \uBC1C\uC0DD\uC2DC\uD0A4\uACE0
+      \uB370\uBBF8\uC9C0\uB97C \uC900\uB2E4."
+    percent: 10
+    color_outline: {r: 1, g: 0.47843137, b: 0.52156866, a: 1}
+    color_jewel: {r: 1, g: 1, b: 1, a: 1}
+    color_image: {r: 0.83137256, g: 0.34509805, b: 0.043137256, a: 1}
+    color_text: {r: 0, g: 0, b: 0, a: 0}
+  - name: "\uC778\uD0F1\uAE00"
+    attack: 10
+    sprite: {fileID: 21300000, guid: 15763814b1dc9e74ab722a45fe159c6c, type: 3}
+    subname: "\uC0C1\uD0DC\uC774\uC0C1"
+    text: "\uBB34\uC791\uC704 \uC801\uD558\uB098\uC5D0\uAC8C \uB370\uBBF8\uC9C0\uB97C
+      \uC90D\uB2C8\uB2E4."
+    percent: 10
+    color_outline: {r: 1, g: 0.47843137, b: 0.52156866, a: 1}
+    color_jewel: {r: 0.18039216, g: 0.14117648, b: 0.14117648, a: 1}
+    color_image: {r: 1, g: 1, b: 1, a: 1}
+    color_text: {r: 0, g: 0.23529412, b: 0.77254903, a: 1}
+  - name: "\uC0B0\uC131 \uBE44"
+    attack: 10
+    sprite: {fileID: 21300000, guid: dd0909acab0d6564fbec91acbcbdf292, type: 3}
+    subname: "\uD544\uB4DC"
+    text: "\uB370\uBBF8\uC9C0 x\uB97C \uC90D\uB2C8\uB2E4."
+    percent: 10
+    color_outline: {r: 1, g: 0.47843137, b: 0.52156866, a: 1}
+    color_jewel: {r: 1, g: 1, b: 1, a: 1}
+    color_image: {r: 0.32941177, g: 1, b: 0, a: 1}
+    color_text: {r: 0, g: 0.23529412, b: 0.77254903, a: 1}
+  - name: "\uB300\uC9C0\uC758 \uBFD4"
+    attack: 10
+    sprite: {fileID: 21300000, guid: 61ab3c90aed865c4889aa871f564c6f0, type: 3}
+    subname: "\uD544\uB4DC"
+    text: "\uB370\uBBF8\uC9C0 x\uB97C \uC90D\uB2C8\uB2E4."
+    percent: 10
+    color_outline: {r: 1, g: 0.47843137, b: 0.52156866, a: 1}
+    color_jewel: {r: 0.18039216, g: 0.14117648, b: 0.14117648, a: 1}
+    color_image: {r: 1, g: 1, b: 1, a: 1}
+    color_text: {r: 0, g: 0, b: 0, a: 0}
+  items2:
+  - name: "\uC77C\uBC18 \uCE74\uB4DC\uD329"
+    number: 1
+    sprite: {fileID: 21300000, guid: dec23dcb35c29264c8939624242c8738, type: 3}
+    subname: "\uD14C\uC2A4\uD2B82"
+    text: "\uC77C\uBC18 \uB4F1\uAE09\uC744 \uC81C\uC678\uD55C \uCE74\uB4DC 1\uC7A5\uC744
+      \uAC00\uC838\uC628\uB2E4."
+    percent: 10
+    color_outline: {r: 0.015686275, g: 1, b: 0.57254905, a: 1}
+    color_jewel: {r: 0.18039216, g: 0.14117648, b: 0.14117648, a: 1}
+    color_image: {r: 1, g: 1, b: 1, a: 1}

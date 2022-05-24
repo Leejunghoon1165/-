@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
+    private Touch tempTouchs;
+    private Vector2 touchedPos;
+    private bool touchOn;
+
     private void Awake()
     {
         Screen.orientation = ScreenOrientation.LandscapeLeft;

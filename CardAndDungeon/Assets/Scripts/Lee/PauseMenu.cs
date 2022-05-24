@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,7 +9,7 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        go_BaseUI.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -33,8 +32,7 @@ public class PauseMenu : MonoBehaviour
 
     public void GoHome()
     {
-        SceneManager.LoadScene("MainMenu");
-        Time.timeScale = 1f;
+        Debug.Log("È¨À¸·Î");
     }
     public void GameOver()
     {

@@ -31,7 +31,7 @@ public class EpicWorm_Attack : MonoBehaviour
 
     IEnumerator Attack()
     {    
-        this.gameObject.GetComponent<MoveManager>().longRange = true;
+       this.gameObject.GetComponent<MoveManager>().longRange = true;
         anim.SetTrigger("Attack");
         yield return new WaitForSeconds(1.74f);
         GameObject intantBullet = Instantiate(bullet, bulletPos.position, bulletPos.rotation);

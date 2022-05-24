@@ -3,7 +3,7 @@ guid: 3e53c1bee5e5e43219f0342dc04f5be0
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
-  fontSize: 16
+  fontSize: 60
   forceTextureCase: -1
   characterSpacing: 0
   characterPadding: 1
@@ -12,9 +12,9 @@ TrueTypeFontImporter:
   - Victor's Pixel Font
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 2
-  ascentCalculationMode: 0
-  useLegacyBoundsCalculation: 1
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
   userData: 
   assetBundleName: 
