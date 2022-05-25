@@ -11,9 +11,15 @@ public class CardData : MonoBehaviour
     {
         num = Random.Range(0,2);
         if(num == 0)
+        {
             A.SetActive(true);
+        }
         else if(num == 1)
+        {
             B.SetActive(true);
+           
+        }
+            
     }
 
     // Update is called once per frame

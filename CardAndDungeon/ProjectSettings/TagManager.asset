@@ -10,6 +10,9 @@ TagManager:
   - PlayerPos
   - New tag
   - UI
+  - MyCardArea
+  - Rain
+  - BackGround
   layers:
   - Default
   - TransparentFX

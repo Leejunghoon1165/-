@@ -15,7 +15,6 @@ public class TestCamera : MonoBehaviour
     public GameObject Map1;
     public GameObject Map2;
     public GameObject Map3;
-
     public PRS Cameraorigin;
 
     float height;

@@ -305,6 +305,18 @@ public class MoveManager : MonoBehaviour
         StartCoroutine(HitedColor());
     }
 
+    public void SlowMove(float speed)
+    {
+        StartCoroutine(SlowMoveMonet(speed));
+
+    }
+    IEnumerator SlowMoveMonet(float speed)
+    {
+        MovementSpeed = MovementSpeed - speed;
+        yield return new WaitForSeconds(0.5f);
+        MovementSpeed = MovementSpeed + speed;
+    }
+
     void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -318,7 +330,17 @@ public class MoveManager : MonoBehaviour
         touch = false;
     }
 
-     void OnDrawGizmos()
+    private void OnParticleCollision(GameObject other)
+    {
+        Debug.Log("Ddd");
+        if (other.tag == "Rain")
+        {
+            Debug.Log("ttttt");
+        }
+       
+    }
+
+    void OnDrawGizmos()
     {
         if(FinalNodeList.Count != 0) for (int i = 0; i < FinalNodeList.Count - 1; i++)
                 Gizmos.DrawLine(new Vector2(FinalNodeList[i].x, FinalNodeList[i].y), new Vector2(FinalNodeList[i + 1].x, FinalNodeList[i + 1].y));
